@@ -1,0 +1,65 @@
+---
+title: "Bridget Project"
+subtitle: "Excel Unit"
+format: html
+---
+
+## Monday Excel Tutorial
+
+In Monday's class, we learned how to identify cells, columns, and rows in an Excel worksheet.
+
+-   **Cells** are the basic unit of Excel where you enter data. Each cell is identified by a unique address combining the column letter and row number.
+
+-   **Columns** are the vertical sets of cells labeled with letters.
+
+-   **Rows** are the horizontal sets of cells labeled with numbers.
+
+Some of the essential Excel functions we learned about are the following:
+
+-   **SUM** is the function that adds all the numbers in a range of cells.
+
+-   **AVERAGE** is the function that calculates the average of numbers in a range.
+
+-   **MAX** is the function that finds the maximum value in a range.
+
+-   **MIN** is the function that finds the minimum value in a range.
+
+The formula for all previous functions is = before the function and a parenthesis containing the cells. Ex: =SUM(A5:B5)
+
+### Basic Functions
+
+Once the Excel worksheet is created and named correctly, we can start cleaning the data so we do not encounter any errors or make sure our visualizations make sense with the information we care about, taking outliers out or NAs. In this case, I removed all NAs in my data set by selecting the dataset, going to Data in the menu bar, choosing a filter, and checking NAs off.
+
+### Scatter Plot
+
+I created a scatter plot by selecting the data, clicking insert in the menu bar, and selecting scatter plot in recommended charts.
+
+![](Scatterplot.png)
+
+### Line Plot
+
+I created a line plot by selecting the data, clicking insert in the menu bar, and selecting line plots in recommended charts.
+
+![](Lineplot.png)
+
+### Bar Chart
+
+I created a bar chart by selecting the data, clicking insert in the menu bar, and selecting bar chart in recommended charts.
+
+![](Barchart.png)
+
+### Pie Chart
+
+I created a pie chart by selecting the data, clicking Insert in the menu bar, and selecting pie charts from the recommended charts.
+
+![](Piechart.png)
+
+### Histogram
+
+I created a Histogram by selecting the data, clicking insert in the menu bar, and selecting Histogram in recommended charts.
+
+![](Histogram.png)
+
+## Conclusion
+
+The best charts to visualize this specific data are scatter plots and line plots. With these charts, we can understand the data and observe all the characteristics in an organized way using color. The other graphs are more complex to understand, and it is challenging to recognize repeated numbers and consider them individually, which makes the chart too broad.
