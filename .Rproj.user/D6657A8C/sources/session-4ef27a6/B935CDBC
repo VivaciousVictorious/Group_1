@@ -3,7 +3,7 @@
     "path": "C:/Visualization2/Group_1-quarto-book/Group_1/index.qmd",
     "project_path": "index.qmd",
     "type": "quarto_markdown",
-    "hash": "0",
+    "hash": "2496397995",
     "contents": "",
     "dirty": false,
     "created": 1725302450964.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "0,7",
+        "cursorPosition": "6,76",
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1725311860,
+    "lastKnownWriteTime": 1725505306,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1725311860532,
+    "last_content_update": 1725505306019,
     "read_only": false,
     "read_only_alternatives": []
 }

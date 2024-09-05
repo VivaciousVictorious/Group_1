@@ -4,7 +4,7 @@ project:
 
 book:
   title: "Group_1 Quarto Book"
-  author: "Victorious"
+  author: "Group 1"
   date: "9/1/2024"
   chapters:
     - index.qmd
