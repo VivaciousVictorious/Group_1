@@ -1,0 +1,62 @@
+---
+title: "Bridget Project"
+subtitle: "Excel Unit"
+format: html
+---
+
+## Wednesday Example
+
+In Monday's class, we learned how to identify cells, columns, and rows in an Excel worksheet. After completing the airquality example, we selected our own datasets. I chose the attenu dataset, which provides information on earthquake attenuation---how the strength of seismic waves decreases as they travel through the Earth. The Joyner--Boore Attenuation Data includes peak acceleration measurements from various observation stations for 23 California earthquakes. This dataset is commonly used to model how ground acceleration (the shaking during an earthquake) decreases with distance from the epicenter and is affected by the earthquake's magnitude. It's valuable for studying seismic wave behavior and predicting ground motion intensity at different distances from an earthquake. It uses five variables (Event, Magnitude, Station, Distance, and Acceleration) with 182 observations.
+
+-   **Event** is the numeric Event Number.
+
+-   **Mag** is the numeric Moment Magnitude.
+
+-   **Station** is the factor Station Number.
+
+-   **Distance** is the numeric Station-hypocenter distance (km).
+
+-   **Acceleration** is the numeric Peak acceleration (g).
+
+### Basic Functions
+
+Once the Excel worksheet is created and named correctly, we can start cleaning the data so we do not encounter any errors or make sure our visualizations make sense with the information we care about, taking outliers out or NAs. In this case, I removed all NAs in my data set by selecting the dataset, going to Data in the menu bar, choosing a filter, and checking NAs off. I also removed all the numbers that made no sense in a numeric column.
+
+### Variables to be evaluated
+
+I will evaluate **Magnitude** and **Distance** to model how earthquake recordings vary with both the magnitude of the quake and the distance at which it is observed. In other words, how depending on the magnitude people further from the epicenter can still feel it.
+
+### Scatter Plot
+
+![](Scatterplot.png)
+
+In this graph, the X-axis shows earthquake magnitude, ranging from about 4 to 8, while the Y-axis represents the distance from the earthquake epicenter in kilometers, going from 0 to 400. For higher magnitudes, the distances are more dispersed, with some data points reaching distances of 350 km or more. A positive relationship between magnitude and distance is suggested, as larger magnitudes correspond to a wider range of distances, indicating that stronger earthquakes may be detected at stations farther from the epicenter.
+
+### Line Plot
+
+![](Lineplot.png)
+
+In this chart, the X-axis is a sequence of data points associated with magnitude and distance values, while the Y-axis shows values for magnitude (in blue) and distance (in orange). We can observe how the distance fluctuates considerably, with peaks reaching up to 350 km, indicating that some earthquakes are recorded at distant stations, though many are detected closer to the epicenter. The magnitude line remains mostly flat along the bottom, suggesting that the magnitude values show little variation compared to the distance. However, we must consider that earthquake magnitudes above 4 can already cause damage. If we made them individual graphs it would reflect better the magnitude. And ultimately determine that higher magnitudes are felt in further locations.
+In this plot, the earthquakes seem to have relatively consistent magnitudes, likely within a narrow range, while the distance varies more significantly.
+
+### Bar Chart
+
+![](Barchart.png)
+
+In this chart, the X-axis represents a sequence of data points linked to magnitude and distance values, while the Y-axis displays magnitude (in blue) and distance (in orange). The distance fluctuates significantly, with peaks up to 350 km, indicating that some earthquakes are recorded at distant stations, though many are detected closer to the epicenter. The magnitude line remains mostly flat near the bottom, showing minimal variation in magnitude compared to the distance. However, it's important to note that magnitudes above 4 can still cause damage. Separate graphs for magnitude and distance would better highlight magnitude trends, showing that stronger earthquakes are often felt at greater distances. Overall, this chart reflects relatively consistent earthquake magnitudes, likely within a narrow range, while distances vary more substantially.
+
+### Pie Chart
+
+![](Piechart.png)
+
+The pie chart visually displays the distribution of magnitude and distance values within the data set, with magnitude shown in blue and distance in orange. The largest slice represents distance, indicating it is the most frequent or dominant value. However, pie charts are not well-suited for our analysis, as they make it challenging to compare values and are not ideal for illustrating relationships between variables.
+
+### Histogram
+
+![](Histogram.png)
+
+The histogram above analyzes the distribution of magnitudes across various distance ranges. The X-axis represents these distance ranges, divided into bins, while the Y-axis indicates the frequency of occurrences within each bin. The data reveals a higher frequency of observations in the lower distance ranges, with fewer observations as the distances increase. Most of the observations are concentrated within the first distance range (0.6, 42.6], suggesting that a significant portion of the data is clustered in this region. The presence of a long tail points to potential outliers or extreme values, which may require further investigation.
+
+## Conclusion
+
+The best charts to visualize this specific data are scatter plots.Line plots and bar charts may be better if we consider the variables individually. With these charts, we can understand the data and observe all the characteristics in an organized way using color. The other graphs are more complex to understand, and it is challenging to recognize repeated numbers and consider them individually, which makes the chart too broad.

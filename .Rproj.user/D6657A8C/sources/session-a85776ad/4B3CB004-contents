@@ -1,0 +1,61 @@
+---
+title: "Week2_Excel_Pivot"
+format: html
+editor: visual
+---
+
+## Air Quality Data Analysis and Modeling Using Excel Pivot Chart
+
+**Data Type**: CVS type, 154 entries and 6 columns.
+
+**Dataset Content**: After cleaning the dataset contains 112 entries and 6 columns, representing the following variables:
+
+Ozone: Ozone concentration (in parts per billion). Solar.R: Solar radiation (in Langley units). Wind: Wind speed (in miles per hour). Temp: Temperature (in degrees Fahrenheit). Month: Month of observation. Day: Day of the month.
+
+All columns are complete with no missing values. The types of data are mostly integers, with wind speed recorded as a floating-point number.
+
+**Cleaning Method** The dataset was cleaned exclusively using MS Excel. The Find and Replace function was employed to locate all instances of "N/A" and replace them with "0". Afterward, a few test plots were generated, which revealed some deficiencies in the data. To address this, additional cleaning was performed by removing all rows containing "0" values.
+
+**Data Analysis** Explore trends over time. Visualize correlations between temp, ozone level over time. Pivot tables were created from the dataset for analysis, and pivot charts were plotted for visualization.
+
+**Ozone and Temperature Correlation**
+
+![](Ozone_Temp_DayPVYTBLW2.png)
+
+![](Ozone_Temp_DayPVYW2.png)
+
+This line chart shows the sum of Ozone levels, sum of Temperature, and sum of Days plotted against the Month. Here's what can be inferred from the plot:
+
+**B. Ozone Levels (Blue Line)**: Ozone levels fluctuates across the months. June shows a lower ozone level compared to July, where ozone levels peak. Ozone levels gradually decrease between July and September. This trend suggests that ozone levels are higher in July but decline towards the end of summer and into early fall.
+
+**A. Temperature (Orange Line)**: Temperatures follow a rising trend from May to July, peaking in July. After peaking in July, the temperature decreases slightly in August, then increases again in Month September. This suggests that July tends to be the hottest month in the dataset, followed by slight variations in temperature in the following months.
+
+**C. Day (Green Line)**: Days appear to be relatively consistent across the months, with only minor variations. This line indicates the total number of days contributing to the data for each is constant. This is an accurate visualization as the raw data shows data collected from 1st of each month to the last day.
+
+**Conclusion**: The plot highlights a clear relationship between temperature and ozone levels, with both peaking in July. The consistent sum of days indicates uniform data collection across months. This pattern suggests that high summer temperatures contribute to higher ozone levels, which decline as temperatures drop towards the end of summer.
+
+**Temperature and Wind Correlation**
+
+![](TempWind_PVYTBLW2.png)
+
+This combination chart displays the average temperature (bar chart) and the average wind speed (line chart) across the different months.
+
+**A. Temperature Trends (Blue Bars)**: June and July have the highest average temperatures, both close to or exceeding 80 degrees. The months of May and September show relatively lower average temperatures compared to the peak summer months. Temperature is highest in July, indicating the middle of summer, and decreases slightly toward September.
+
+**B. Wind Speed Trends (Orange Line)**: May starts with higher wind speeds, averaging around 10-12 mph.
+
+Wind speeds are highest in June, with a slight drop in July, followed by relatively steady or slightly increasing wind speeds in August and September. July, which has the highest average temperature, coincides with lower wind speeds, indicating calm summer conditions.
+
+**Conclusion**: The plot shows that July experiences the highest average temperatures but lower wind speeds, while June sees the highest wind speeds. This inverse trend between wind speed and temperature, especially during peak summer months, suggests that hotter conditions may coincide with calmer winds. This pattern could be typical of a warm season where high temperatures are associated with reduced wind activity.
+
+**Combination bar chart of multiple variables across different months.**
+
+![](Comb_PVYTBLW2.png)
+
+**Key Points** **Temperature and Solar Radiation**: The high solar radiation levels in July and August correspond to higher average temperatures, which is typical for summer months.
+
+**Ozone and Temperature**: Ozone levels are highest in July, suggesting that warmer temperatures lead to higher ozone concentrations, likely due to increased sunlight and heat contributing to ozone formation.
+
+**Wind Speed**: Wind speeds are highest in the earlier months (May and June) but decrease in the peak summer months, which could imply calmer weather conditions during the hottest periods.
+
+**Conclusion**: The chart visualization suggests a clear relationship between temperature, solar radiation, and ozone levels. As solar radiation and temperature increase during the summer months (especially in July), ozone levels also rise. Wind speeds, however, show an inverse relationship, with higher wind speeds occurring in the cooler months and lower wind speeds in the hotter summer months. This pattern is typical of mid-summer conditions, where higher temperatures and calmer winds create conditions conducive to higher ozone concentrations.
