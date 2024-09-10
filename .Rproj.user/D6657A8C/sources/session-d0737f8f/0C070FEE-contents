@@ -1,0 +1,36 @@
+
+**Data for Genomic Characterization of Highly Pathogenic H5 Avian Influenza Viruses from Alaska in 2022**
+
+**Citation Information**
+
+-   **Publication Year**:2024
+-   **Title**: Data for Genomic Characterization of Highly Pathogenic H5 Avian Influenza Viruses from Alaska in 2022
+-   **DOI**: 10.5066/P13RDHRQ
+-   **Authors**: Laura C Scott, Christiana A Ahlstrom, Mia K Torchetti
+-   **Product Type**: Data Release
+-   **Record Source**: USGS Digital Object Identifier Catalog
+-   **USGS Organization**: Alaska Science Center
+
+**What is this project about?**
+
+-   This dataset contains genetic information from 2022 on highly pathogenic H5N1 avian influenza (bird flu) viruses. Researchers use this data to track how the virus spread over time and across different regions in Alaska. The data also shows how the virus moved between wild birds, backyard poultry, and mammals, helping scientists understand the patterns of transmission.
+
+**Link to the page**
+
+-   https://www.usgs.gov/data/data-genomic-characterization-highly-pathogenic-h5-avian-influenza-viruses-alaska-2022
+
+**Variables for this project**
+
+1.  USDA_ID Sequence_ID
+2.  2.Animal_Type
+3.  3.Species Borough
+4.  4.Collection_Date
+5.  5.PB2_genotype
+6.  6.PB1_genotype
+7.  7.PA_genotype
+8.  8.HA_genotype
+9.  9.NP_genotype
+10. 10.NA_genotype
+11. 11.M_genotype
+12. 12.NS_genotype
+13. 13.AK_genotype

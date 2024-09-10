@@ -1,0 +1,75 @@
+---
+title: "Air quality Pivot Tables"
+author: "Daniela Rodriguez"
+subtitle: "Excel"
+format: html
+---
+
+**Air quality Data Set**
+
+**Details for Airquality**
+
+-   **Ozone** : Mean ozone in parts per billion from 1300 to 1500 hours at Roosevelt Island.
+-   **Solar .R** : Solar radiation in Langleys on the frequency band 4000-7700 Angstroms from 0800 to 1200 hours tat Central Park.
+-   **Wind** : Average wind speed in miles per hour at 0700 and 1000 hours at LaGuardia Airport.
+-   **Temp** : Maximum daily temperature in degrees Farenheit at La Guardia Airport.
+
+**Where is the data source retrieved from?**
+
+-   The data were obtained from the New York State Department of Conservation(ozone data) and the National Weather Service (meteorological data).
+
+**What did I learned?**
+
+I learned how to clean a data set through excel and prepare the data. As well, we were introduced to the usage of the pivot tables and how crucial they are to analyze data and clever information for the data set. In my opinion, pivot tables expand even more the capacity to analyze data in multiple forms and variations.
+
+**Steps for a data set pivot table/ chart**
+
+**1.** Clean data set
+
+**2.** After cleaning the data set and making sure there's no NA's we can proceed and press command +A and select the data set.
+
+**3.** By selecting "Insert" we can start working on the "pivot table" section
+
+**4.** Then choose which variable will go either on values, rows, columns and filter.
+
+**Pivot Table #1** *Month's Max Airquality*
+
+![](Month's%20Max%20Airquality_RodriguezDaniela%20.png)
+
+![](Month's%20Max%20Airquality%20Chart_RodriguezDaniela%20.png)
+
+**Pivot Table #1 Insight**
+
+-   Max of Solar.R has the highest values across all months ranging from about 250 to 350 units.
+-   Max of Temp is the second highest metric, with values around 80-100 units for all months.
+-   Month 5 (Likely to be May) has the highest "Max of Solar. R" value.
+
+**Pivot Table #2**
+
+![](Average%20values_RodriguezDaniela%20.png)
+
+![](Average_chart_RodriguezDaniela%20.png)
+
+**Pivot Table #2 Insight**
+
+**1. Analysis pivot table**
+
+-   This analysis provides insights into the seasonal patterns of these air quality metrics, showing how they change throughout the summer months and highlighting the variability in measurements both within and between months.
+
+**2. Metrics Measured**
+
+-   Average Temperature
+
+-   Average Solar Radiation (Solar. R)
+
+-   Average Wind Speed
+
+-   Average Ozone Levels
+
+**3. Temperature Trends**
+
+-   Highest in month 9(September), with an average of 91.2 F
+
+-   Lowest in month 5(May), averaging 232 units
+
+-   Generally increases from May to September
