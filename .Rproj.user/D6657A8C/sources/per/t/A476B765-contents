@@ -93,7 +93,7 @@ Starts at 182.04 units in May, increases to 216.42 units in July, and decreases 
 
 ***Trend***: Solar radiation peaks in July, reflecting longer, sunnier days in mid-summer, with a noticeable decline as the summer ends.
 
-## Max temp, Ozone, Wind, Solar R. by Month
+### Max temp, Ozone, Wind, Solar R. by Month
 
 ![](Pivot2.png){width="390"}
 
@@ -107,7 +107,7 @@ Up next is the variable of wind. And when we take a look to the information of t
 
 The last variable in the chart is the ozone. For this variable it is interesting that over these months the ozone variables were completely different from each other.
 
-## Sum temp, Ozone, Wind, Solar R. by Month
+### Sum temp, Ozone, Wind, Solar R. by Month
 
 ![](Pivot3.png){width="390"}
 
@@ -155,7 +155,7 @@ This table presents the monthly totals for four environmental variables: tempera
 
 **Total**: The overall solar radiation for the period is 20,513, with most of it occurring in the mid-summer months.
 
-## Min temp, Ozone, Wind, Solar R. by Month
+### Min temp, Ozone, Wind, Solar R. by Month
 
 ![](Pivot4.png){width="390"}
 
