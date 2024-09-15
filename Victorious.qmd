@@ -6,7 +6,7 @@ format: html
 
 **Welcome to Victorious' Page.**
 
-<h3>Week One</H3>
+<h2>Week One</H2>
 
 <details>
 
