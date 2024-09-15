@@ -4,7 +4,13 @@ editor: visual
 format: html
 ---
 
-Date : Wednesday 09/04 And Friday 09/06
+**Welcome to Saul's Page.**
+
+<H2>WEEK ONE</H2>
+
+<details>
+
+<summary><strong>Wednesday</strong></summary>
 
 ## Topics Reviewed
 
@@ -211,7 +217,32 @@ This table presents the monthly totals for four environmental variables: tempera
 
 -   The drop in wind speed during the hottest months (July and August) suggests that calm, warm weather prevails during the peak of summer.
 
-Week2
+</details>
+
+
+
+<details>
+
+<summary><strong>Friday</strong></summary>
+
+PLACE TEXT HERE
+</details>
+
+
+<details>
+
+<summary><strong>Saturday</strong></summary>
+
+PLACE TEXT HERE
+
+</details>
+
+
+<H2>WEEK TWO</H2>
+
+<details>
+
+<summary><strong>Wednesday</strong></summary>
 
 Date : Wednesday 09/04 And Friday 09/06
 
@@ -419,3 +450,59 @@ This table presents the monthly totals for four environmental variables: tempera
 -   As temperature increases, the wind speed tends to decrease. This inverse relationship is most noticeable in the summer months (July and August), where the highest temperatures coincide with the lowest wind speeds.
 
 -   The drop in wind speed during the hottest months (July and August) suggests that calm, warm weather prevails during the peak of summer.
+
+    </details>
+
+<details>
+
+<summary><strong>Friday</strong></summary>
+
+</details>
+
+<details>
+
+<summary><strong>Saturday</strong></summary>
+
+</details>
+
+<h2>WEEK THREE</H2>
+
+<details>
+
+<summary><strong>Wednesday</strong></summary>
+
+</details>
+
+<details>
+
+<summary><strong>Friday</strong></summary>
+
+</details>
+
+<details>
+
+<summary><strong>Saturday</strong></summary>
+
+</details>
+
+
+<h2>WEEK FOUR</H2>
+
+<details>
+
+<summary><strong>Wednesday</strong></summary>
+
+</details>
+
+<details>
+
+<summary><strong>Friday</strong></summary>
+
+</details>
+
+<details>
+
+<summary><strong>Saturday</strong></summary>
+
+</details>
+

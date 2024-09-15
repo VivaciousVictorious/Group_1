@@ -1,3 +1,8 @@
 # Introduction
 
+**ORU Visualization Group-1 - Quarto Book**
 
+
+Welcome to our data visualization class, where we are learning to turn data into compelling visual stories. Our group of students is diving into tools like R, Excel, Tableau, and Python, discovering how to effectively analyze and visualize datasets. Through hands-on experience, we explore how each tool can be used to create a variety of visualizations, from simple charts to interactive dashboards, making complex data accessible and understandable.
+
+Our focus is not just on mastering these tools, but also on developing a keen eye for effective visual communication. We are learning to choose the right visual elements to convey data insights clearly, whether we are presenting trends, comparisons, or distributions. This journey is helping us build a solid foundation in data visualization, preparing us to share our findings with a wider audience, including fellow students and professors, both within and beyond the university. Dr. Eric Valderrama is the professor over this visualization class. 

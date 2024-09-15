@@ -4,9 +4,16 @@ editor: visual
 format: html
 ---
 
+**Welcome to Daniela's Quarto Page.**
+
+<h2>WEEK ONE</H2>
+
+<details>
+
+<summary><strong>Wednesday</strong></summary>
 ## **Air quality Data Set**
 
-## **Details for Airquality**
+### **Details for Airquality**
 
 -   **Ozone** : Mean ozone in parts per billion from 1300 to 1500 hours at Roosevelt Island.
 -   **Solar .R** : Solar radiation in Langleys on the frequency band 4000-7700 Angstroms from 0800 to 1200 hours tat Central Park.
@@ -73,7 +80,17 @@ I learned how to clean a data set through excel and prepare the data. As well, w
 
 -   Generally increases from May to September
 
-Week 2
+</details>
+
+
+
+
+<h2>WEEK TWO</H2>
+
+<details>
+
+<summary><strong>Wednesday</strong></summary>
+
 
 **Data for Genomic Characterization of Highly Pathogenic H5 Avian Influenza Viruses from Alaska in 2022**
 
@@ -110,3 +127,106 @@ Week 2
 11. 11.M_genotype
 12. 12.NS_genotype
 13. 13.AK_genotype
+
+</details>
+
+
+
+<h2>WEEK THREE</H2>
+
+<details>
+
+<summary><strong>Wednesday</strong></summary>
+
+**Week 3 Wednesday Data Set: Economics_long_ggplot2**
+
+**Details on Wednesday Class**
+
+**1.** I've learned how to use Tableau and its various features to gather data, create dynamic visualizations, and enhance those visuals to make them both insightful and visually appealing."
+
+**2.** How to create a Parameter? For this second part I learned how to create a parameter. First is important to name the parameter and also choose the data type based on the type of data that I am comparing (**float or integer** ).
+
+**3.** After creating a parameter now it's time to create a visualization by dragging variables into columns and rows either **numerical or categorical**
+
+**4.** Now, for the next step, is essential to create a dashboard and display all visualizations. Then just adjust visualization and create special place for each of them.
+
+**Economics_long_ggplot2**
+
+-   This data its composed by 4 columns. The variables are **date**, **variable**, **value**, **value01**
+
+-   Moreover, this data explains and analyzes the trends in consumer spending over time. It helps idnetifying changes in spending behavior, inflation, or economic growth during the given period.
+
+**Link from my dashboard from the Economics_long_ggplot2**
+
+https://public.tableau.com/views/DanielasWednesdayDashboard/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
+
+</details>
+
+
+<details>
+
+<summary><strong>Friday</strong></summary>
+
+
+##**Week 3 Data Set for Midterm Project: Analysis for Organic and Inorganic Data at Bemidji, Minnesota**
+
+**What is this data set about?**
+
+-   This data is about samples collected from soil water at a site in Minnesota where a large oil spill occurred in 1979. The U.S. Geological Survey (USGS) collected these samples in 2018, 2019, and 2021 to study how the oil is breaking down over time.
+
+-   They tested for different chemicals that could indicate natural cleanup processes. Some of these chemicals, if present in high amounts, could be harmful to human health or the environment. The data includes things like organic carbon, ammonium, and other substances to see if the oil spill still poses any risk today.
+
+-   As well, I created my Dashboard for this project:
+
+https://public.tableau.com/views/DanielasBiGDataDashboard/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
+
+
+</details>
+
+
+
+
+
+<details>
+
+<summary><strong>Saturday</strong></summary>
+
+
+INSERT TEXT HERE
+
+</details>
+
+
+
+
+<h2>WEEK FOUR</H2>
+
+<details>
+
+<summary><strong>Wednesday</strong></summary>
+
+INSERT TEXT HERE
+
+</details>
+
+
+
+
+<details>
+
+<summary><strong>Friday</strong></summary>
+
+INSERT TEXT HERE
+
+</details>
+
+
+
+
+<details>
+
+<summary><strong>Saturday</strong></summary>
+
+INSERT TEXT HERE
+
+</details>
