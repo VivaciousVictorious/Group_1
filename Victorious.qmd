@@ -173,7 +173,7 @@ Reported the findings in - excel-basics_Attitude_Fashina_082624.
 
 <h2>**Week 1 Project**</h2>
 
-##<h2>Visualization Of National Centers For Environmental Information (NCEI) Dataset</h2>
+<h2>Visualization Of National Centers For Environmental Information (NCEI) Dataset</h2>
 
 Instruction for completing assignment:
 
@@ -249,7 +249,7 @@ Based on the column names and data structure, the dataset consists of:
 
 ### **Data Cleaning Methods Employed**
 
-###**Column Selection**
+### **Column Selection**
 
 Out of the original 25 columns, 9 were found to be missing chunks of data. These 9 columns were dropped using Python and importing Pandas as pd. I then fed the NCEI dataset into Python using "data = pd.read_csv(r'C:\\path_to_the_dataset_on_my PC. csv)"
 
@@ -308,9 +308,9 @@ Observing the interaction between temperature and time reveals a general increas
 
 <summary><strong>Friday</strong></summary>
 
-##Air Quality Data Analysis and Modeling Using Excel Pivot Chart
+## Air Quality Data Analysis and Modeling Using Excel Pivot Chart
 
-###Data Type: CVS type, 154 entries and 6 columns.
+### Data Type: CVS type, 154 entries and 6 columns.
 
 **Dataset Content**: After cleaning the dataset contains 112 entries and 6 columns, representing the following variables:
 
@@ -319,7 +319,7 @@ Ozone: Ozone concentration (in parts per billion). Solar.R: Solar radiation (in 
 All columns are complete with no missing values. The types of data are mostly integers, with wind speed recorded as a floating-point number
 
 
-###Cleaning Method:
+### Cleaning Method:
 The dataset was cleaned exclusively using MS Excel. The Find and Replace function was employed to locate all instances of "N/A" and replace them with "0". Afterward, a few test plots were generated, which revealed some deficiencies in the data. To address this, additional cleaning was performed by removing all rows containing "0" values.
 
 **Data Analysis** Explore trends over time. Visualize correlations between temp, ozone level over time. Pivot tables were created from the dataset for analysis, and pivot charts were plotted for visualization.
@@ -372,11 +372,11 @@ Wind speeds are highest in June, with a slight drop in July, followed by relativ
 
 <summary><strong>Saturday</strong></summary>
 
-##TIME TO RECHECK DATA FOR ANOMALY!
+## TIME TO RECHECK DATA FOR ANOMALY!
 
 -   It was discovered that the dataset had been corrupted starting from row 126 onward. I proceeded to remove these rows and reran the test.
 
-###Sea_Level and Months Data Error.
+### Sea_Level and Months Data Error.
 
 ![](Week-1_SeaLevelAndMonth.png)
 
@@ -392,7 +392,7 @@ The new plot, with the average aggregation applied, provides a more accurate dep
 
 <https://www.noaa.gov/jetstream/atmosphere/air-pressure#:~:text=Therefore%2C%201%20hectopascal%20(hPa),)%20and%20hectopascal%20(hPa).>
 
-###The corrected Sea_level_Pressure Vs Date now looks like this:
+### The corrected Sea_level_Pressure Vs Date now looks like this:
 
 ![](Week-1SLPOutliers.png)
 
@@ -425,8 +425,8 @@ Click on the link below to see the dashboard in Tableau.
 
 https://public.tableau.com/views/AnscombesDataset_17261215380710/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
 
-##Brief Description of Plots
-###Scatter Plot
+## Brief Description of Plots
+### Scatter Plot
 The scatter plot displays the relationships for all four datasets from Anscombe's Quartet. Each plot represents a pair of variables (x1 vs. y1, x2 vs. y2, etc.) with a trend line that shows the linear relationship:
 
 **Inferences from Scatter Plots:**
@@ -441,7 +441,7 @@ The fourth dataset emphasizes the limitation of using linear models when there i
 Importance of Visualization:
 These plots emphasize the importance of visualizing data to understand the actual dynamics between variables, rather than solely relying on summary statistics. Despite similar summary statistics across the four datasets, the underlying data patterns and appropriate model fits are distinctly different.  This visualization perfectly demonstrates the purpose of Anscombe's Quartet: to illustrate the limitations of descriptive statistics alone and the value of graphical summaries in data analysis
 
-###**Histogram**
+### **Histogram**
 This histogram shows the distribution of the y1 values across bins, which allows for the understand of how often each value (or range of values) occurs in the dataset.
 
 Shape of the Distribution:
@@ -459,7 +459,7 @@ The Anscombe's Quartet is famous for illustrating that datasets with nearly iden
 
 <summary><strong>Saturday</strong></summary>
 
-##Visualization Of National Centers For Environmental Information (NCEI) Dataset
+## Visualization Of National Centers For Environmental Information (NCEI) Dataset
 
 
 
@@ -476,8 +476,8 @@ Based on the column names and data structure, the dataset consists of:
 **3. Meteorological Data:** - **SLP (Sea Level Pressure):** Atmospheric pressure at sea level, which is useful in studying weather systems, such as predicting storm conditions or high-pressure systems. - **WND, TMP, VIS, DEW, etc.:** These columns seem to encode data on wind speed/direction, temperature, visibility, dew point, and other weather-related variables. They are stored in a format that requires further decoding.
 
 **4. Purpose:** - It would appear that the is used for tracking and analyzing weather conditions over time at the specified station. It could be useful for forecasting, climate studies, or aviation-related weather monitoring.
-
-###The source and link to the dataset - (csv)
+ 
+### The source and link to the dataset - (csv)
 
 -   The source is National Centre For Environment Information (NCEI)
 
@@ -532,7 +532,7 @@ Based on the column names and data structure, the dataset consists of:
 
 ### Data Cleaning Methods Employed
 
-###Column Selection
+### Column Selection
 
 Out of the original 25 columns, 9 were found to be missing chunks of data. These 9 columns were dropped using Python and importing Pandas as pd. I then fed the NCEI dataset into Python using "data = pd.read_csv(r'C:\\path_to_the_dataset_on_my PC. csv)"
 
@@ -554,7 +554,7 @@ I also had python drop the null columns "data_cleaned = data.dropna())
 
 **Adding visualization to quarto document, including label and captions.**
 
-####Visualization in Tableau.
+#### Visualization in Tableau.
 Throughout this third week, I worked extensively with Tableau, finding it to be a highly enjoyable and powerful visualization tool. While there is a lot to learn within a short time, Tableau’s detailed and visually appealing outputs make the effort worthwhile. Although Tableau incorporates some object-oriented programming concepts, it’s not something we needed to delve into deeply during this period.
 
 This week, I created two notable visualizations using the NCEI dataset: a static wind rose and a radial wind rose. Tableau initially struggled with generating a traditional wind rose, so I opted to create a radial one instead (Both created programtically). The wind rose, intended to mimic the function of a windmill for weather observation, serves as a graphical tool to display the distribution of wind speed and direction over a specific period. It provides a concise visual summary of how wind speed and direction are typically distributed at a location, aiding in identifying prevailing wind patterns. The wind mill describes my dataset perfectly. Below is a copy of my dashboard using Tableau.
