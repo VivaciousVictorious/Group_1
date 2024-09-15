@@ -4,13 +4,18 @@ editor: visual
 format: html
 ---
 
-**Welcome to Daniela's Quarto Page.**
+**Welcome to Daniela's Page.**
 
-<h2>WEEK ONE</H2>
+<h2>
+
+WEEK ONE
+
+</H2>
 
 <details>
 
 <summary><strong>Wednesday</strong></summary>
+
 ## **Air quality Data Set**
 
 ### **Details for Airquality**
@@ -82,15 +87,15 @@ I learned how to clean a data set through excel and prepare the data. As well, w
 
 </details>
 
+<h2>
 
+WEEK TWO
 
-
-<h2>WEEK TWO</H2>
+</H2>
 
 <details>
 
 <summary><strong>Wednesday</strong></summary>
-
 
 **Data for Genomic Characterization of Highly Pathogenic H5 Avian Influenza Viruses from Alaska in 2022**
 
@@ -130,9 +135,11 @@ I learned how to clean a data set through excel and prepare the data. As well, w
 
 </details>
 
+<h2>
 
+WEEK THREE
 
-<h2>WEEK THREE</H2>
+</H2>
 
 <details>
 
@@ -162,13 +169,11 @@ https://public.tableau.com/views/DanielasWednesdayDashboard/Dashboard1?:language
 
 </details>
 
-
 <details>
 
 <summary><strong>Friday</strong></summary>
 
-
-##**Week 3 Data Set for Midterm Project: Analysis for Organic and Inorganic Data at Bemidji, Minnesota**
+\##**Week 3 Data Set for Midterm Project: Analysis for Organic and Inorganic Data at Bemidji, Minnesota**
 
 **What is this data set about?**
 
@@ -180,26 +185,21 @@ https://public.tableau.com/views/DanielasWednesdayDashboard/Dashboard1?:language
 
 https://public.tableau.com/views/DanielasBiGDataDashboard/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
 
-
 </details>
-
-
-
-
 
 <details>
 
 <summary><strong>Saturday</strong></summary>
 
-
 INSERT TEXT HERE
 
 </details>
 
+<h2>
 
+WEEK FOUR
 
-
-<h2>WEEK FOUR</H2>
+</H2>
 
 <details>
 
@@ -209,9 +209,6 @@ INSERT TEXT HERE
 
 </details>
 
-
-
-
 <details>
 
 <summary><strong>Friday</strong></summary>
@@ -219,9 +216,6 @@ INSERT TEXT HERE
 INSERT TEXT HERE
 
 </details>
-
-
-
 
 <details>
 
