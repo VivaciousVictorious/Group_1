@@ -1,0 +1,14 @@
+---
+title: "Week3_Wednesday_Ruiz"
+format: html
+---
+
+# Wednesday
+
+## Tableau Tutorial 2
+
+Last class we chose our own data set to start and exploring Tableau. The data set that I chose is called tree_datasets. This data has 3 variables, height, volume and girth, representing the measurements of 31 trees. With this data, I will be trying to replicate and apply what the professor taught in class on how to use Tableau. Below it there will be the link to access all the visualizations made in tableau for this data set. Here is the link that will take you to the visualizations.
+
+<https://public.tableau.com/views/Wednesday_17263668014200/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link>
+
+.

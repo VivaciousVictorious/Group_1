@@ -1,0 +1,11 @@
+---
+title: "Week3_Friday_Ruiz"
+format: html
+---
+
+## Friday Week 3
+
+In Friday's class, I worked on applying what I learned from Wednesday's practice with the TreeData set in Tableau. I used the same ideas and methods but with my midterm data this time. I focused on creating charts and graphs to better understand my data. It was a good way to get more comfortable with Tableau and practice using it for real data, which made everything click a bit more.
+
+<https://public.tableau.com/views/HellothisismyDashboard/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link>
+

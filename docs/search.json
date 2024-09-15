@@ -184,7 +184,7 @@
     "href": "Saul.html",
     "title": "3  Saul",
     "section": "",
-    "text": "3.1 Topics Reviewed\nIn week 2 we kept using the data set of air quality and started learning about pivot tables. We also reviewed on how to properly use different kinds of graphics and charts in excel.\nData Description\nDaily air quality measurements in New York, May to September 1973.\nFormat\nA data frame with 153 observations on 6 variables.",
+    "text": "4 Wednesday",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Saul</span>"
     ]
@@ -557,6 +557,36 @@
     "text": "6.3 Here’s the published Dashboard in Tableau\n Click on the link below to see the dashboard in Tableau.\nhttps://public.tableau.com/views/AnscombesDataset_17261215380710/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link\n##Brief Description of Plots ###Scatter Plot The scatter plot displays the relationships for all four datasets from Anscombe’s Quartet. Each plot represents a pair of variables (x1 vs. y1, x2 vs. y2, etc.) with a trend line that shows the linear relationship:\nInferences from Scatter Plots:\nIf one imagines that each dataset shows a similar statistical summary (e.g., mean, standard deviation, correlation) when calculated, but the scatter plots reveal significantly different relationships and distributions:\nThe first dataset represents a simple linear relationship. The second dataset might better fit a polynomial model due to its curvature. The third dataset shows the impact of an outlier on a linear regression model. The fourth dataset emphasizes the limitation of using linear models when there is no variation in one of the variables (x), except for an outlier.\nImportance of Visualization: These plots emphasize the importance of visualizing data to understand the actual dynamics between variables, rather than solely relying on summary statistics. Despite similar summary statistics across the four datasets, the underlying data patterns and appropriate model fits are distinctly different. This visualization perfectly demonstrates the purpose of Anscombe’s Quartet: to illustrate the limitations of descriptive statistics alone and the value of graphical summaries in data analysis\n###Histogram This histogram shows the distribution of the y1 values across bins, which allows for the understand of how often each value (or range of values) occurs in the dataset.\nShape of the Distribution: The overall shape of the histogram doesn’t suggest a clear normal distribution (bell curve). Instead, it appears to have multiple clusters of values. The values seem to be slightly bimodal, with clusters around 4-5 and 8-9.\nRelation to Anscombe’s Quartet: The Anscombe’s Quartet is famous for illustrating that datasets with nearly identical statistical properties (like mean, variance, and correlation) can have very different distributions when visualized. In this case, the histogram shows that the y1 values are not uniformly or normally distributed and instead have distinct clusters.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Victorious</span>"
+    ]
+  },
+  {
+    "objectID": "Saul.html#tableau-tutorial-2",
+    "href": "Saul.html#tableau-tutorial-2",
+    "title": "3  Saul",
+    "section": "4.1 Tableau Tutorial 2",
+    "text": "4.1 Tableau Tutorial 2\nLast class we chose our own data set to start and exploring Tableau. The data set that I chose is called tree_datasets. This data has 3 variables, height, volume and girth, representing the measurements of 31 trees. With this data, I will be trying to replicate and apply what the professor taught in class on how to use Tableau. Below it there will be the link to access all the visualizations made in tableau for this data set. Here is the link that will take you to the visualizations.\nhttps://public.tableau.com/views/Wednesday_17263668014200/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Saul</span>"
+    ]
+  },
+  {
+    "objectID": "Saul.html#friday-week-3",
+    "href": "Saul.html#friday-week-3",
+    "title": "3  Saul",
+    "section": "4.2 Friday Week 3",
+    "text": "4.2 Friday Week 3\nIn Friday’s class, I worked on applying what I learned from Wednesday’s practice with the TreeData set in Tableau. I used the same ideas and methods but with my midterm data this time. I focused on creating charts and graphs to better understand my data. It was a good way to get more comfortable with Tableau and practice using it for real data, which made everything click a bit more.\nhttps://public.tableau.com/views/HellothisismyDashboard/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Saul</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "2  Introduction",
+    "section": "",
+    "text": "ORU Visualization Group-1 - Quarto Book\nWelcome to our data visualization class, where we are learning to turn data into compelling visual stories. Our group of students is diving into tools like R, Excel, Tableau, and Python, discovering how to effectively analyze and visualize datasets. Through hands-on experience, we explore how each tool can be used to create a variety of visualizations, from simple charts to interactive dashboards, making complex data accessible and understandable.\nOur focus is not just on mastering these tools, but also on developing a keen eye for effective visual communication. We are learning to choose the right visual elements to convey data insights clearly, whether we are presenting trends, comparisons, or distributions. This journey is helping us build a solid foundation in data visualization, preparing us to share our findings with a wider audience, including fellow students and professors, both within and beyond the university. Dr. Eric Valderrama is the professor over this visualization class.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
     ]
   }
 ]
