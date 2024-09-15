@@ -302,7 +302,7 @@ Observing the interaction between temperature and time reveals a general increas
 
 </details>
 
-<H2>**Week Two**</H2>
+<H2>WEEK TWO</H2>
 
 <details>
 
@@ -412,7 +412,7 @@ The plot also proves true about Norwegian's weather in December/January. <https:
 
 </details>
 
-<h2>Week 3</h2>
+<h2>WEEK THREE</h2>
 
 <details>
 
