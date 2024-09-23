@@ -76,7 +76,6 @@ The best charts to visualize this specific data are scatter plots and line plots
 
 </details>
 
-
 <details>
 
 <summary><strong>Wednesday</strong></summary>
@@ -138,9 +137,6 @@ The histogram above analyzes the distribution of magnitudes across various dista
 The best charts to visualize this specific data are scatter plots.Line plots and bar charts may be better if we consider the variables individually. With these charts, we can understand the data and observe all the characteristics in an organized way using color. The other graphs are more complex to understand, and it is challenging to recognize repeated numbers and consider them individually, which makes the chart too broad.
 
 </details>
-
-
-
 
 <details>
 
@@ -234,8 +230,6 @@ The variables I will consider are Daily AQI Value and Local Site Name. Our goal 
 
 </details>
 
-
-
 <H2>WEEK TWO</H2>
 
 <details>
@@ -245,8 +239,6 @@ The variables I will consider are Daily AQI Value and Local Site Name. Our goal 
 PLACE TEXT HERE
 
 </details>
-
-
 
 <details>
 
@@ -303,7 +295,6 @@ The previous pivot table is looking into the corresponding minimum of ozone leve
 This pivot table analyzes the relationship between wind speed and temperature to explore potential correlations. Wind speeds range from around 1.7 to 20.7 units, while temperatures vary between 57° and 94°, indicating substantial fluctuation across different wind speeds. A general pattern suggests that temperatures tend to decrease as wind speeds rise. However, exceptions to this trend imply that other factors may also impact temperature.
 
 </details>
-
 
 <details>
 
@@ -399,16 +390,15 @@ The variables I will consider are Daily AQI Value and Local Site Name. Our goal 
 
 </details>
 
+<h2>
 
+WEEK THREE
 
-
-
-<h2>WEEK THREE</H2>
+</H2>
 
 <details>
 
 <summary><strong>Wednesday</strong></summary>
-
 
 ## Attenu
 
@@ -444,8 +434,6 @@ The types of charts I used are bubble chart, bar chart, scatter plot, and line g
 
 </details>
 
-
-
 <details>
 
 <summary><strong>Friday</strong></summary>
@@ -453,9 +441,6 @@ The types of charts I used are bubble chart, bar chart, scatter plot, and line g
 PLACE TEXT HERE
 
 </details>
-
-
-
 
 <details>
 
@@ -499,10 +484,11 @@ The types of charts I used are map, scatter plot, bar chart, and area chart.
 
 </details>
 
+<h2>
 
+WEEK FOUR
 
-
-<h2>WEEK FOUR</H2>
+</H2>
 
 <details>
 
@@ -512,19 +498,16 @@ INSERT TEXT HERE
 
 </details>
 
-
-
-
 <details>
 
 <summary><strong>Friday</strong></summary>
 
-INSERT TEXT HERE
+## Jupyter Lab Work
+We learnt Visualization using Python today. For more details please refer to my Jupyter note by clicking the below link.
+
+ [Tut2_Python_Jaen_092024.ipynb](Tut2_Python_Jaen_092024.ipynb).
 
 </details>
-
-
-
 
 <details>
 

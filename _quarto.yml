@@ -11,8 +11,10 @@ book:
     - intro.qmd
     - Saul.qmd
     - Bridget.qmd
+    - Tut2_Python_Jaen_092024.ipynb
     - Daniela.qmd
     - Victorious.qmd
+    - Tut_Python_vfashina_092024.ipynb
     - summary.qmd
     - references.qmd
 

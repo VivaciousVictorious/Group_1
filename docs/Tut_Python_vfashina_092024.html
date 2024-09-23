@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Group_1 Quarto Book - 8&nbsp; Victoria’s Jupyter Notebook</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./summary.html" rel="next">
+<link href="./Victorious.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Tut_Python_vfashina_092024.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Victoria’s Jupyter Notebook</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Group_1 Quarto Book</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Index</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Saul.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Saul</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Bridget.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bridget</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Tut2_Python_Jaen_092024.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Bridget’s Jupyter Notebook</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Daniela.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Daniela</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Victorious.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Victorious</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Tut_Python_vfashina_092024.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Victoria’s Jupyter Notebook</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#this-is-a-markdown-title.-markdown-is-the-same-as-html." id="toc-this-is-a-markdown-title.-markdown-is-the-same-as-html." class="nav-link active" data-scroll-target="#this-is-a-markdown-title.-markdown-is-the-same-as-html."><span class="header-section-number">8.1</span> This is a markdown title. Markdown is the same as html.</a>
+  <ul class="collapse">
+  <li><a href="#in-markdown-items-appear-as-list.-remember-to-switch-from-code-to-markdown-to-see-the-effect-of-markdown." id="toc-in-markdown-items-appear-as-list.-remember-to-switch-from-code-to-markdown-to-see-the-effect-of-markdown." class="nav-link" data-scroll-target="#in-markdown-items-appear-as-list.-remember-to-switch-from-code-to-markdown-to-see-the-effect-of-markdown."><span class="header-section-number">8.1.1</span> In markdown items appear as list. Remember to switch from code to markdown to see the effect of markdown.</a></li>
+  <li><a href="#then-press-cntr-and-enter-on-the-keyboard." id="toc-then-press-cntr-and-enter-on-the-keyboard." class="nav-link" data-scroll-target="#then-press-cntr-and-enter-on-the-keyboard."><span class="header-section-number">8.1.2</span> Then press cntr and enter on the keyboard.</a></li>
+  </ul></li>
+  <li><a href="#dataframes" id="toc-dataframes" class="nav-link" data-scroll-target="#dataframes"><span class="header-section-number">8.2</span> DataFrames:</a>
+  <ul class="collapse">
+  <li><a href="#pandas-provide-a-flexible-structure-called-dataframe-for-storing-tabular-data." id="toc-pandas-provide-a-flexible-structure-called-dataframe-for-storing-tabular-data." class="nav-link" data-scroll-target="#pandas-provide-a-flexible-structure-called-dataframe-for-storing-tabular-data."><span class="header-section-number">8.2.1</span> pandas provide a flexible structure called DataFrame for storing tabular data.</a></li>
+  </ul></li>
+  <li><a href="#ozone-histogram" id="toc-ozone-histogram" class="nav-link" data-scroll-target="#ozone-histogram"><span class="header-section-number">8.3</span> Ozone Histogram</a>
+  <ul class="collapse">
+  <li><a href="#histogram-visualizes-the-spread-of-a-variable-across-a-dataset.-here-we-will-see-the-spread-of-ozone-across-the-dataset." id="toc-histogram-visualizes-the-spread-of-a-variable-across-a-dataset.-here-we-will-see-the-spread-of-ozone-across-the-dataset." class="nav-link" data-scroll-target="#histogram-visualizes-the-spread-of-a-variable-across-a-dataset.-here-we-will-see-the-spread-of-ozone-across-the-dataset."><span class="header-section-number">8.3.1</span> Histogram visualizes the spread of a variable across a dataset. Here we will see the spread of Ozone across the dataset.</a></li>
+  <li><a href="#ozone-readings-ppb-within-the-range-of-0---175-appeared-20-times-within-the-data-set." id="toc-ozone-readings-ppb-within-the-range-of-0---175-appeared-20-times-within-the-data-set." class="nav-link" data-scroll-target="#ozone-readings-ppb-within-the-range-of-0---175-appeared-20-times-within-the-data-set."><span class="header-section-number">8.3.2</span> Ozone readings (ppb) within the range of 0 - 175 appeared 20 times within the data set.</a></li>
+  </ul></li>
+  <li><a href="#box-plot-for-ozone" id="toc-box-plot-for-ozone" class="nav-link" data-scroll-target="#box-plot-for-ozone"><span class="header-section-number">8.4</span> Box Plot for Ozone</a>
+  <ul class="collapse">
+  <li><a href="#the-central-box-represents-the-interquartile-range-iqr-which-contains-the-middle-50-of-the-data." id="toc-the-central-box-represents-the-interquartile-range-iqr-which-contains-the-middle-50-of-the-data." class="nav-link" data-scroll-target="#the-central-box-represents-the-interquartile-range-iqr-which-contains-the-middle-50-of-the-data."><span class="header-section-number">8.4.1</span> The central box represents the interquartile range (IQR), which contains the middle 50% of the data.</a></li>
+  <li><a href="#the-lower-edge-of-the-box-is-the-25th-percentile-q1-and-the-upper-edge-is-the-75th-percentile-q3." id="toc-the-lower-edge-of-the-box-is-the-25th-percentile-q1-and-the-upper-edge-is-the-75th-percentile-q3." class="nav-link" data-scroll-target="#the-lower-edge-of-the-box-is-the-25th-percentile-q1-and-the-upper-edge-is-the-75th-percentile-q3."><span class="header-section-number">8.4.2</span> The lower edge of the box is the 25th percentile (Q1), and the upper edge is the 75th percentile (Q3).</a></li>
+  <li><a href="#in-this-case-it-indicates-that-most-ozone-levels-are-between-approximately-15-and-55-parts-per-billion-ppb." id="toc-in-this-case-it-indicates-that-most-ozone-levels-are-between-approximately-15-and-55-parts-per-billion-ppb." class="nav-link" data-scroll-target="#in-this-case-it-indicates-that-most-ozone-levels-are-between-approximately-15-and-55-parts-per-billion-ppb."><span class="header-section-number">8.4.3</span> In this case, it indicates that most ozone levels are between approximately 15 and 55 parts per billion (ppb).</a></li>
+  <li><a href="#the-dots-outside-the-upper-whisker-indicate-potential-outliers." id="toc-the-dots-outside-the-upper-whisker-indicate-potential-outliers." class="nav-link" data-scroll-target="#the-dots-outside-the-upper-whisker-indicate-potential-outliers."><span class="header-section-number">8.4.4</span> The dots outside the upper whisker indicate potential outliers.</a></li>
+  <li><a href="#this-box-plot-summarizes-the-ozone-levels-showing-the-range-central-tendency-and-variability-and-highlights-the-presence-of-a-few-extreme-values-outliers." id="toc-this-box-plot-summarizes-the-ozone-levels-showing-the-range-central-tendency-and-variability-and-highlights-the-presence-of-a-few-extreme-values-outliers." class="nav-link" data-scroll-target="#this-box-plot-summarizes-the-ozone-levels-showing-the-range-central-tendency-and-variability-and-highlights-the-presence-of-a-few-extreme-values-outliers."><span class="header-section-number">8.4.5</span> This box plot summarizes the ozone levels, showing the range, central tendency, and variability, and highlights the presence of a few extreme values (outliers).</a></li>
+  </ul></li>
+  <li><a href="#box-plot-for-temp" id="toc-box-plot-for-temp" class="nav-link" data-scroll-target="#box-plot-for-temp"><span class="header-section-number">8.5</span> Box Plot for Temp</a>
+  <ul class="collapse">
+  <li><a href="#refer-to-above-analysis-of-boxplot.-here-there-are-no-outliers." id="toc-refer-to-above-analysis-of-boxplot.-here-there-are-no-outliers." class="nav-link" data-scroll-target="#refer-to-above-analysis-of-boxplot.-here-there-are-no-outliers."><span class="header-section-number">8.5.1</span> Refer to above analysis of boxplot. Here there are no outliers.</a></li>
+  <li><a href="#in-summary-this-box-plot-shows-that-the-majority-of-the-temperatures-in-the-dataset-are-concentrated-between-70f-and-90f-with-a-median-of-around-80f-and-no-extreme-temperature-values-outliers-are-present." id="toc-in-summary-this-box-plot-shows-that-the-majority-of-the-temperatures-in-the-dataset-are-concentrated-between-70f-and-90f-with-a-median-of-around-80f-and-no-extreme-temperature-values-outliers-are-present." class="nav-link" data-scroll-target="#in-summary-this-box-plot-shows-that-the-majority-of-the-temperatures-in-the-dataset-are-concentrated-between-70f-and-90f-with-a-median-of-around-80f-and-no-extreme-temperature-values-outliers-are-present."><span class="header-section-number">8.5.2</span> In summary, this box plot shows that the majority of the temperatures in the dataset are concentrated between 70°F and 90°F, with a median of around 80°F, and no extreme temperature values (outliers) are present.</a></li>
+  </ul></li>
+  <li><a href="#scatter-plot-with-regression-line" id="toc-scatter-plot-with-regression-line" class="nav-link" data-scroll-target="#scatter-plot-with-regression-line"><span class="header-section-number">8.6</span> Scatter Plot with Regression Line</a>
+  <ul class="collapse">
+  <li><a href="#observation" id="toc-observation" class="nav-link" data-scroll-target="#observation"><span class="header-section-number">8.6.1</span> Observation</a></li>
+  <li><a href="#this-scatter-plot-with-a-regression-line-displays-the-relationship-between-temperature-fahrenheit-and-ozone-levels-in-parts-per-billion-ppb." id="toc-this-scatter-plot-with-a-regression-line-displays-the-relationship-between-temperature-fahrenheit-and-ozone-levels-in-parts-per-billion-ppb." class="nav-link" data-scroll-target="#this-scatter-plot-with-a-regression-line-displays-the-relationship-between-temperature-fahrenheit-and-ozone-levels-in-parts-per-billion-ppb."><span class="header-section-number">8.6.2</span> This scatter plot with a regression line displays the relationship between temperature (Fahrenheit) and ozone levels (in parts per billion, ppb).</a></li>
+  <li><a href="#with-the-data-points-color-coded-by-month.-there-is-a-clear-positive-correlation-between-temperature-and-ozone-levels." id="toc-with-the-data-points-color-coded-by-month.-there-is-a-clear-positive-correlation-between-temperature-and-ozone-levels." class="nav-link" data-scroll-target="#with-the-data-points-color-coded-by-month.-there-is-a-clear-positive-correlation-between-temperature-and-ozone-levels."><span class="header-section-number">8.6.3</span> With the data points color-coded by month. There is a clear positive correlation between temperature and ozone levels.</a></li>
+  <li><a href="#as-the-temperature-increases-the-ozone-levels-tend-to-rise-as-well.-this-is-indicated-by-the-upward-slope-of-the-regression-line." id="toc-as-the-temperature-increases-the-ozone-levels-tend-to-rise-as-well.-this-is-indicated-by-the-upward-slope-of-the-regression-line." class="nav-link" data-scroll-target="#as-the-temperature-increases-the-ozone-levels-tend-to-rise-as-well.-this-is-indicated-by-the-upward-slope-of-the-regression-line."><span class="header-section-number">8.6.4</span> As the temperature increases, the ozone levels tend to rise as well. This is indicated by the upward slope of the regression line.</a></li>
+  <li><a href="#spread-of-data--while-the-trend-is-positive-there-is-variability-in-ozone-levels-at-each-temperature.-this-can-be-seen-in-the-spread-of-the-points-especially-at-higher-temperatures-above-80f-where-ozone-levels-range-significantly." id="toc-spread-of-data--while-the-trend-is-positive-there-is-variability-in-ozone-levels-at-each-temperature.-this-can-be-seen-in-the-spread-of-the-points-especially-at-higher-temperatures-above-80f-where-ozone-levels-range-significantly." class="nav-link" data-scroll-target="#spread-of-data--while-the-trend-is-positive-there-is-variability-in-ozone-levels-at-each-temperature.-this-can-be-seen-in-the-spread-of-the-points-especially-at-higher-temperatures-above-80f-where-ozone-levels-range-significantly."><span class="header-section-number">8.6.5</span> Spread of Data- While the trend is positive, there is variability in ozone levels at each temperature. This can be seen in the spread of the points, especially at higher temperatures (above 80°F), where ozone levels range significantly.</a></li>
+  <li><a href="#monthly-variation--the-colors-corresponding-to-different-months-show-how-ozone-levels-vary-throughout-the-months.-while-the-general-trend-remains-consistent-there-are-slight-differences-in-ozone-concentrations-at-the-same-temperature-for-different-months.-for-instance-data-points-from-month-9-september-are-mostly-seen-at-higher-temperatures-and-higher-ozone-levels-compared-to-earlier-months." id="toc-monthly-variation--the-colors-corresponding-to-different-months-show-how-ozone-levels-vary-throughout-the-months.-while-the-general-trend-remains-consistent-there-are-slight-differences-in-ozone-concentrations-at-the-same-temperature-for-different-months.-for-instance-data-points-from-month-9-september-are-mostly-seen-at-higher-temperatures-and-higher-ozone-levels-compared-to-earlier-months." class="nav-link" data-scroll-target="#monthly-variation--the-colors-corresponding-to-different-months-show-how-ozone-levels-vary-throughout-the-months.-while-the-general-trend-remains-consistent-there-are-slight-differences-in-ozone-concentrations-at-the-same-temperature-for-different-months.-for-instance-data-points-from-month-9-september-are-mostly-seen-at-higher-temperatures-and-higher-ozone-levels-compared-to-earlier-months."><span class="header-section-number">8.6.6</span> Monthly Variation- The colors, corresponding to different months, show how ozone levels vary throughout the months. While the general trend remains consistent, there are slight differences in ozone concentrations at the same temperature for different months. For instance, data points from month 9 (September) are mostly seen at higher temperatures and higher ozone levels compared to earlier months.</a></li>
+  <li><a href="#regression-line--the-black-regression-line-provides-an-average-trend-across-all-months.-despite-different-monthly-data-points-the-line-gives-a-summary-of-how-ozone-levels-respond-to-changes-in-temperature." id="toc-regression-line--the-black-regression-line-provides-an-average-trend-across-all-months.-despite-different-monthly-data-points-the-line-gives-a-summary-of-how-ozone-levels-respond-to-changes-in-temperature." class="nav-link" data-scroll-target="#regression-line--the-black-regression-line-provides-an-average-trend-across-all-months.-despite-different-monthly-data-points-the-line-gives-a-summary-of-how-ozone-levels-respond-to-changes-in-temperature."><span class="header-section-number">8.6.7</span> Regression Line- The black regression line provides an average trend across all months. Despite different monthly data points, the line gives a summary of how ozone levels respond to changes in temperature.</a></li>
+  <li><a href="#conclusion-" id="toc-conclusion-" class="nav-link" data-scroll-target="#conclusion-"><span class="header-section-number">8.6.8</span> Conclusion-</a></li>
+  <li><a href="#the-plot-suggests-that-higher-temperatures-are-associated-with-increased-ozone-levels-which-could-be-due-to-chemical-reactions-that-are-emperature-dependent-such-as-the-formation-of-ground-level-ozone.-the-color-variation-indicates-that-there-are-monthly-differences-possibly-related-to-seasonal-changes-but-the-general-positive-trend-holds-across-the-months-shown." id="toc-the-plot-suggests-that-higher-temperatures-are-associated-with-increased-ozone-levels-which-could-be-due-to-chemical-reactions-that-are-emperature-dependent-such-as-the-formation-of-ground-level-ozone.-the-color-variation-indicates-that-there-are-monthly-differences-possibly-related-to-seasonal-changes-but-the-general-positive-trend-holds-across-the-months-shown." class="nav-link" data-scroll-target="#the-plot-suggests-that-higher-temperatures-are-associated-with-increased-ozone-levels-which-could-be-due-to-chemical-reactions-that-are-emperature-dependent-such-as-the-formation-of-ground-level-ozone.-the-color-variation-indicates-that-there-are-monthly-differences-possibly-related-to-seasonal-changes-but-the-general-positive-trend-holds-across-the-months-shown."><span class="header-section-number">8.6.9</span> The plot suggests that higher temperatures are associated with increased ozone levels, which could be due to chemical reactions that are emperature-dependent, such as the formation of ground-level ozone. The color variation indicates that there are monthly differences, possibly related to seasonal changes, but the general positive trend holds across the months shown.</a></li>
+  </ul></li>
+  <li><a href="#correlation-matrix" id="toc-correlation-matrix" class="nav-link" data-scroll-target="#correlation-matrix"><span class="header-section-number">8.7</span> Correlation Matrix</a>
+  <ul class="collapse">
+  <li><a href="#observation-1" id="toc-observation-1" class="nav-link" data-scroll-target="#observation-1"><span class="header-section-number">8.7.1</span> Observation</a></li>
+  <li><a href="#this-correlation-matrix-heatmap-shows-the-relationships-between-three-variables-ozone-temperature-temp-and-wind." id="toc-this-correlation-matrix-heatmap-shows-the-relationships-between-three-variables-ozone-temperature-temp-and-wind." class="nav-link" data-scroll-target="#this-correlation-matrix-heatmap-shows-the-relationships-between-three-variables-ozone-temperature-temp-and-wind."><span class="header-section-number">8.7.2</span> This correlation matrix heatmap shows the relationships between three variables: Ozone, Temperature (Temp), and Wind.</a></li>
+  <li><a href="#the-values-range-from--1-to-1-representing-the-strength-and-direction-of-the-linear-relationship-between-the-variables." id="toc-the-values-range-from--1-to-1-representing-the-strength-and-direction-of-the-linear-relationship-between-the-variables." class="nav-link" data-scroll-target="#the-values-range-from--1-to-1-representing-the-strength-and-direction-of-the-linear-relationship-between-the-variables."><span class="header-section-number">8.7.3</span> The values range from -1 to 1, representing the strength and direction of the linear relationship between the variables.</a></li>
+  </ul></li>
+  <li><a href="#observations" id="toc-observations" class="nav-link" data-scroll-target="#observations"><span class="header-section-number">8.8</span> Observations:</a>
+  <ul class="collapse">
+  <li><a href="#diagonal-elements--the-diagonal-elements-ozone-ozone-temp-temp-wind-wind-are-all-equal-to-1-which-is-expected-because-any-variable-is-perfectly-correlated-with-itself." id="toc-diagonal-elements--the-diagonal-elements-ozone-ozone-temp-temp-wind-wind-are-all-equal-to-1-which-is-expected-because-any-variable-is-perfectly-correlated-with-itself." class="nav-link" data-scroll-target="#diagonal-elements--the-diagonal-elements-ozone-ozone-temp-temp-wind-wind-are-all-equal-to-1-which-is-expected-because-any-variable-is-perfectly-correlated-with-itself."><span class="header-section-number">8.8.1</span> Diagonal Elements- The diagonal elements (Ozone-Ozone, Temp-Temp, Wind-Wind) are all equal to 1, which is expected because any variable is perfectly correlated with itself.</a></li>
+  <li><a href="#ozone-and-temperature-0.7--there-is-a-positive-correlation-0.7-between-ozone-and-temperature.-this-indicates-that-as-the-temperature-increases-the-ozone-levels-also-tend-to-increase.-a-value-of-0.7-shows-a-fairly-strong-positive-relationship." id="toc-ozone-and-temperature-0.7--there-is-a-positive-correlation-0.7-between-ozone-and-temperature.-this-indicates-that-as-the-temperature-increases-the-ozone-levels-also-tend-to-increase.-a-value-of-0.7-shows-a-fairly-strong-positive-relationship." class="nav-link" data-scroll-target="#ozone-and-temperature-0.7--there-is-a-positive-correlation-0.7-between-ozone-and-temperature.-this-indicates-that-as-the-temperature-increases-the-ozone-levels-also-tend-to-increase.-a-value-of-0.7-shows-a-fairly-strong-positive-relationship."><span class="header-section-number">8.8.2</span> Ozone and Temperature (0.7)- There is a positive correlation (0.7) between Ozone and Temperature. This indicates that as the temperature increases, the ozone levels also tend to increase. A value of 0.7 shows a fairly strong positive relationship.</a></li>
+  <li><a href="#ozone-and-wind--0.6--there-is-a-negative-correlation--0.6-between-ozone-and-wind.-this-means-that-higher-wind-speeds-are-generally-associated-with-lower-ozone-levels.-the--0.6-value-suggests-a-moderately-strong-negative-relationship." id="toc-ozone-and-wind--0.6--there-is-a-negative-correlation--0.6-between-ozone-and-wind.-this-means-that-higher-wind-speeds-are-generally-associated-with-lower-ozone-levels.-the--0.6-value-suggests-a-moderately-strong-negative-relationship." class="nav-link" data-scroll-target="#ozone-and-wind--0.6--there-is-a-negative-correlation--0.6-between-ozone-and-wind.-this-means-that-higher-wind-speeds-are-generally-associated-with-lower-ozone-levels.-the--0.6-value-suggests-a-moderately-strong-negative-relationship."><span class="header-section-number">8.8.3</span> Ozone and Wind (-0.6)- There is a negative correlation (-0.6) between Ozone and Wind. This means that higher wind speeds are generally associated with lower ozone levels. The -0.6 value suggests a moderately strong negative relationship.</a></li>
+  <li><a href="#temperature-and-wind--0.46--there-is-a-negative-correlation--0.46-between-temperature-and-wind.-this-indicates-that-as-temperatures-increase-wind-speeds-tend-to-decrease-but-the-relationship-is-not-as-strong-as-the-ozone-wind-correlation." id="toc-temperature-and-wind--0.46--there-is-a-negative-correlation--0.46-between-temperature-and-wind.-this-indicates-that-as-temperatures-increase-wind-speeds-tend-to-decrease-but-the-relationship-is-not-as-strong-as-the-ozone-wind-correlation." class="nav-link" data-scroll-target="#temperature-and-wind--0.46--there-is-a-negative-correlation--0.46-between-temperature-and-wind.-this-indicates-that-as-temperatures-increase-wind-speeds-tend-to-decrease-but-the-relationship-is-not-as-strong-as-the-ozone-wind-correlation."><span class="header-section-number">8.8.4</span> Temperature and Wind (-0.46)- There is a negative correlation (-0.46) between Temperature and Wind. This indicates that as temperatures increase, wind speeds tend to decrease, but the relationship is not as strong as the Ozone-Wind correlation.</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">8.8.5</span> Summary:</a></li>
+  <li><a href="#the-matrix-reveals-that-ozone-levels-are-more-strongly-associated-with-temperature-than-wind-speed.-however-both-wind-and-temperature-influence-ozone-levels-in-different-ways-temperature-increases-ozone-levels-while-higher-wind-speeds-tend-to-decrease-them." id="toc-the-matrix-reveals-that-ozone-levels-are-more-strongly-associated-with-temperature-than-wind-speed.-however-both-wind-and-temperature-influence-ozone-levels-in-different-ways-temperature-increases-ozone-levels-while-higher-wind-speeds-tend-to-decrease-them." class="nav-link" data-scroll-target="#the-matrix-reveals-that-ozone-levels-are-more-strongly-associated-with-temperature-than-wind-speed.-however-both-wind-and-temperature-influence-ozone-levels-in-different-ways-temperature-increases-ozone-levels-while-higher-wind-speeds-tend-to-decrease-them."><span class="header-section-number">8.8.6</span> The matrix reveals that ozone levels are more strongly associated with temperature than wind speed. However, both wind and temperature influence ozone levels in different ways; temperature increases ozone levels, while higher wind speeds tend to decrease them.</a></li>
+  <li><a href="#wind-speed-has-a-moderate-inverse-relationship-with-both-temperature-and-ozone-levels-likely-due-to-the-fact-that-stronger-winds-help-disperse-ozone-and-reduce-its-concentration-in-the-atmosphere." id="toc-wind-speed-has-a-moderate-inverse-relationship-with-both-temperature-and-ozone-levels-likely-due-to-the-fact-that-stronger-winds-help-disperse-ozone-and-reduce-its-concentration-in-the-atmosphere." class="nav-link" data-scroll-target="#wind-speed-has-a-moderate-inverse-relationship-with-both-temperature-and-ozone-levels-likely-due-to-the-fact-that-stronger-winds-help-disperse-ozone-and-reduce-its-concentration-in-the-atmosphere."><span class="header-section-number">8.8.7</span> Wind speed has a moderate inverse relationship with both temperature and ozone levels, likely due to the fact that stronger winds help disperse ozone and reduce its concentration in the atmosphere.</a></li>
+  <li><a href="#this-correlation-matrix-is-helpful-for-understanding-how-these-variables-interact-and-can-provide-insights-for-further-analysis-or-modeling-of-environmental-data." id="toc-this-correlation-matrix-is-helpful-for-understanding-how-these-variables-interact-and-can-provide-insights-for-further-analysis-or-modeling-of-environmental-data." class="nav-link" data-scroll-target="#this-correlation-matrix-is-helpful-for-understanding-how-these-variables-interact-and-can-provide-insights-for-further-analysis-or-modeling-of-environmental-data."><span class="header-section-number">8.8.8</span> This correlation matrix is helpful for understanding how these variables interact, and can provide insights for further analysis or modeling of environmental data.</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Victoria’s Jupyter Notebook</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="this-is-a-markdown-title.-markdown-is-the-same-as-html." class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="this-is-a-markdown-title.-markdown-is-the-same-as-html."><span class="header-section-number">8.1</span> This is a markdown title. Markdown is the same as html.</h2>
+<section id="in-markdown-items-appear-as-list.-remember-to-switch-from-code-to-markdown-to-see-the-effect-of-markdown." class="level3" data-number="8.1.1">
+<h3 data-number="8.1.1" class="anchored" data-anchor-id="in-markdown-items-appear-as-list.-remember-to-switch-from-code-to-markdown-to-see-the-effect-of-markdown."><span class="header-section-number">8.1.1</span> In markdown items appear as list. Remember to switch from code to markdown to see the effect of markdown.</h3>
+</section>
+<section id="then-press-cntr-and-enter-on-the-keyboard." class="level3" data-number="8.1.2">
+<h3 data-number="8.1.2" class="anchored" data-anchor-id="then-press-cntr-and-enter-on-the-keyboard."><span class="header-section-number">8.1.2</span> Then press cntr and enter on the keyboard.</h3>
+<ul>
+<li>item 1</li>
+<li>item 2</li>
+<li>item 3</li>
+</ul>
+<p>We can also create a list 1. ‘Great art thou o Lord’ 2. Marvelous God 3. Equilibrium 4. Visualization is fun 5. Dr.&nbsp;V is the best.</p>
+<p>We can <strong>bolden</strong> with double hyterix, also <em>italic</em> with the single hysterix.</p>
+<div id="5b95390e-4be9-48b4-86ce-10167099bc3f" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># here numpy is imported with an alias called np</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.array([<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>])</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (np.absolute (<span class="op">-</span><span class="dv">1</span>))</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(arr)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">## Lists: Lists are pythons native way of storing multiple items in a single variable.</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>]</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_list)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1
+[1 2 3 4 5]
+[1, 2, 3, 4, 5, 6]</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="dataframes" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="dataframes"><span class="header-section-number">8.2</span> DataFrames:</h2>
+<section id="pandas-provide-a-flexible-structure-called-dataframe-for-storing-tabular-data." class="level3" data-number="8.2.1">
+<h3 data-number="8.2.1" class="anchored" data-anchor-id="pandas-provide-a-flexible-structure-called-dataframe-for-storing-tabular-data."><span class="header-section-number">8.2.1</span> pandas provide a flexible structure called DataFrame for storing tabular data.</h3>
+<div id="d196c34a-1319-4eaf-8d6b-fd08220eb021" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> {<span class="st">'Ozone'</span>: [<span class="dv">41</span>, <span class="dv">36</span>, <span class="dv">12</span>], <span class="st">'Temp'</span>: [<span class="dv">67</span>,<span class="dv">72</span>,<span class="dv">74</span>]}</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(data)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Ozone  Temp
+0     41    67
+1     36    72
+2     12    74</code></pre>
+</div>
+</div>
+<div id="0a34948c-6a84-43be-87c4-a36670043e2b" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Single hash is used for comment in Python.</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Now we will load the csv from the Scripts folder in our virtual environment (venv)</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Read it into a datafram called df using pandas command read_csv</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'airquality_datasets.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="3257260d-a5a9-40c3-92e2-83f812786835" class="cell" data-scrolled="true" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Summary of the dataset. Tbl now in df.</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.info())</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.describe())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 153 entries, 0 to 152
+Data columns (total 6 columns):
+ #   Column   Non-Null Count  Dtype  
+---  ------   --------------  -----  
+ 0   Ozone    116 non-null    float64
+ 1   Solar.R  146 non-null    float64
+ 2   Wind     153 non-null    float64
+ 3   Temp     153 non-null    int64  
+ 4   Month    153 non-null    int64  
+ 5   Day      153 non-null    int64  
+dtypes: float64(3), int64(3)
+memory usage: 7.3 KB
+None
+            Ozone     Solar.R        Wind        Temp       Month         Day
+count  116.000000  146.000000  153.000000  153.000000  153.000000  153.000000
+mean    42.129310  185.931507    9.957516   77.882353    6.993464   15.803922
+std     32.987885   90.058422    3.523001    9.465270    1.416522    8.864520
+min      1.000000    7.000000    1.700000   56.000000    5.000000    1.000000
+25%     18.000000  115.750000    7.400000   72.000000    6.000000    8.000000
+50%     31.500000  205.000000    9.700000   79.000000    7.000000   16.000000
+75%     63.250000  258.750000   11.500000   85.000000    8.000000   23.000000
+max    168.000000  334.000000   20.700000   97.000000    9.000000   31.000000</code></pre>
+</div>
+</div>
+<div id="347e8b1b-3020-4c3e-a8f6-61680a1bb135" class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Ozone Histogram</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>plt.hist(df[<span class="st">'Ozone'</span>].dropna(), bins<span class="op">=</span><span class="dv">20</span>, color<span class="op">=</span><span class="st">'blue'</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Distribution of Ozone Levels'</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Ozone (ppb)'</span>)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Frequency'</span>)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Tut_Python_vfashina_092024_files/figure-html/cell-6-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="ozone-histogram" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="ozone-histogram"><span class="header-section-number">8.3</span> Ozone Histogram</h2>
+<section id="histogram-visualizes-the-spread-of-a-variable-across-a-dataset.-here-we-will-see-the-spread-of-ozone-across-the-dataset." class="level3" data-number="8.3.1">
+<h3 data-number="8.3.1" class="anchored" data-anchor-id="histogram-visualizes-the-spread-of-a-variable-across-a-dataset.-here-we-will-see-the-spread-of-ozone-across-the-dataset."><span class="header-section-number">8.3.1</span> Histogram visualizes the spread of a variable across a dataset. Here we will see the spread of Ozone across the dataset.</h3>
+</section>
+<section id="ozone-readings-ppb-within-the-range-of-0---175-appeared-20-times-within-the-data-set." class="level3" data-number="8.3.2">
+<h3 data-number="8.3.2" class="anchored" data-anchor-id="ozone-readings-ppb-within-the-range-of-0---175-appeared-20-times-within-the-data-set."><span class="header-section-number">8.3.2</span> Ozone readings (ppb) within the range of 0 - 175 appeared 20 times within the data set.</h3>
+<div id="b1a1b123-dcf0-4e64-aca6-d2f0f70d653a" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Temperature plot</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Next we will visualize the spread of temperature across the data set.</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Temperature range between 55 - 95 degrees appear 20 times within the data set.</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">6</span>))</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>plt.hist(df[<span class="st">'Temp'</span>].dropna(), bins<span class="op">=</span><span class="dv">20</span>, color<span class="op">=</span><span class="st">'orange'</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Distribution of Temperature'</span>)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Temperature(F)'</span>)</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Frequency'</span>)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Tut_Python_vfashina_092024_files/figure-html/cell-7-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="6af39092-2b8b-4de2-8d6c-a0b32f7fcdc5" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Boxplot for Ozone</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">6</span>))</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>plt.boxplot(df[<span class="st">'Ozone'</span>].dropna())</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Boxplot of Ozone Levels'</span>)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Ozone(ppb)'</span>)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Tut_Python_vfashina_092024_files/figure-html/cell-8-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="box-plot-for-ozone" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="box-plot-for-ozone"><span class="header-section-number">8.4</span> Box Plot for Ozone</h2>
+<section id="the-central-box-represents-the-interquartile-range-iqr-which-contains-the-middle-50-of-the-data." class="level3" data-number="8.4.1">
+<h3 data-number="8.4.1" class="anchored" data-anchor-id="the-central-box-represents-the-interquartile-range-iqr-which-contains-the-middle-50-of-the-data."><span class="header-section-number">8.4.1</span> The central box represents the interquartile range (IQR), which contains the middle 50% of the data.</h3>
+</section>
+<section id="the-lower-edge-of-the-box-is-the-25th-percentile-q1-and-the-upper-edge-is-the-75th-percentile-q3." class="level3" data-number="8.4.2">
+<h3 data-number="8.4.2" class="anchored" data-anchor-id="the-lower-edge-of-the-box-is-the-25th-percentile-q1-and-the-upper-edge-is-the-75th-percentile-q3."><span class="header-section-number">8.4.2</span> The lower edge of the box is the 25th percentile (Q1), and the upper edge is the 75th percentile (Q3).</h3>
+</section>
+<section id="in-this-case-it-indicates-that-most-ozone-levels-are-between-approximately-15-and-55-parts-per-billion-ppb." class="level3" data-number="8.4.3">
+<h3 data-number="8.4.3" class="anchored" data-anchor-id="in-this-case-it-indicates-that-most-ozone-levels-are-between-approximately-15-and-55-parts-per-billion-ppb."><span class="header-section-number">8.4.3</span> In this case, it indicates that most ozone levels are between approximately 15 and 55 parts per billion (ppb).</h3>
+</section>
+<section id="the-dots-outside-the-upper-whisker-indicate-potential-outliers." class="level3" data-number="8.4.4">
+<h3 data-number="8.4.4" class="anchored" data-anchor-id="the-dots-outside-the-upper-whisker-indicate-potential-outliers."><span class="header-section-number">8.4.4</span> The dots outside the upper whisker indicate potential outliers.</h3>
+</section>
+<section id="this-box-plot-summarizes-the-ozone-levels-showing-the-range-central-tendency-and-variability-and-highlights-the-presence-of-a-few-extreme-values-outliers." class="level3" data-number="8.4.5">
+<h3 data-number="8.4.5" class="anchored" data-anchor-id="this-box-plot-summarizes-the-ozone-levels-showing-the-range-central-tendency-and-variability-and-highlights-the-presence-of-a-few-extreme-values-outliers."><span class="header-section-number">8.4.5</span> This box plot summarizes the ozone levels, showing the range, central tendency, and variability, and highlights the presence of a few extreme values (outliers).</h3>
+<div id="62d8cebc-1abd-426a-9312-96d8f12a8591" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Boxplot for Temp</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>plt.figure(figure<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>plt.boxplot(df[<span class="st">'Temp'</span>].dropna())</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Boxplot of Temperature'</span>)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Temperatur(F)'</span>)</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>           </span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Tut_Python_vfashina_092024_files/figure-html/cell-9-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="box-plot-for-temp" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="box-plot-for-temp"><span class="header-section-number">8.5</span> Box Plot for Temp</h2>
+<section id="refer-to-above-analysis-of-boxplot.-here-there-are-no-outliers." class="level3" data-number="8.5.1">
+<h3 data-number="8.5.1" class="anchored" data-anchor-id="refer-to-above-analysis-of-boxplot.-here-there-are-no-outliers."><span class="header-section-number">8.5.1</span> Refer to above analysis of boxplot. Here there are no outliers.</h3>
+</section>
+<section id="in-summary-this-box-plot-shows-that-the-majority-of-the-temperatures-in-the-dataset-are-concentrated-between-70f-and-90f-with-a-median-of-around-80f-and-no-extreme-temperature-values-outliers-are-present." class="level3" data-number="8.5.2">
+<h3 data-number="8.5.2" class="anchored" data-anchor-id="in-summary-this-box-plot-shows-that-the-majority-of-the-temperatures-in-the-dataset-are-concentrated-between-70f-and-90f-with-a-median-of-around-80f-and-no-extreme-temperature-values-outliers-are-present."><span class="header-section-number">8.5.2</span> In summary, this box plot shows that the majority of the temperatures in the dataset are concentrated between 70°F and 90°F, with a median of around 80°F, and no extreme temperature values (outliers) are present.</h3>
+<div id="e8b67aa1-7e9f-4525-86b5-fed50db097c6" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Scatter plot with regression line</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co">#sns.lmplot(x='Temp', y='Ozone', hue='Month', data=df, height=5, aspect=1.5)</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(x<span class="op">=</span><span class="st">'Temp'</span>, y<span class="op">=</span><span class="st">'Ozone'</span>, hue<span class="op">=</span><span class="st">'Month'</span>, data<span class="op">=</span>df)</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>sns.regplot(x<span class="op">=</span><span class="st">'Temp'</span>, y<span class="op">=</span><span class="st">'Ozone'</span>, data<span class="op">=</span>df, scatter<span class="op">=</span><span class="va">False</span>, color<span class="op">=</span><span class="st">'black'</span>)  <span class="co"># scatter=False will only show the regression line</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Temperature vs Ozone Levels by Month'</span>)</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Temperature (F)'</span>)</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Ozone (ppb)'</span>)</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Tut_Python_vfashina_092024_files/figure-html/cell-10-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="scatter-plot-with-regression-line" class="level2" data-number="8.6">
+<h2 data-number="8.6" class="anchored" data-anchor-id="scatter-plot-with-regression-line"><span class="header-section-number">8.6</span> Scatter Plot with Regression Line</h2>
+<section id="observation" class="level3" data-number="8.6.1">
+<h3 data-number="8.6.1" class="anchored" data-anchor-id="observation"><span class="header-section-number">8.6.1</span> Observation</h3>
+</section>
+<section id="this-scatter-plot-with-a-regression-line-displays-the-relationship-between-temperature-fahrenheit-and-ozone-levels-in-parts-per-billion-ppb." class="level3" data-number="8.6.2">
+<h3 data-number="8.6.2" class="anchored" data-anchor-id="this-scatter-plot-with-a-regression-line-displays-the-relationship-between-temperature-fahrenheit-and-ozone-levels-in-parts-per-billion-ppb."><span class="header-section-number">8.6.2</span> This scatter plot with a regression line displays the relationship between temperature (Fahrenheit) and ozone levels (in parts per billion, ppb).</h3>
+</section>
+<section id="with-the-data-points-color-coded-by-month.-there-is-a-clear-positive-correlation-between-temperature-and-ozone-levels." class="level3" data-number="8.6.3">
+<h3 data-number="8.6.3" class="anchored" data-anchor-id="with-the-data-points-color-coded-by-month.-there-is-a-clear-positive-correlation-between-temperature-and-ozone-levels."><span class="header-section-number">8.6.3</span> With the data points color-coded by month. There is a clear positive correlation between temperature and ozone levels.</h3>
+</section>
+<section id="as-the-temperature-increases-the-ozone-levels-tend-to-rise-as-well.-this-is-indicated-by-the-upward-slope-of-the-regression-line." class="level3" data-number="8.6.4">
+<h3 data-number="8.6.4" class="anchored" data-anchor-id="as-the-temperature-increases-the-ozone-levels-tend-to-rise-as-well.-this-is-indicated-by-the-upward-slope-of-the-regression-line."><span class="header-section-number">8.6.4</span> As the temperature increases, the ozone levels tend to rise as well. This is indicated by the upward slope of the regression line.</h3>
+</section>
+<section id="spread-of-data--while-the-trend-is-positive-there-is-variability-in-ozone-levels-at-each-temperature.-this-can-be-seen-in-the-spread-of-the-points-especially-at-higher-temperatures-above-80f-where-ozone-levels-range-significantly." class="level3" data-number="8.6.5">
+<h3 data-number="8.6.5" class="anchored" data-anchor-id="spread-of-data--while-the-trend-is-positive-there-is-variability-in-ozone-levels-at-each-temperature.-this-can-be-seen-in-the-spread-of-the-points-especially-at-higher-temperatures-above-80f-where-ozone-levels-range-significantly."><span class="header-section-number">8.6.5</span> Spread of Data- While the trend is positive, there is variability in ozone levels at each temperature. This can be seen in the spread of the points, especially at higher temperatures (above 80°F), where ozone levels range significantly.</h3>
+</section>
+<section id="monthly-variation--the-colors-corresponding-to-different-months-show-how-ozone-levels-vary-throughout-the-months.-while-the-general-trend-remains-consistent-there-are-slight-differences-in-ozone-concentrations-at-the-same-temperature-for-different-months.-for-instance-data-points-from-month-9-september-are-mostly-seen-at-higher-temperatures-and-higher-ozone-levels-compared-to-earlier-months." class="level3" data-number="8.6.6">
+<h3 data-number="8.6.6" class="anchored" data-anchor-id="monthly-variation--the-colors-corresponding-to-different-months-show-how-ozone-levels-vary-throughout-the-months.-while-the-general-trend-remains-consistent-there-are-slight-differences-in-ozone-concentrations-at-the-same-temperature-for-different-months.-for-instance-data-points-from-month-9-september-are-mostly-seen-at-higher-temperatures-and-higher-ozone-levels-compared-to-earlier-months."><span class="header-section-number">8.6.6</span> Monthly Variation- The colors, corresponding to different months, show how ozone levels vary throughout the months. While the general trend remains consistent, there are slight differences in ozone concentrations at the same temperature for different months. For instance, data points from month 9 (September) are mostly seen at higher temperatures and higher ozone levels compared to earlier months.</h3>
+</section>
+<section id="regression-line--the-black-regression-line-provides-an-average-trend-across-all-months.-despite-different-monthly-data-points-the-line-gives-a-summary-of-how-ozone-levels-respond-to-changes-in-temperature." class="level3" data-number="8.6.7">
+<h3 data-number="8.6.7" class="anchored" data-anchor-id="regression-line--the-black-regression-line-provides-an-average-trend-across-all-months.-despite-different-monthly-data-points-the-line-gives-a-summary-of-how-ozone-levels-respond-to-changes-in-temperature."><span class="header-section-number">8.6.7</span> Regression Line- The black regression line provides an average trend across all months. Despite different monthly data points, the line gives a summary of how ozone levels respond to changes in temperature.</h3>
+</section>
+<section id="conclusion-" class="level3" data-number="8.6.8">
+<h3 data-number="8.6.8" class="anchored" data-anchor-id="conclusion-"><span class="header-section-number">8.6.8</span> Conclusion-</h3>
+</section>
+<section id="the-plot-suggests-that-higher-temperatures-are-associated-with-increased-ozone-levels-which-could-be-due-to-chemical-reactions-that-are-emperature-dependent-such-as-the-formation-of-ground-level-ozone.-the-color-variation-indicates-that-there-are-monthly-differences-possibly-related-to-seasonal-changes-but-the-general-positive-trend-holds-across-the-months-shown." class="level3" data-number="8.6.9">
+<h3 data-number="8.6.9" class="anchored" data-anchor-id="the-plot-suggests-that-higher-temperatures-are-associated-with-increased-ozone-levels-which-could-be-due-to-chemical-reactions-that-are-emperature-dependent-such-as-the-formation-of-ground-level-ozone.-the-color-variation-indicates-that-there-are-monthly-differences-possibly-related-to-seasonal-changes-but-the-general-positive-trend-holds-across-the-months-shown."><span class="header-section-number">8.6.9</span> The plot suggests that higher temperatures are associated with increased ozone levels, which could be due to chemical reactions that are emperature-dependent, such as the formation of ground-level ozone. The color variation indicates that there are monthly differences, possibly related to seasonal changes, but the general positive trend holds across the months shown.</h3>
+<div id="ea58e90a-d488-4e05-ae0b-0e429159c214" class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Correlation matrix</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>corr <span class="op">=</span> df[[<span class="st">'Ozone'</span>, <span class="st">'Temp'</span>, <span class="st">'Wind'</span>]].corr()</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>sns.heatmap(corr, annot<span class="op">=</span><span class="va">True</span>, cmap<span class="op">=</span><span class="st">'coolwarm'</span>)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Correlation Matrix'</span>)</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Tut_Python_vfashina_092024_files/figure-html/cell-11-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="correlation-matrix" class="level2" data-number="8.7">
+<h2 data-number="8.7" class="anchored" data-anchor-id="correlation-matrix"><span class="header-section-number">8.7</span> Correlation Matrix</h2>
+<section id="observation-1" class="level3" data-number="8.7.1">
+<h3 data-number="8.7.1" class="anchored" data-anchor-id="observation-1"><span class="header-section-number">8.7.1</span> Observation</h3>
+</section>
+<section id="this-correlation-matrix-heatmap-shows-the-relationships-between-three-variables-ozone-temperature-temp-and-wind." class="level3" data-number="8.7.2">
+<h3 data-number="8.7.2" class="anchored" data-anchor-id="this-correlation-matrix-heatmap-shows-the-relationships-between-three-variables-ozone-temperature-temp-and-wind."><span class="header-section-number">8.7.2</span> This correlation matrix heatmap shows the relationships between three variables: Ozone, Temperature (Temp), and Wind.</h3>
+</section>
+<section id="the-values-range-from--1-to-1-representing-the-strength-and-direction-of-the-linear-relationship-between-the-variables." class="level3" data-number="8.7.3">
+<h3 data-number="8.7.3" class="anchored" data-anchor-id="the-values-range-from--1-to-1-representing-the-strength-and-direction-of-the-linear-relationship-between-the-variables."><span class="header-section-number">8.7.3</span> The values range from -1 to 1, representing the strength and direction of the linear relationship between the variables.</h3>
+</section>
+</section>
+<section id="observations" class="level2" data-number="8.8">
+<h2 data-number="8.8" class="anchored" data-anchor-id="observations"><span class="header-section-number">8.8</span> Observations:</h2>
+<section id="diagonal-elements--the-diagonal-elements-ozone-ozone-temp-temp-wind-wind-are-all-equal-to-1-which-is-expected-because-any-variable-is-perfectly-correlated-with-itself." class="level3" data-number="8.8.1">
+<h3 data-number="8.8.1" class="anchored" data-anchor-id="diagonal-elements--the-diagonal-elements-ozone-ozone-temp-temp-wind-wind-are-all-equal-to-1-which-is-expected-because-any-variable-is-perfectly-correlated-with-itself."><span class="header-section-number">8.8.1</span> Diagonal Elements- The diagonal elements (Ozone-Ozone, Temp-Temp, Wind-Wind) are all equal to 1, which is expected because any variable is perfectly correlated with itself.</h3>
+</section>
+<section id="ozone-and-temperature-0.7--there-is-a-positive-correlation-0.7-between-ozone-and-temperature.-this-indicates-that-as-the-temperature-increases-the-ozone-levels-also-tend-to-increase.-a-value-of-0.7-shows-a-fairly-strong-positive-relationship." class="level3" data-number="8.8.2">
+<h3 data-number="8.8.2" class="anchored" data-anchor-id="ozone-and-temperature-0.7--there-is-a-positive-correlation-0.7-between-ozone-and-temperature.-this-indicates-that-as-the-temperature-increases-the-ozone-levels-also-tend-to-increase.-a-value-of-0.7-shows-a-fairly-strong-positive-relationship."><span class="header-section-number">8.8.2</span> Ozone and Temperature (0.7)- There is a positive correlation (0.7) between Ozone and Temperature. This indicates that as the temperature increases, the ozone levels also tend to increase. A value of 0.7 shows a fairly strong positive relationship.</h3>
+</section>
+<section id="ozone-and-wind--0.6--there-is-a-negative-correlation--0.6-between-ozone-and-wind.-this-means-that-higher-wind-speeds-are-generally-associated-with-lower-ozone-levels.-the--0.6-value-suggests-a-moderately-strong-negative-relationship." class="level3" data-number="8.8.3">
+<h3 data-number="8.8.3" class="anchored" data-anchor-id="ozone-and-wind--0.6--there-is-a-negative-correlation--0.6-between-ozone-and-wind.-this-means-that-higher-wind-speeds-are-generally-associated-with-lower-ozone-levels.-the--0.6-value-suggests-a-moderately-strong-negative-relationship."><span class="header-section-number">8.8.3</span> Ozone and Wind (-0.6)- There is a negative correlation (-0.6) between Ozone and Wind. This means that higher wind speeds are generally associated with lower ozone levels. The -0.6 value suggests a moderately strong negative relationship.</h3>
+</section>
+<section id="temperature-and-wind--0.46--there-is-a-negative-correlation--0.46-between-temperature-and-wind.-this-indicates-that-as-temperatures-increase-wind-speeds-tend-to-decrease-but-the-relationship-is-not-as-strong-as-the-ozone-wind-correlation." class="level3" data-number="8.8.4">
+<h3 data-number="8.8.4" class="anchored" data-anchor-id="temperature-and-wind--0.46--there-is-a-negative-correlation--0.46-between-temperature-and-wind.-this-indicates-that-as-temperatures-increase-wind-speeds-tend-to-decrease-but-the-relationship-is-not-as-strong-as-the-ozone-wind-correlation."><span class="header-section-number">8.8.4</span> Temperature and Wind (-0.46)- There is a negative correlation (-0.46) between Temperature and Wind. This indicates that as temperatures increase, wind speeds tend to decrease, but the relationship is not as strong as the Ozone-Wind correlation.</h3>
+</section>
+<section id="summary" class="level3" data-number="8.8.5">
+<h3 data-number="8.8.5" class="anchored" data-anchor-id="summary"><span class="header-section-number">8.8.5</span> Summary:</h3>
+</section>
+<section id="the-matrix-reveals-that-ozone-levels-are-more-strongly-associated-with-temperature-than-wind-speed.-however-both-wind-and-temperature-influence-ozone-levels-in-different-ways-temperature-increases-ozone-levels-while-higher-wind-speeds-tend-to-decrease-them." class="level3" data-number="8.8.6">
+<h3 data-number="8.8.6" class="anchored" data-anchor-id="the-matrix-reveals-that-ozone-levels-are-more-strongly-associated-with-temperature-than-wind-speed.-however-both-wind-and-temperature-influence-ozone-levels-in-different-ways-temperature-increases-ozone-levels-while-higher-wind-speeds-tend-to-decrease-them."><span class="header-section-number">8.8.6</span> The matrix reveals that ozone levels are more strongly associated with temperature than wind speed. However, both wind and temperature influence ozone levels in different ways; temperature increases ozone levels, while higher wind speeds tend to decrease them.</h3>
+</section>
+<section id="wind-speed-has-a-moderate-inverse-relationship-with-both-temperature-and-ozone-levels-likely-due-to-the-fact-that-stronger-winds-help-disperse-ozone-and-reduce-its-concentration-in-the-atmosphere." class="level3" data-number="8.8.7">
+<h3 data-number="8.8.7" class="anchored" data-anchor-id="wind-speed-has-a-moderate-inverse-relationship-with-both-temperature-and-ozone-levels-likely-due-to-the-fact-that-stronger-winds-help-disperse-ozone-and-reduce-its-concentration-in-the-atmosphere."><span class="header-section-number">8.8.7</span> Wind speed has a moderate inverse relationship with both temperature and ozone levels, likely due to the fact that stronger winds help disperse ozone and reduce its concentration in the atmosphere.</h3>
+</section>
+<section id="this-correlation-matrix-is-helpful-for-understanding-how-these-variables-interact-and-can-provide-insights-for-further-analysis-or-modeling-of-environmental-data." class="level3" data-number="8.8.8">
+<h3 data-number="8.8.8" class="anchored" data-anchor-id="this-correlation-matrix-is-helpful-for-understanding-how-these-variables-interact-and-can-provide-insights-for-further-analysis-or-modeling-of-environmental-data."><span class="header-section-number">8.8.8</span> This correlation matrix is helpful for understanding how these variables interact, and can provide insights for further analysis or modeling of environmental data.</h3>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./Victorious.html" class="pagination-link" aria-label="Victorious">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Victorious</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./summary.html" class="pagination-link" aria-label="Summary">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

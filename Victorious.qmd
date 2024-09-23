@@ -26,7 +26,6 @@ Instructions:
 
 ![](Week-1_scatterplot.png)
 
-
 The plot shows a negative correlation between wind speed and temperature, meaning with increased wind speed, the temperature begins to drop. It also reveals most data points are clustered around the temperature range of 60/90 degrees and wind speed of 5/15 units, this indicates common wind and temperature within the sampled area.
 
 The downward trend suggests that higher wind speeds tend to be associated with lower temperatures, but the variability in the data indicates that this is not the only factor affecting temperature.
@@ -35,13 +34,12 @@ Scatter plot seem best for visualizing relationships, below plot reveals the Ozo
 
 ![](Week-TempOzone.png)
 
-
 The plot reveals a generally positive relationship between temperature and ozone levels, with higher temperatures leading to higher ozone levels. The presence of an outlier suggests that under certain conditions, ozone levels can spike significantly, which may require further investigation to understand the underlying causes. The outlier might be a result of wrong calculation, error in transferring of data or a weather anomaly. At any rate, further investigation will be required to reach a conclusive decision.
 
 3.  Ozone distribution was also recorded to visualize Ozone concentration in the dataset.
 
 ![](Week_1Histogram.png)
-    
+
 The histogram shows that low ozone concentrations are the most common in the dataset, while higher concentrations are much less frequent. This right-skewed distribution suggests that most observations are clustered at lower ozone levels, with only a few instances of higher concentrations that could be outliers or represent unusual conditions.
 
 ### Closer analysis of concentration intervals:
@@ -56,9 +54,7 @@ The histogram shows that low ozone concentrations are the most common in the dat
 
 I assumed there must exit a relationship between solar radiation and season, so i tried to module this relationship with a bar chart:
 
-         
 ![](Week-1_Solar-R.png)
-
 
 It made no sense. So i tried with a pivot bar chart:
 
@@ -149,7 +145,6 @@ On a good note, since the data is not heavily skewed, it means there might be ro
 **Correlation Between Complaints and Privileges**
 
 ![](Week-1_CompnlaPriv.png)
-
 
 The scatter plot points are somewhat dispersed around the trend line, meaning that while there's a general trend showing a positive correlation between complaints and privileges, the correlation isn't very strong. Some points might be far above or below the trend line, indicating instances where the number of complaints and the level of privileges do not follow the general pattern. This variability suggests that other factors might be influencing the relationship, or that the correlation between complaints and privileges is moderate rather than strong.
 
@@ -259,9 +254,9 @@ I had it print null data by "print(data.isnull().sum())
 
 I also had python drop the null columns "data_cleaned = data.dropna())
 
-        
-    -   Total 9 columns were dropped.
-
+```         
+-   Total 9 columns were dropped.
+```
 
 **Decoding Encoded Data:** **Date Conversion**
 
@@ -274,8 +269,6 @@ I also had python drop the null columns "data_cleaned = data.dropna())
 **Add a description of what we should understand from your visualization, and how this connect with your project scope.**
 
 ![](Week-1_SeaLevelMonth.png)
-
-
 
 Above Line plot models the relationship between the sea level pressure and time. Here's my analysis:
 
@@ -297,7 +290,6 @@ The stabilization afterward could be due to stable high-pressure systems or data
 
 ![](Weel-1_TemoOverTme.png)
 
-
 Observing the interaction between temperature and time reveals a general increase in temperature over time, however, above plot shows some extremely high temperature values . This suggests that there may be underlying issues with the data which might require further investigation of the dataset.
 
 </details>
@@ -318,8 +310,8 @@ Ozone: Ozone concentration (in parts per billion). Solar.R: Solar radiation (in 
 
 All columns are complete with no missing values. The types of data are mostly integers, with wind speed recorded as a floating-point number
 
-
 ### Cleaning Method:
+
 The dataset was cleaned exclusively using MS Excel. The Find and Replace function was employed to locate all instances of "N/A" and replace them with "0". Afterward, a few test plots were generated, which revealed some deficiencies in the data. To address this, additional cleaning was performed by removing all rows containing "0" values.
 
 **Data Analysis** Explore trends over time. Visualize correlations between temp, ozone level over time. Pivot tables were created from the dataset for analysis, and pivot charts were plotted for visualization.
@@ -380,13 +372,11 @@ Wind speeds are highest in June, with a slight drop in July, followed by relativ
 
 ![](Week-1_SeaLevelAndMonth.png)
 
-
 **PIVOT TABLE CHALLENGE**
 
 Pivot Tables by default sum up the number formatted columns on the table. This plot, by doing, gave unrealistic figures of temperature values, rising to 35 thousand hpa. I revisted the Pivot table and changed the summation method to 'average' and the below plot is the result.
 
 ![](Week-1SLP.png)
-
 
 The new plot, with the average aggregation applied, provides a more accurate depiction of sea-level pressure trends over time. The values are within the expected range, and the daily fluctuations suggest typical atmospheric behavior. See below to information about atmospheric behaviour.
 
@@ -396,13 +386,11 @@ The new plot, with the average aggregation applied, provides a more accurate dep
 
 ![](Week-1SLPOutliers.png)
 
-
 The plot provides a better representation of how sea-level pressure changes over time. It also shows outliers in the dataset which warrant further investigation. Despite the outliers, the rest of the data appears to follow a consistent pattern showing typical fluctuations that could be linked to daily and seasonal atmospheric changes
 
 **Temperature over time** now looks like this:
 
 ![](Week-1_TempOverTme.png)
-
 
 kjeller Airfield, Norway.
 
@@ -420,48 +408,39 @@ The plot also proves true about Norwegian's weather in December/January. <https:
 
 ## Here's the published Dashboard in Tableau
 
-![](Anscombs_Quartet_Dboard.png)
-Click on the link below to see the dashboard in Tableau.
+![](Anscombs_Quartet_Dboard.png) Click on the link below to see the dashboard in Tableau.
 
 https://public.tableau.com/views/AnscombesDataset_17261215380710/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
 
 ## Brief Description of Plots
+
 ### Scatter Plot
+
 The scatter plot displays the relationships for all four datasets from Anscombe's Quartet. Each plot represents a pair of variables (x1 vs. y1, x2 vs. y2, etc.) with a trend line that shows the linear relationship:
 
 **Inferences from Scatter Plots:**
 
 If one imagines that each dataset shows a similar statistical summary (e.g., mean, standard deviation, correlation) when calculated, but the scatter plots reveal significantly different relationships and distributions:
 
-The first dataset represents a simple linear relationship.
-The second dataset might better fit a polynomial model due to its curvature.
-The third dataset shows the impact of an outlier on a linear regression model.
-The fourth dataset emphasizes the limitation of using linear models when there is no variation in one of the variables (x), except for an outlier.
+The first dataset represents a simple linear relationship. The second dataset might better fit a polynomial model due to its curvature. The third dataset shows the impact of an outlier on a linear regression model. The fourth dataset emphasizes the limitation of using linear models when there is no variation in one of the variables (x), except for an outlier.
 
-Importance of Visualization:
-These plots emphasize the importance of visualizing data to understand the actual dynamics between variables, rather than solely relying on summary statistics. Despite similar summary statistics across the four datasets, the underlying data patterns and appropriate model fits are distinctly different.  This visualization perfectly demonstrates the purpose of Anscombe's Quartet: to illustrate the limitations of descriptive statistics alone and the value of graphical summaries in data analysis
+Importance of Visualization: These plots emphasize the importance of visualizing data to understand the actual dynamics between variables, rather than solely relying on summary statistics. Despite similar summary statistics across the four datasets, the underlying data patterns and appropriate model fits are distinctly different. This visualization perfectly demonstrates the purpose of Anscombe's Quartet: to illustrate the limitations of descriptive statistics alone and the value of graphical summaries in data analysis
 
 ### **Histogram**
+
 This histogram shows the distribution of the y1 values across bins, which allows for the understand of how often each value (or range of values) occurs in the dataset.
 
-Shape of the Distribution:
-The overall shape of the histogram doesn't suggest a clear normal distribution (bell curve). Instead, it appears to have multiple clusters of values.
-The values seem to be slightly bimodal, with clusters around 4-5 and 8-9.
+Shape of the Distribution: The overall shape of the histogram doesn't suggest a clear normal distribution (bell curve). Instead, it appears to have multiple clusters of values. The values seem to be slightly bimodal, with clusters around 4-5 and 8-9.
 
-Relation to Anscombe's Quartet:
-The Anscombe's Quartet is famous for illustrating that datasets with nearly identical statistical properties (like mean, variance, and correlation) can have very different distributions when visualized. In this case, the histogram shows that the y1 values are not uniformly or normally distributed and instead have distinct clusters.
+Relation to Anscombe's Quartet: The Anscombe's Quartet is famous for illustrating that datasets with nearly identical statistical properties (like mean, variance, and correlation) can have very different distributions when visualized. In this case, the histogram shows that the y1 values are not uniformly or normally distributed and instead have distinct clusters.
 
 </details>
-
-
 
 <details>
 
 <summary><strong>Saturday</strong></summary>
 
 ## Visualization Of National Centers For Environmental Information (NCEI) Dataset
-
-
 
 ### context of the dataset
 
@@ -476,7 +455,7 @@ Based on the column names and data structure, the dataset consists of:
 **3. Meteorological Data:** - **SLP (Sea Level Pressure):** Atmospheric pressure at sea level, which is useful in studying weather systems, such as predicting storm conditions or high-pressure systems. - **WND, TMP, VIS, DEW, etc.:** These columns seem to encode data on wind speed/direction, temperature, visibility, dew point, and other weather-related variables. They are stored in a format that requires further decoding.
 
 **4. Purpose:** - It would appear that the is used for tracking and analyzing weather conditions over time at the specified station. It could be useful for forecasting, climate studies, or aviation-related weather monitoring.
- 
+
 ### The source and link to the dataset - (csv)
 
 -   The source is National Centre For Environment Information (NCEI)
@@ -529,7 +508,6 @@ Based on the column names and data structure, the dataset consists of:
 
 -   Time
 
-
 ### Data Cleaning Methods Employed
 
 ### Column Selection
@@ -542,9 +520,9 @@ I had it print null data by "print(data.isnull().sum())
 
 I also had python drop the null columns "data_cleaned = data.dropna())
 
-
-    -   Total 9 columns were dropped.
-
+```         
+-   Total 9 columns were dropped.
+```
 
 **Decoding Encoded Data:** **Date Conversion**
 
@@ -555,6 +533,7 @@ I also had python drop the null columns "data_cleaned = data.dropna())
 **Adding visualization to quarto document, including label and captions.**
 
 #### Visualization in Tableau.
+
 Throughout this third week, I worked extensively with Tableau, finding it to be a highly enjoyable and powerful visualization tool. While there is a lot to learn within a short time, Tableau’s detailed and visually appealing outputs make the effort worthwhile. Although Tableau incorporates some object-oriented programming concepts, it’s not something we needed to delve into deeply during this period.
 
 This week, I created two notable visualizations using the NCEI dataset: a static wind rose and a radial wind rose. Tableau initially struggled with generating a traditional wind rose, so I opted to create a radial one instead (Both created programtically). The wind rose, intended to mimic the function of a windmill for weather observation, serves as a graphical tool to display the distribution of wind speed and direction over a specific period. It provides a concise visual summary of how wind speed and direction are typically distributed at a location, aiding in identifying prevailing wind patterns. The wind mill describes my dataset perfectly. Below is a copy of my dashboard using Tableau.
@@ -563,29 +542,33 @@ This week, I created two notable visualizations using the NCEI dataset: a static
 
 Above **Tableau Dashboard** displays various visualizations of the weather center data, offering insights into wind patterns and conditions:
 
-1. **WNDIRSPEED**: This plot aims to illustrate the wind speed over time, broken down by months. It shows how wind speed fluctuates throughout different months, with January showing a noticeable peak. This could indicate periods of higher wind activity during certain months.
+1.  **WNDIRSPEED**: This plot aims to illustrate the wind speed over time, broken down by months. It shows how wind speed fluctuates throughout different months, with January showing a noticeable peak. This could indicate periods of higher wind activity during certain months.
 
-2. **RadialWR (Radial Wind Rose)**: The radial wind rose displays the distribution of wind direction and speed in a circular format, indicating the frequency and strength of winds coming from various directions. It helps in identifying the prevailing wind directions and their intensities.
+2.  **RadialWR (Radial Wind Rose)**: The radial wind rose displays the distribution of wind direction and speed in a circular format, indicating the frequency and strength of winds coming from various directions. It helps in identifying the prevailing wind directions and their intensities.
 
-3. **WndRose (Wind Rose)**: This is a bar chart version of a wind rose, categorizing wind speed by direction groups (N, NE, E, etc.). It shows which directions have higher wind speeds on average, indicating that winds from the NE and S directions are particularly strong in this dataset. Additionally, i have included temperature data, i supect a potential correlation between wind direction and temperature changes.
+3.  **WndRose (Wind Rose)**: This is a bar chart version of a wind rose, categorizing wind speed by direction groups (N, NE, E, etc.). It shows which directions have higher wind speeds on average, indicating that winds from the NE and S directions are particularly strong in this dataset. Additionally, i have included temperature data, i supect a potential correlation between wind direction and temperature changes.
 
-4. **BarChart**: This chart displays the average wind speed across different bins. It shows how often different wind speed ranges occur, highlighting that higher speeds (around 80) are less frequent but still present, indicating a varied wind speed distribution.
+4.  **BarChart**: This chart displays the average wind speed across different bins. It shows how often different wind speed ranges occur, highlighting that higher speeds (around 80) are less frequent but still present, indicating a varied wind speed distribution.
 
-**Overall Interpretation**:
-- The visualizations suggest that wind speed and direction vary across time and direction, with some directions (NE, S) showing higher wind speeds.
-- There might be a relationship between wind direction and temperature, as seen in the Wind Rose plot.
-- The radial wind rose helps identify the most common wind directions and their speeds, which could be useful for understanding local weather patterns or for purposes like wind energy assessments.
+**Overall Interpretation**: - The visualizations suggest that wind speed and direction vary across time and direction, with some directions (NE, S) showing higher wind speeds. - There might be a relationship between wind direction and temperature, as seen in the Wind Rose plot. - The radial wind rose helps identify the most common wind directions and their speeds, which could be useful for understanding local weather patterns or for purposes like wind energy assessments.
 
 These plots collectively provide a comprehensive view of the wind and temperature data, aiding in the analysis of prevailing wind conditions and their potential impact on the environment.
+
 </details>
 
+<h2>
 
-<h2>WEEK FOUR</H2>
+WEEK FOUR
+
+</H2>
 
 <details>
 
 <summary><strong>Wednesday</strong></summary>
 
+## Revival Day -
+
+No classes on this day in ORU, we were all in the chapel service.
 
 </details>
 
@@ -593,12 +576,16 @@ These plots collectively provide a comprehensive view of the wind and temperatur
 
 <summary><strong>Friday</strong></summary>
 
-</details>
+## Python on Jupyter
 
+Today we learnt visualization using python on Jupyter Lab. We all worked the AirQuality Data set, this time using Python to visualize
+
+You can find the full details of this visualization in my [Tut_Python_vfashina_092024.ipynb](Tut_Python_vfashina_092024.ipynb).
+
+</details>
 
 <details>
+
 <summary><strong>Saturday</strong></summary>
 
-
 </details>
-

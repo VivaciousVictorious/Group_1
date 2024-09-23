@@ -6,11 +6,7 @@ format: html
 
 **Welcome to Daniela's Page.**
 
-<h2>
-
-WEEK ONE
-
-</H2>
+<h2>WEEK ONE</h2>
 
 <details>
 
@@ -173,7 +169,7 @@ https://public.tableau.com/views/DanielasWednesdayDashboard/Dashboard1?:language
 
 <summary><strong>Friday</strong></summary>
 
-\##**Week 3 Data Set for Midterm Project: Analysis for Organic and Inorganic Data at Bemidji, Minnesota**
+## **Week 3 Data Set for Midterm Project: Analysis for Organic and Inorganic Data at Bemidji, Minnesota**
 
 **What is this data set about?**
 
