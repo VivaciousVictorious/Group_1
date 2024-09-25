@@ -380,7 +380,7 @@ Pivot Tables by default sum up the number formatted columns on the table. This p
 
 The new plot, with the average aggregation applied, provides a more accurate depiction of sea-level pressure trends over time. The values are within the expected range, and the daily fluctuations suggest typical atmospheric behavior. See below to information about atmospheric behaviour.
 
-<https://www.noaa.gov/jetstream/atmosphere/air-pressure#:~:text=Therefore%2C%201%20hectopascal%20(hPa),)%20and%20hectopascal%20(hPa).>
+<https://www.noaa.gov/jetstream/atmosphere/air-pressure#:~:text=Therefore%2C%201%20hectopascal%20(hPa),)%20and%20hectopascal%20(hPa)>
 
 ### The corrected Sea_level_Pressure Vs Date now looks like this:
 
@@ -580,7 +580,7 @@ No classes on this day in ORU, we were all in the chapel service.
 
 Today we learnt visualization using python on Jupyter Lab. We all worked the AirQuality Data set, this time using Python to visualize
 
-You can find the full details of this visualization in my [Tut_Python_vfashina_092024.ipynb](Tut_Python_vfashina_092024.ipynb).
+You can find the full details of this visualization in my [Tut_Python_vfashina_092024.ipynb](Tut_Python_vfashina_092024.ipynb)
 
 </details>
 

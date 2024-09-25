@@ -209,7 +209,11 @@ INSERT TEXT HERE
 
 <summary><strong>Friday</strong></summary>
 
-INSERT TEXT HERE
+## Jupyter Lab Work
+
+We learnt Visualization using Python today. For more details please refer to my Jupyter note by clicking the below link.
+
+[Tut_Python_Daniela_092324.ipynb](Tut_Python_Daniela_092324.ipynb)
 
 </details>
 
