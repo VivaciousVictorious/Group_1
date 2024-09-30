@@ -515,10 +515,9 @@ I used python to print the data column heads - print(data.head()))
 I had it print null data by "print(data.isnull().sum())
 
 I also had python drop the null columns "data_cleaned = data.dropna())
-
-```         
+       
 -   Total 9 columns were dropped.
-```
+
 
 **Decoding Encoded Data:** **Date Conversion**
 
@@ -593,14 +592,6 @@ Please refer to Friday
 WEEK FIVE
 
 </H2>
-
-<details>
-
-<summary><strong>Monday</strong></summary>
-
-More Python
-
-</details>
 
 <details>
 
@@ -720,12 +711,6 @@ WEEK SIX
 
 <details>
 
-<summary><strong>Monday</strong></summary>
-
-</details>
-
-<details>
-
 <summary><strong>Wednesday</strong></summary>
 
 </details>
@@ -736,13 +721,14 @@ WEEK SIX
 
 </details>
 
-<H2>MID TERM PROJECT</H2>
-
 <details>
 
-<summary><strong>Monday</strong></summary>
+<summary><strong>Saturday</strong></summary>
 
 </details>
+
+<H2>MID TERM PROJECT</H2>
+
 
 <details>
 
