@@ -219,15 +219,13 @@ This table presents the monthly totals for four environmental variables: tempera
 
 </details>
 
-
-
 <details>
 
 <summary><strong>Friday</strong></summary>
 
 PLACE TEXT HERE
-</details>
 
+</details>
 
 <details>
 
@@ -236,7 +234,6 @@ PLACE TEXT HERE
 PLACE TEXT HERE
 
 </details>
-
 
 <H2>WEEK TWO</H2>
 
@@ -453,12 +450,15 @@ This table presents the monthly totals for four environmental variables: tempera
 
     </details>
 
+<h2>
 
-<h2>WEEK THREE</H2>
+WEEK THREE
+
+</H2>
+
 <details>
 
 <summary><strong>Wednesday</strong></summary>
-
 
 # Wednesday
 
@@ -474,7 +474,6 @@ Last class we chose our own data set to start and exploring Tableau. The data se
 
 <summary><strong>Friday</strong></summary>
 
-
 ## Friday Week 3
 
 In Friday's class, I worked on applying what I learned from Wednesday's practice with the TreeData set in Tableau. I used the same ideas and methods but with my midterm data this time. I focused on creating charts and graphs to better understand my data. It was a good way to get more comfortable with Tableau and practice using it for real data, which made everything click a bit more.
@@ -483,9 +482,11 @@ In Friday's class, I worked on applying what I learned from Wednesday's practice
 
 </details>
 
+<h2>
 
+WEEK FOUR
 
-<h2>WEEK FOUR</H2>
+</H2>
 
 <details>
 
@@ -493,13 +494,11 @@ In Friday's class, I worked on applying what I learned from Wednesday's practice
 
 </details>
 
-
 <details>
 
 <summary><strong>Friday</strong></summary>
 
 </details>
-
 
 <details>
 

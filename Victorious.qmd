@@ -252,11 +252,7 @@ I used python to print the data column heads - print(data.head()))
 
 I had it print null data by "print(data.isnull().sum())
 
-I also had python drop the null columns "data_cleaned = data.dropna())
-
-```         
--   Total 9 columns were dropped.
-```
+I also had python drop the null columns "data_cleaned = data.dropna()) - Total 9 columns were dropped.
 
 **Decoding Encoded Data:** **Date Conversion**
 
@@ -583,6 +579,178 @@ Today we learnt visualization using python on Jupyter Lab. We all worked the Air
 You can find the full details of this visualization in my [Tut_Python_vfashina_092024.ipynb](Tut_Python_vfashina_092024.ipynb)
 
 </details>
+
+<details>
+
+<summary><strong>Saturday</strong></summary>
+
+Please refer to Friday
+
+</details>
+
+<h2>
+
+WEEK FIVE
+
+</H2>
+
+<details>
+
+<summary><strong>Monday</strong></summary>
+
+More Python
+
+</details>
+
+<details>
+
+<summary><strong>Wednesday</strong></summary>
+
+</details>
+
+<details>
+
+<summary><strong>Friday</strong></summary>
+
+# 1. Data Access and Collection Methods
+
+In this section, provide a formal explanation of how the data can be accessed and collected.
+
+-   **Source Overview:**
+
+    The data-set is an hourly data collection of meteorological observations from "KJELLER AIRPORT, NO". Weather Station in Norway.
+
+    This data-set is used by the National Center For Environmental Information (NCEI) for studying weather trends, creating predictive models, or understanding how atmospheric conditions change over time and its concomitant effects. The data-set is used in various domains such as weather forecasting, climate research, aviation and agriculture.\
+
+-   **File Formats and Access:** Discuss the formats available for the dataset (CSV, Excel, JSON, etc.) and provide instructions for downloading or retrieving the data from the source.
+
+    NCEI data-sets are available in various formats, here's a brief description of each format;
+
+    -   CSV (Comma-Separated Values - CSV is a plain-text format that separates data fields using commas. It is universally readable across platforms and tools, it sis simple and lightweight. CSV is useful for basic analysis in Excel and programmatic access in Python, R or databases.
+    -   Excel (XLSX) is a format that supports data with multiple sheets, formula and various data types. Ideal for users that are familiar with spread sheets tools MS Excel, it also allows for manual manipulation of data, visualizations and pivot tables.
+    -   JSON(JavaScript Object Notation) is a lightweight format used for data exchange, especially in web applications and APIs. It is ideal for programmatic access and integration with web services. It is human readable and easy to parse i most programming languages.
+    -   NteCDF (Network Common Data Form) is a scientific data format primarily used for storing array-based geospatial data such as climate models and satellite data. It is designed for efficient storage of large, multidimensional data-sets such as time=series etc.
+    -   API(Application Programming Interface) for programmatic access to NCEI data-sets, which allows developers and researchers to query and retrieve data dynamically.
+    -   Direct FTP (File Transfer Protocol) useful for large datasets, allowing for bulk downloads. This format can be integrated into automated workflows using FTP clients or command-line tools.
+
+-   **Data Acquisition Procedure:** Outline the steps required to acquire the data, including any necessary permissions, logins, or API usage.
+
+    General instruction for retrieving data from NCEI:
+
+    1.  Log on to https://www.ncei.noaa.gov.
+    2.  Navigate to data/global-hourly/access/2024/2024-08-26 10:32
+    3.  Select a dataset, in my case 01466099999
+    4.  Choose a download format - csv
+    5.  Choose 'Save As' and do a local download.
+
+# 2. Data Variables and Contextual Framework
+
+This chapter provides a detailed breakdown of the variables within the data-set and contextualizes the purpose behind their collection.
+
+**Variables and Definition** The Data-set variables are as follows:
+
+**1. Geographical Information:** - **STATION, LATITUDE, LONGITUDE, ELEVATION, STATION NAME, CALL-SIGN:** These columns provide details about the specific location where the weather observations were recorded.
+
+**2. Time-based Observations:** - **Date/Time:** The dataset records weather data at hourly intervals, providing a time-series structure for analyzing weather patterns.
+
+**3. Meteorological Data:** - **SLP (Sea Level Pressure):** Atmospheric pressure at sea level, which is useful in studying weather systems, such as predicting storm conditions or high-pressure systems. **WIND**,**TEMPRATURE**, **VISIBILTY**, **DEW**, **CIG - Cloud ceiling and sky cover data which are constant all through the data-set**, **KA1 & KA2 - Key air temperature at different altitudes**, **MA1 & MD1 - Mean temperature at different altitudes**, **OC2, OD1, OD2 - Other cloud characteristics and additional observation**. Date and Time, Wind, Temperature, Visibility CIG, SLP are all stored in variables that require further decoding.
+
+**4. Data Collection Purpose:** - The dataset can be used in various domains: - **Weather Forecasting**: By analyzing past weather patterns, meteorologists can refine predictive models. - **Climate Research**: Scientists use long-term weather data to track changes in climate, temperature trends, and extreme weather events. **Aviation**: Provides essential information for flight safety, including wind speed and visibility data. - **Agriculture**: The data-set can help farmers make decisions regarding irrigation, planting, and harvesting based historica weather conditions.
+
+**Contextual Significance**: The data-set is significant due to its role in addressing several global challenges related to climate, weather prediction, and environmental protection. This data-set provides global hourly weather observations, which are key to understanding a variety of critical issues. Here's the historical and contextual background to justify the importance of this data:
+
+**Meteorologists**: Improve the accuracy of short-term and long-term weather forecasting.
+
+**Environmental Scientists**: Analyze data to study climate change and its impacts.
+
+**Government Agencies**: Utilize data to prepare for natural disasters like hurricanes, floods, or droughts. Agricultural Sector: Farmers benefit from historical weather trends for better planning.
+
+**Environmental and National Implications**: Natural Disaster Preparedness: Access to precise historical data improves disaster readiness and response strategies, safeguarding lives and resources.
+
+**Policy Making**: This data helps governments craft environmental and public safety policies related to weather and climate.
+
+**Sustainability Initiatives**: Data-driven insights into weather patterns can guide sustainable resource management (e.g., water usage).
+
+
+# 3. Analytical Approach and Visualization Techniques
+
+**Date Conversion**
+
+-   
+
+    1.  **Converted `DATE` Column to Datetime:** The `DATE` column originally combined both dated and time. I split this into two separate columns by using the text to column function in excel.
+
+-   
+
+    2.  **Sea Level Pressure (`SLP`) Conversion** **Reformatted and Converted `SLP`:** The `SLP` column contained values in string format with commas as delimiters. I decoded this using the Excel's text to column function. The same method was used to decode the Wind, Temperature, and Dew variables.
+
+**Data Cleaning Methods Employed** - **Column Selection** - Out of the original 25 columns, 9 were identified as containing significant portions of missing data. These columns were subsequently removed using Python's pandas library. The NCEI dataset was first loaded into Python with the following command: data = pd.read_csv(r'C:\\path_to_the_dataset_on_my_PC.csv') Afterward, the column headers were printed using: print(data.head()) To check for missing data, the command: print(data.isnull().sum()) was executed, which identified the null values. The columns with missing data were dropped using: data_cleaned = data.dropna() As a result, a total of 9 columns were successfully removed. As a result, a total of 9 columns were successfully removed. I then asked Python to search for and drop any duplicate rows using: data_cleaned = data_cleaned.drop_duplicates() The command returned an empty table, indicating that no duplicate rows were found in the data-set. Apparently the data after January were either duplicate or zeros.
+
+Upon further analysis of the data-set, several variables were removed due to redundancy. These included station name, latitude, longitude, elevation, call sign, visibility, mean values, and key air temperature, as they remained constant throughout the data-set. Additionally, data for variables **KA1** and **KA2** ceased being recorded after January 30th, with one isolated entry on April 10th. Beyond this point, the remaining variables began to repeat. Consequently, only data from January and one day in April was considered usable for further analysis.
+</details>
+
+<details>
+
+<summary><strong>Saturday</strong></summary>
+
+
+**Summary of the Jena Data-set** 
+![](Visual_Summary_Climate_Dataset.png) 
+If I were to choose a plot to summarize the Jena climate dataset, it would be a **time series plot** that highlights the main variables at play. This plot visualizes the time series of three key weather variables: **Temperature (°C)**, **Pressure (mbar)**, and **Wind Speed (m/s)** over a period spanning from **2009 to 2017**.
+
+The plot reveals clear **seasonal trends** in temperature and pressure, with distinct annual cycles of warming and cooling. Wind speed remains relatively stable over the years, with occasional spikes corresponding to higher wind events. Additionally, the plot shows occasional anomalies, such as a sharp dip in both pressure and temperature around **2011**.
+
+For improved clarity and to better observe the behavior of the variables, two additional representations are provided, displaying the trends **bi-annually** and **quarterly**. These allow for a more detailed examination of the dataset over shorter time periods.
+
+**bi-annual Behaviour**
+
+![](Visual_Summary_Climate_Dataset_Bi-Annual.png)
+
+**Quartley Behavior**
+
+![](Visual_Summary_Climate_Dataset_Quarterly.png)
+
+</details>
+
+<h2>
+
+WEEK SIX
+
+</H2>
+
+<details>
+
+<summary><strong>Monday</strong></summary>
+
+</details>
+
+<details>
+
+<summary><strong>Wednesday</strong></summary>
+
+</details>
+
+<details>
+
+<summary><strong>Friday</strong></summary>
+
+</details>
+
+<H2>MID TERM PROJECT</H2>
+
+<details>
+
+<summary><strong>Monday</strong></summary>
+
+</details>
+
+<details>
+
+<summary><strong>Wednesday</strong></summary>
+
+</details>
+
+<summary><strong>Friday</strong></summary>
 
 <details>
 

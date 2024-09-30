@@ -1,0 +1,31 @@
+---
+title: "Week5_Friday"
+format: html
+---
+
+## Energy Imports and Exports from years 2013-2023
+
+The following chart shows how the United States has dramatically increased their imports in energy into exporting their own energy. This could guide us into thinking that the U.S economy has now gone better by bringing more money into the currency and increasing their GDP.
+
+![](Dashboard%201.png)
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).

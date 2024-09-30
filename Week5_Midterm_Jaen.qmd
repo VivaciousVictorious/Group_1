@@ -1,0 +1,45 @@
+---
+title: "midterm_jaen_092824"
+format: html
+editor: visual
+---
+
+## Dataset
+
+This dataset is about Airquality focused on air pollutants, specifically ozone. Ozone is a harmful gas formed when pollutants from vehicles, industries, and other sources react with sunlight. We will look into the levels in Florida, Miami,Fort Lauderdale, and West Palm Beach. Specifically in the Miami-Dade county. The source is the EDA website and the year we are focusing in is 2023. There are 21 variables in this dataset and 710 observations. The variables are Date, Source, Site ID, POC, Daily Max 8-hour Ozone Concentration, Units, Daily AQI Value, Local Site Name, Daily Obs Count, Percent Complete, AQS Parameter code, AQS Parameter Description, Method Code, CBSA Code, CBSA Name, State FIPS Code, State, County FIPS Code, County, Site Latitude, and Site Longitude.
+
+## Tableau
+
+I decided to use Tableau because it is a powerful data visualization tool that creates dynamic and interactive graphs. It is user-friendly and the drag-and-drop functionality allows changes to be done quicker. It offers a wide variety of visualization options, including line charts, bar charts, and dual-axis graphs, allowing users to select the best representation for their data. With the dashboard function, it also facilitates effective storytelling with data.
+
+## Graph
+
+![](MidtermGraph.png)
+
+This graph is a dual-axis comparison of the Average Daily AQI Value and the Average Daily Max 8-hour Ozone Concentration for the two evaluated sites over the months of January to December 2023. In this particular graph we can observe the Rosenstiel site.
+
+**Y-Axis**
+
+-   The Y-axis on the left represents the Average Daily AQI Value. The values range from 0 to 50, indicating the air quality index levels over the specified time period.
+
+-   The Y-Axis on the right represents the Average Daily Max 8-hour Ozone Concentration. The values range from 0 to 0.045, reflecting the ozone concentration in parts per million (ppm).
+
+**X-Axis**
+
+The X-axis lists the months from January to December 2023. Each bar represents the average AQI for that month.
+
+**Colors**
+
+The blue bars indicate the Average Daily AQI Value for each month. Each bar height corresponds to the average AQI for that particular month, with higher bars indicating poorer air quality.
+
+The orange line represents the Average Daily Max 8-hour Ozone Concentration. This line connects data points for each month, illustrating the trend in ozone concentration over the year.
+
+**Data Representation**
+
+The **Daily AQI Value** appears to fluctuate throughout the year, with certain months displaying higher average values (March, May, October), which could indicate poor air quality conditions. Analyzing specific months could provide insights into seasonal variations or events impacting air quality.
+
+The **Daily Max 8-hour Ozone Concentration** follows a similar trend. It highlights specific months where ozone levels peak or drop significantly. Comparing the timing of peaks in AQI with those in ozone concentration reveals correlations between the two metrics, indicating how ozone levels might contribute to the overall AQI.
+
+## Dashboard Link
+
+https://public.tableau.com/app/profile/bridget.jaen/viz/MidtermDasboard/Dashboard1

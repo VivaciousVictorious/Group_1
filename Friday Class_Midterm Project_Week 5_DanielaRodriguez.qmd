@@ -1,0 +1,28 @@
+---
+title: "Friday Class_MidtermProject_DanielaRodriguez"
+author: "Daniela Rodriguez"
+subject: Tableau
+format: html
+---
+
+**Week 5 Friday Class for Midterm Project: Analysis for Organic and Inorganic Data at Bemidji, Minnesota**
+
+-   https://public.tableau.com/views/BemidjiTableDataSetPlot/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link. This is the link to my plot for my data set.
+
+**Summary of the data and plot**
+
+-   This plot visually represents the presence and relative concentrations of various analytes sampled from the Bemidji crude oil spill site across three years (2018, 2019, 2021).
+
+-   It provides insights into how key indicators of biodegradation (like Ammonia and NVDOC) were monitored, helping to track the natural attenuation of the oil spill over time. The bubble sizes and colors effectively highlight which constituents were more prevalent in each year, showing the temporal shifts in the analysis focus.
+
+**Explanation of the plot**
+
+**1. Structure of the Chart:**
+
+-   Each bubble corresponds to a specific analyte, such as Ammonia, NVDOC (Non-Volatile Dissolved Organic Carbon), or Sulfate, which were measured at the site. The size of each bubble indicates the relative significance or concentration of that analyte during the given year.
+
+-   The color of each bubble represents a specific analyte, as shown in the color legend on the right. Time Periods: The numbers inside the bubbles (2018, 2019, 2021) indicate the years when the analytes were measured. This makes it easy to see which constituents were studied during which time frames.
+
+**2. Key Patterns:**
+
+-   In 2021, many key analytes such as Ammonia, NVDOC, and Alkalinity were analyzed extensively, as shown by the large bubbles. The 2019 data includes a broader spread of different analytes (many smaller bubbles), indicating that more minor constituents were studied that year. 2018 shows fewer analytes (fewer bubbles), suggesting a smaller sampling effort in that year compared to 2019 and 2021.
