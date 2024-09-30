@@ -736,7 +736,11 @@ WEEK SIX
 
 </details>
 
+<details>
+
 <summary><strong>Friday</strong></summary>
+
+</details>
 
 <details>
 
