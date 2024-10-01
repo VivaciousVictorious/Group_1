@@ -503,9 +503,66 @@ INSERT TEXT HERE
 <summary><strong>Friday</strong></summary>
 
 ## Jupyter Lab Work
+
 We learnt Visualization using Python today. For more details please refer to my Jupyter note by clicking the below link.
 
- [Tut2_Python_Jaen_092024.ipynb](Tut2_Python_Jaen_092024.ipynb).
+[Tut2_Python_Jaen_092024.ipynb](Tut2_Python_Jaen_092024.ipynb).
+
+</details>
+
+<details>
+
+<summary><strong>Saturday</strong></summary>
+
+INSERT TEXT HERE
+
+</details>
+
+<h2>
+
+WEEK FIVE
+
+</H2>
+
+<details>
+
+<summary><strong>Wednesday</strong></summary>
+
+[Tut3_Python_Jaen.ipynb](Tut3_Python_Jaen.ipynb).
+
+</details>
+
+<details>
+
+<summary><strong>Friday</strong></summary>
+
+[Tut4_Python_Plotnine_Jaen.ipynb](Tut4_Python_Plotnine_Jaen.ipynb).
+
+</details>
+
+<details>
+
+<summary><strong>Saturday</strong></summary>
+
+INSERT TEXT HERE
+
+</details>
+
+<h2>
+
+MIDTERM
+
+</H2>
+
+<details>
+
+<summary><strong>Wednesday</strong></summary>
+
+</details>
+
+<details>
+
+<summary><strong>Friday</strong></summary>
 
 </details>
 

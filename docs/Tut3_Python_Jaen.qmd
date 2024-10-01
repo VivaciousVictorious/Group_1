@@ -1,0 +1,110 @@
+---
+jupyter: python3
+---
+
+```{python}
+import pandas as pd
+df = pd.read_csv('airquality_datasets.csv')
+```
+
+```{python}
+df.info()
+```
+
+```{python}
+df.describe()
+```
+
+```{python}
+import matplotlib.pyplot as plt
+```
+
+```{python}
+# Ozone Histogram
+plt.figure(figsize=(8, 6))
+plt.hist(df['Ozone'].dropna(), bins=20, color='blue', edgecolor='black')
+plt.title('Distribution of Ozone Levels')
+plt.xlabel('Ozone (ppb)')
+plt.ylabel('Frequency')
+plt.savefig('hist_ozone_jaen.png', dpi=300, bbox_inches='tight')
+plt.show()
+```
+
+```{python}
+# Temp Histogram
+plt.figure(figsize=(8, 6))
+plt.hist(df['Temp'].dropna(), bins=20, color='orange', edgecolor='black')
+plt.title('Distribution of Temperature')
+plt.xlabel('Temperature (°F)')
+plt.ylabel('Frequency')
+plt.savefig('hist_temp_jaen.png', dpi=300, bbox_inches='tight')
+plt.show()
+```
+
+```{python}
+# Boxplot for Ozone
+plt.figure(figsize=(8, 6))
+plt.boxplot(df['Ozone'].dropna())
+plt.title('Boxplot of Ozone Levels')
+plt.ylabel('Ozone (ppb)')
+plt.savefig('boxplot_ozone_jaen.png', dpi=300, bbox_inches='tight')
+plt.show()
+```
+
+```{python}
+import seaborn as sns
+```
+
+```{python}
+# Scatter plot Ozone vs Temp
+plt.figure(figsize=(10, 6))
+sns.scatterplot(x='Temp', y='Ozone', hue='Month', data=df)
+plt.title('Temperature vs Ozone Levels by Month')
+plt.xlabel('Temperature (°F)')
+plt.ylabel('Ozone (ppb)')
+plt.savefig('scatter_tempvsozone_jaen.png', dpi=300, bbox_inches='tight')
+plt.show()
+```
+
+```{python}
+df['Month'] = df['Month'].astype('category')
+```
+
+```{python}
+# Scatter plot Ozone vs Temp, better VIZ for categorical
+plt.figure(figsize=(10, 6))
+sns.scatterplot(x='Temp', y='Ozone', hue='Month', data=df)
+plt.title('Temperature vs Ozone Levels by Month')
+plt.xlabel('Temperature (°F)')
+plt.ylabel('Ozone (ppb)')
+plt.savefig('scatter_tempvsozone2_jaen.png', dpi=300, bbox_inches='tight')
+plt.show()
+```
+
+```{python}
+# Convert the numeric month to the month name
+df['month_name'] = pd.to_datetime(df['Month'], format='%m').dt.strftime('%B')
+print(df) # to see our new variable added to the dataframe
+```
+
+```{python}
+# Scatter plot Ozone vs Temp, better names and hue
+plt.figure(figsize=(10, 6))
+sns.scatterplot(x='Temp', y='Ozone', hue='month_name', data=df)
+plt.title('Temperature vs Ozone Levels by Month')
+plt.xlabel('Temperature (°F)')
+plt.ylabel('Ozone (ppb)')
+plt.savefig('scatter_tempvsozone3_jaen.png', dpi=300, bbox_inches='tight')
+plt.show()
+```
+
+```{python}
+# Correlation matrix
+corr = df[['Ozone', 'Temp', 'Wind']].corr()
+sns.heatmap(corr, annot=True, cmap='coolwarm')
+plt.title('Correlation Matrix')
+plt.savefig('correlation_matrix_jaen.png', dpi=300, bbox_inches='tight')
+plt.show()
+```
+
+

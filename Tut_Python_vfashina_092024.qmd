@@ -1,0 +1,179 @@
+---
+title: Victoria's Jupyter Notebook
+jupyter: python3
+---
+
+## This is a markdown title. Markdown is the same as html.
+
+### In markdown items appear as list. Remember to switch from code to markdown to see the effect of markdown.
+### Then press cntr and enter on the keyboard.
+- item 1
+- item 2
+- item 3
+
+We can also create a list
+1. 'Great art thou o Lord'
+2. Marvelous God
+3. Equilibrium
+4. Visualization is fun
+5. Dr. V is the best.
+
+We can **bolden** with double hyterix, also *italic* with the single hysterix.
+
+
+```{python}
+import numpy as np
+# here numpy is imported with an alias called np
+arr = np.array([1,2,3,4,5])
+print (np.absolute (-1))
+print(arr)
+
+## Lists: Lists are pythons native way of storing multiple items in a single variable.
+my_list = [1,2,3,4,5,6]
+print(my_list)
+```
+
+## DataFrames: 
+### pandas provide a flexible structure called DataFrame for storing tabular data.
+
+```{python}
+import pandas as pd
+data = {'Ozone': [41, 36, 12], 'Temp': [67,72,74]}
+df = pd.DataFrame(data)
+print (df)
+```
+
+```{python}
+# Single hash is used for comment in Python.
+# Now we will load the csv from the Scripts folder in our virtual environment (venv)
+# Read it into a datafram called df using pandas command read_csv
+df = pd.read_csv('airquality_datasets.csv')
+```
+
+```{python}
+#| scrolled: true
+#Summary of the dataset. Tbl now in df.
+print(df.info())
+print(df.describe())
+```
+
+```{python}
+import matplotlib.pyplot as plt
+# Ozone Histogram
+plt.hist(df['Ozone'].dropna(), bins=20, color='blue', edgecolor='black')
+plt.title('Distribution of Ozone Levels')
+plt.xlabel('Ozone (ppb)')
+plt.ylabel('Frequency')
+plt.show()
+```
+
+## Ozone Histogram
+### Histogram visualizes the spread of a variable across a dataset. Here we will see the spread of Ozone across the dataset.
+### Ozone readings (ppb) within the range of 0 - 175 appeared 20 times within the data set.
+
+```{python}
+#Temperature plot
+# Next we will visualize the spread of temperature across the data set.
+# Temperature range between 55 - 95 degrees appear 20 times within the data set.
+plt.figure(figsize=(8,6))
+plt.hist(df['Temp'].dropna(), bins=20, color='orange', edgecolor='black')
+plt.title('Distribution of Temperature')
+plt.xlabel('Temperature(F)')
+plt.ylabel('Frequency')
+plt.show()
+```
+
+```{python}
+#Boxplot for Ozone
+plt.figure(figsize=(8,6))
+plt.boxplot(df['Ozone'].dropna())
+plt.title('Boxplot of Ozone Levels')
+plt.ylabel('Ozone(ppb)')
+plt.show()
+```
+
+## Box Plot for Ozone
+### The central box represents the interquartile range (IQR), which contains the middle 50% of the data. 
+### The lower edge of the box is the 25th percentile (Q1), and the upper edge is the 75th percentile (Q3). 
+### In this case, it indicates that most ozone levels are between approximately 15 and 55 parts per billion (ppb).
+### The dots outside the upper whisker indicate potential outliers.
+### This box plot summarizes the ozone levels, showing the range, central tendency, and variability, and highlights the presence of a few extreme values (outliers).
+
+
+```{python}
+#Boxplot for Temp
+
+plt.figure(figure=(8, 6))
+plt.boxplot(df['Temp'].dropna())
+plt.title('Boxplot of Temperature')
+plt.ylabel('Temperatur(F)')
+plt.show()
+           
+
+```
+
+## Box Plot for Temp
+### Refer to above analysis of boxplot. Here there are no outliers.
+### In summary, this box plot shows that the majority of the temperatures in the dataset are concentrated between 70°F and 90°F, with a median of around 80°F, and no extreme temperature values (outliers) are present.
+
+           
+
+
+```{python}
+import seaborn as sns
+
+#Scatter plot with regression line
+#sns.lmplot(x='Temp', y='Ozone', hue='Month', data=df, height=5, aspect=1.5)
+plt.figure(figsize=(10, 6))
+sns.scatterplot(x='Temp', y='Ozone', hue='Month', data=df)
+sns.regplot(x='Temp', y='Ozone', data=df, scatter=False, color='black')  # scatter=False will only show the regression line
+plt.title('Temperature vs Ozone Levels by Month')
+plt.xlabel('Temperature (F)')
+plt.ylabel('Ozone (ppb)')
+plt.show()
+```
+
+## Scatter Plot with Regression Line
+### Observation
+### This scatter plot with a regression line displays the relationship between temperature (Fahrenheit) and ozone levels (in parts per billion, ppb).
+### With the data points color-coded by month. There is a clear positive correlation between temperature and ozone levels. 
+### As the temperature increases, the ozone levels tend to rise as well. This is indicated by the upward slope of the regression line.
+### Spread of Data- While the trend is positive, there is variability in ozone levels at each temperature. This can be seen in the spread of the points, especially at higher temperatures (above 80°F), where ozone levels range significantly.
+
+### Monthly Variation- The colors, corresponding to different months, show how ozone levels vary throughout the months. While the general trend remains consistent, there are slight differences in ozone concentrations at the same temperature for different months. For instance, data points from month 9 (September) are mostly seen at higher temperatures and higher ozone levels compared to earlier months.
+
+### Regression Line- The black regression line provides an average trend across all months. Despite different monthly data points, the line gives a summary of how ozone levels respond to changes in temperature.
+
+### Conclusion-
+### The plot suggests that higher temperatures are associated with increased ozone levels, which could be due to chemical reactions that are emperature-dependent, such as the formation of ground-level ozone. The color variation indicates that there are monthly differences, possibly related to seasonal changes, but the general positive trend holds across the months shown.
+
+```{python}
+#Correlation matrix
+corr = df[['Ozone', 'Temp', 'Wind']].corr()
+sns.heatmap(corr, annot=True, cmap='coolwarm')
+plt.title('Correlation Matrix')
+plt.show()
+
+```
+
+## Correlation Matrix
+### Observation
+### This correlation matrix heatmap shows the relationships between three variables: Ozone, Temperature (Temp), and Wind. 
+### The values range from -1 to 1, representing the strength and direction of the linear relationship between the variables. 
+
+## Observations:
+### Diagonal Elements- The diagonal elements (Ozone-Ozone, Temp-Temp, Wind-Wind) are all equal to 1, which is expected because any variable is perfectly correlated with itself.
+
+### Ozone and Temperature (0.7)- There is a positive correlation (0.7) between Ozone and Temperature. This indicates that as the temperature increases, the ozone levels also tend to increase. A value of 0.7 shows a fairly strong positive relationship.
+
+### Ozone and Wind (-0.6)- There is a negative correlation (-0.6) between Ozone and Wind. This means that higher wind speeds are generally associated with lower ozone levels. The -0.6 value suggests a moderately strong negative relationship.
+
+### Temperature and Wind (-0.46)- There is a negative correlation (-0.46) between Temperature and Wind. This indicates that as temperatures increase, wind speeds tend to decrease, but the relationship is not as strong as the Ozone-Wind correlation.
+
+### Summary:
+### The matrix reveals that ozone levels are more strongly associated with temperature than wind speed. However, both wind and temperature influence ozone levels in different ways; temperature increases ozone levels, while higher wind speeds tend to decrease them.
+### Wind speed has a moderate inverse relationship with both temperature and ozone levels, likely due to the fact that stronger winds help disperse ozone and reduce its concentration in the atmosphere.
+
+### This correlation matrix is helpful for understanding how these variables interact, and can provide insights for further analysis or modeling of environmental data.
+
+

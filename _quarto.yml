@@ -12,10 +12,14 @@ book:
     - Saul.qmd
     - Bridget.qmd
     - Tut2_Python_Jaen_092024.ipynb
+    - Tut3_Python_Jaen.ipynb
+    - Tut4_Python_Plotnine_Jaen.ipynb
     - Daniela.qmd
-    - Tut_Python_Daniela_092324.ipynb
+    - Tut2_Python_Daniela_092324.ipynb
     - Victorious.qmd
-    - Tut_Python_vfashina_092024.ipynb
+    - Tut2_Python_vfashina_092024.ipynb
+    - Tut4_Python_vfashina_092724.ipynb
+    - Tut5_Python_Vfashina_093024.ipynb
     - summary.qmd
     - references.qmd
 

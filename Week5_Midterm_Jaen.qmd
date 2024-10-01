@@ -1,8 +1,4 @@
----
-title: "midterm_jaen_092824"
-format: html
-editor: visual
----
+
 
 ## Dataset
 
