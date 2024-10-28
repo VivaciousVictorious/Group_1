@@ -1,0 +1,150 @@
+---
+title: "Ozone Levels Heat Map and Scatter Plot"
+author: "Daniela Rodriguez"
+date: "2024-10-26"
+---
+
+**1. Heat Maps**
+
+-   **Explanation**:
+
+-   The data set I am working is from the 2018 data set from Hurricane Irma data set. With these visualizations I am trying to explain and demonstrate the ozone levels of the two Heat Maps. The two heat maps---time-based heat map and geographic heat map---differ in purpose, structure, and the type of data they visualize.
+
+-   **What do I want to interpret?**
+
+I want to interpret both the differences but as well the importance of the two Heat Maps. Both, the Time-Based Heat Map and the Geographic Heat Map help preparing a broad and expanded visualization of this data set and expresses the information in a very clear way.
+
+**1. Time-Based Heat Map**: Helps in understanding temporal trends---such as daily or weekly ozone changes---which can highlight seasonal effects or events.
+
+**2.Geographic Heat Map**: Highlights spatial patterns, showing which regions have higher or lower levels of ozone, useful for geographic analysis or targeting specific areas for environmental or public health interventions.
+
+## Geographic Distribution of Average Ozone Levels in 2018
+
+```{r}
+
+
+library(ggplot2)
+library(dplyr)
+library(lubridate)
+
+
+data <- read.csv("Hurricane_Irma_2018_Cleaned.csv")
+
+data$Date <- as.Date(data$Date, format="%m/%d/%y")
+data$Month <- month(data$Date)
+data$Week <- week(data$Date)
+data$Day <- day(data$Date)
+
+ggplot(data, aes(x=Week, y=Day, fill=`Daily.Max.8.hour.Ozone.Concentration`)) +
+  geom_tile(color="white") +
+  scale_fill_gradient(low="yellow", high="red", name="Ozone Level (ppm)") +
+  labs(title="Ozone Levels Across Days/Weeks in 2018",
+       x="Week of the Year", y="Day of the Month") +
+  theme_minimal() +
+  facet_wrap(~ Month, ncol=3)
+
+```
+
+## Ozone Concentration Patterns Across Geographic Locations
+
+```{r}
+
+library(ggplot2)
+library(dplyr)
+library(sf)  
+
+
+data <- read.csv("Hurricane_Irma_2018_Cleaned.csv")
+
+data$Date <- as.Date(data$Date, format="%m/%d/%y")
+
+data_summary <- data %>%
+  group_by(Site.Latitude, Site.Longitude) %>%
+  summarise(Average_Ozone = mean(as.numeric(Daily.Max.8.hour.Ozone.Concentration), na.rm = TRUE))
+
+ggplot(data_summary, aes(x=Site.Longitude, y=Site.Latitude, fill=Average_Ozone)) +
+  geom_tile(color="white") +
+  scale_fill_gradient(low="blue", high="red", name="Avg Ozone Level (ppm)") +
+  labs(title="Geographic Heat Map of Average Ozone Levels",
+       x="Longitude", y="Latitude") +
+  theme_minimal()
+
+```
+
+**2. Scatter Plots**
+
+## Comparison of Ozone Concentration and AQI Across Sites
+
+```{r}
+
+# Load necessary libraries
+library(ggplot2)
+library(dplyr)
+
+# Load the dataset
+data <- read.csv("Hurricane_Irma_2018_Cleaned.csv")
+
+# Filter data to include only relevant columns and format as needed
+data <- data %>%
+  mutate(Ozone_Concentration = as.numeric(Daily.Max.8.hour.Ozone.Concentration),
+         AQI = as.numeric(Daily.AQI.Value))
+
+# Create the scatter plot
+ggplot(data, aes(x = Ozone_Concentration, y = AQI, color = Local.Site.Name)) +
+  geom_point(alpha = 0.6) +
+  labs(title = "Scatter Plot of Ozone Concentration vs AQI",
+       x = "Daily Max 8-Hour Ozone Concentration (ppm)",
+       y = "Daily AQI Value",
+       color = "Site") +
+  theme_minimal()
+```
+
+**Explanation**:
+
+The "Ozone Concentration vs AQI Comparison" scatter plot is designed to show how daily ozone concentration (in parts per million, ppm) relates to the Air Quality Index (AQI) at two different monitoring sites.
+
+**1.Axes:** X-axis represents the Daily Max 8-Hour Ozone Concentration (measured in ppm). This value shows the peak ozone concentration recorded within an 8-hour period each day. Y-axis represents the Daily AQI Value, which is a summary measure of air quality, taking into account various pollutants, with higher values indicating poorer air quality.
+
+**2.Color Coding:** The points are color-coded by Local.Site.Name, distinguishing data from two different monitoring sites (or locations). This allows for an easy comparison between sites. Scatter Plot of Temperature vs. Humidity
+
+**Interpretation of the plot:**
+
+**1.Correlation:** The scatter plot helps visualize the relationship (correlation) between ozone concentration and AQI. If there's a strong positive correlation, points would trend upward from left to right, showing that higher ozone levels are associated with higher AQI values (indicating worse air quality).
+
+**2.Comparison Across Sites:** By color-coding the sites, you can compare if one site tends to have higher ozone concentrations or AQI values than the other. For example, one site may show a tighter grouping with higher AQI values for certain ozone levels, possibly due to regional pollution sources or environmental factors.
+
+**3.Insights on Air Quality:** This plot can reveal thresholds where ozone concentration begins to significantly impact AQI, or if one site generally has better or worse air quality.
+
+## Scatter Plot of Ozone Concentration vs AQI with Regression Line
+
+```{r}
+
+library(ggplot2)
+library(dplyr)
+
+data <- read.csv("Hurricane_Irma_2018_Cleaned.csv")
+
+data <- data %>%
+  mutate(Ozone_Concentration = as.numeric(Daily.Max.8.hour.Ozone.Concentration),
+         AQI = as.numeric(Daily.AQI.Value))
+
+ggplot(data, aes(x = Ozone_Concentration, y = AQI, color = Local.Site.Name)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", se = FALSE) + # Adds regression line without confidence interval
+  labs(title = "Scatter Plot of Ozone Concentration vs AQI with Trendline",
+       x = "Daily Max 8-Hour Ozone Concentration (ppm)",
+       y = "Daily AQI Value",
+       color = "Site") +
+  theme_minimal()
+
+```
+
+**Explanation:**
+
+Data Points (Scatter Plot): Each point represents a day's reading of Ozone Concentration (in parts per million, ppm) and AQI (Air Quality Index). **1. X-axis:** Displays the daily maximum 8-hour ozone concentration. Higher values mean more ozone in the air. **2. Y-axis:** Shows the AQI value, where higher numbers indicate poorer air quality. **3. Points** are colored by Local.Site.Name, distinguishing data from two monitoring locations.
+
+**Interpretation**:
+
+**Strength of Correlation:** The regression line helps visually confirm the strength of correlation. A strong, clear upward slope across both sites indicates that ozone concentration is likely a significant contributor to AQI changes.
+
+**Site-Specific Insights:** If one site has a steeper slope, it implies a stronger sensitivity to ozone levels, possibly due to local factors like industrial activity, traffic, or geography.

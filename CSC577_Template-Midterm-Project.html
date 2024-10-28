@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Victoria Fashina">
+<meta name="dcterms.date" content="2024-01-01">
+
+<title>Data-Driven Insights: Analyzing of Environmental Information Trends</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="CSC577_Template-Midterm-Project_files/libs/clipboard/clipboard.min.js"></script>
+<script src="CSC577_Template-Midterm-Project_files/libs/quarto-html/quarto.js"></script>
+<script src="CSC577_Template-Midterm-Project_files/libs/quarto-html/popper.min.js"></script>
+<script src="CSC577_Template-Midterm-Project_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="CSC577_Template-Midterm-Project_files/libs/quarto-html/anchor.min.js"></script>
+<link href="CSC577_Template-Midterm-Project_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="CSC577_Template-Midterm-Project_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="CSC577_Template-Midterm-Project_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="CSC577_Template-Midterm-Project_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="CSC577_Template-Midterm-Project_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Data-Driven Insights: Analyzing of Environmental Information Trends</h1>
+<p class="subtitle lead">GCSC-577 Visualization @ ORU</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Victoria Fashina </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 1, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="data-source-and-collection-methods" class="level1">
+<h1>1. Data Source and Collection Methods</h1>
+<ul>
+<li><p><strong>Source Overview:</strong> <img src="MP.png" class="img-fluid"> The data-set used in this project is an hourly data collection of meteorological observations from Max Plank Institue For Biogeochemistry (MPI-BGC), Jena. MPI-BGC is a prestigious research institute located in Jena, Germany, and is part of the Max Planck Society, which oversees many research institutes across various scientific disciplines. The MPI-BGC focuses on understanding the complex interactions between the biosphere (living organisms) and the geosphere (the Earth’s surface) over time.</p></li>
+<li><p><strong>File Formats and Access:</strong> The Jena dataset is only available in CSV format:</p>
+<ul>
+<li>Comma-Separated Values (CSV)- CSV is a plain-text format that separates data fields using commas. It is universally readable across platforms and tools, it is simple and lightweight. CSV is useful for basic analysis in Excel and programmatic access in Python, R or databases.</li>
+</ul></li>
+</ul>
+<p><strong>Summary of the Jena Data-set</strong> The Jena dataset contains detailed weather observations from 2009 to 2016 in Jena, Germany, capturing variables such as temperature, pressure, wind speed, and humidity. This granular, time-stamped data is ideal for analyzing seasonal patterns, extreme weather events, and long-term climate trends. It is particularly useful for both exploratory and predictive analysis in fields like climate research, agricultural planning, and environmental monitoring. I have used a line plot to depict the interaction between these variables due to its effectiveness in visualizing data continuity over time, highlighting trends, and managing multiple variables. This makes it ideal for time series analysis. <img src="JenaDataset_2009_2010_SeasonalTrends.png" class="img-fluid"></p>
+<p>The plot reveals clear <strong>seasonal trends</strong> in temperature and pressure, with distinct annual cycles of warming and cooling. Wind speed remains relatively stable over the years, with occasional spikes corresponding to higher wind events. <img src="Jena'a_Seasons.png" class="img-fluid"></p>
+<ul>
+<li><p><strong>Source Overview:</strong></p>
+<p>Max Planck Institute for Biogeochemistry, a research institute, gathered this dataset over time to study weather trends, creating predictive models, and understanding how atmospheric conditions change over time and its concomitant effects. The data-set is used in various domains such as weather forecasting, climate research, aviation and agriculture. Following below link will take one to the site it was obtained from. https://www.kaggle.com/datasets/mnassrib/jena-climate</p></li>
+<li><p><strong>Data Acquisition Procedure:</strong> Outline the steps required to acquire the data, including any necessary permissions, logins, or API usage.</p>
+<p>General instruction for retrieving data from Kaggle:</p>
+<ol type="1">
+<li>Log on to https://www.kaggle.com/dataset</li>
+<li>Register or login to access data</li>
+<li>Navigate to data climate dataset</li>
+<li>Select a dataset, in my case Jenna Climate Dataset by Baligh Mnassri</li>
+<li>Choose a download format - csv</li>
+<li>Choose ‘Save As’ and do a local download.</li>
+<li>Dataset size - 14 MB.</li>
+</ol></li>
+</ul>
+</section>
+<section id="data-variables-and-contextual-framework" class="level1">
+<h1>2. Data Variables and Contextual Framework</h1>
+<p>This chapter provides a detailed breakdown of the variables within the data-set and contextualizes the purpose behind their collection.</p>
+<ul>
+<li><h2 class="anchored" data-anchor-id="data-variables-and-contextual-framework">
+<p><strong>Variables and Definition</strong></p>
+</h2>
+<p>The Data-set consists of 15 columns and 420,552 rows of meteorological information ranging from January 2009 to December 2016. The variables and definition follows:</p></li>
+<li><ol type="1">
+<li><strong>Date Time:</strong> - This column records the precise date and time of each weather observation, giving it temporal context. Accurate timetamps are essential for tracking changes in weather conditions over time, allowing for time-series analysis. Weather is inherently time-sensitive, and this data helps identify patterns, trends, and anomalies.</li>
+</ol></li>
+<li><ol start="2" type="1">
+<li><strong>p (mbar) – Atmospheric Pressure (in millibars):</strong> - Atmospheric pressure is the force exerted by the weight of the air above a surface. It’s measured in millibars (mbar). <strong>Purpose:</strong> Tracking pressure is crucial for weather forecasting. A drop in pressure often indicates storms or bad weather, while rising pressure indicates fair weather. It helps meteorologists predict changes in weather patterns, such as the approach of high-pressure systems (calm weather) or low-pressure systems (storms).</li>
+</ol></li>
+<li><ol start="3" type="1">
+<li><strong>T (degC) – Temperature (in Celsius):</strong> - The temperature of the air in degrees Celsius. - <strong>Purpose:</strong> Temperature is one of the fundamental variables in meteorology. It influences other factors like humidity, precipitation, and atmospheric pressure. Understanding temperature trends is crucial for predicting heatwaves, cold snaps, and general climate behavior.</li>
+</ol></li>
+<li><ol start="4" type="1">
+<li><strong>Tpot (K) – Potential Temperature (in Kelvin):</strong> - The temperature a parcel of air would have if it were moved adiabatically to a standard reference pressure level. <strong>Purpose:</strong> This is used to compare air masses at different altitudes. Potential temperature is valuable for studying atmospheric stability, which can help predict vertical air movements and weather phenomena like thunderstorms or cloud formation.</li>
+</ol></li>
+<li><ol start="5" type="1">
+<li><strong>Tdew (degC) – Dew Point Temperature (in Celsius):</strong> - The temperature at which air becomes saturated with moisture, meaning the air can no longer hold all the water vapor, and it condenses into dew or frost. <strong>Purpose:</strong> The dew point provides information on moisture levels in the air. A high dew point indicates a humid environment, which is important for predicting fog, frost, or precipitation. In agriculture, monitoring the dew point can help protect crops from frost damage.</li>
+</ol></li>
+<li><ol start="6" type="1">
+<li><strong>rh (%) – Relative Humidity (in Percent):</strong> - This measures how much moisture the air is holding relative to the maximum amount it could hold at that temperature. <strong>Purpose:</strong> Relative humidity impacts human comfort, plant growth, and the likelihood of precipitation. High humidity means the air is near saturation and more likely to produce rain or fog, while low humidity can lead to drought conditions. It also affects evaporation rates, which is crucial in agriculture and water resource management.</li>
+</ol></li>
+<li><ol start="7" type="1">
+<li><strong>VPmax (mbar) – Maximum Vapor Pressure:</strong> - The highest possible vapor pressure under current temperature conditions, showing the maximum amount of moisture the air can hold. <strong>Purpose:</strong> This helps determine the saturation point of the air. By comparing VPmax with actual vapor pressure, meteorologists can assess how close the atmosphere is to generating precipitation.</li>
+</ol></li>
+<li><ol start="8" type="1">
+<li><strong>VPact (mbar) – Actual Vapor Pressure:</strong> - The actual pressure exerted by water vapor in the air. <strong>Purpose:</strong> Actual vapor pressure provides direct information on the moisture content in the air. When VPact approaches VPmax, it suggests that the atmosphere is nearing saturation, which often leads to cloud formation or precipitation.</li>
+</ol></li>
+<li><ol start="9" type="1">
+<li><strong>VPdef (mbar) – Vapor Pressure Deficit:</strong> - The difference between the maximum and actual vapor pressure. <strong>Purpose:</strong> Vapor pressure deficit indicates the “drying power” of the air. It is particularly important in agriculture and water management because a higher VPdef means the air will more actively evaporate water from plants and soils, leading to drier conditions.</li>
+</ol></li>
+<li><ol start="10" type="1">
+<li><strong>sh (g/kg) – Specific Humidity (grams per kilogram):</strong> - Specific humidity is the mass of water vapor present in a unit mass of air. <strong>Purpose:</strong> This is used to understand the total amount of moisture in the air, independent of temperature or pressure. Specific humidity plays a key role in calculating heat indices and predicting weather phenomena like thunderstorms or monsoons.</li>
+</ol></li>
+<li><ol start="11" type="1">
+<li><strong>H2OC (mmol/mol) – Concentration of Water Vapor (millimoles per mole):</strong> - The concentration of water vapor molecules in the air. <strong>Purpose:</strong> This is an indicator of humidity at the molecular level, which is essential for precision in weather forecasting, especially in microclimate studies or scientific research related to greenhouse gases and climate change.</li>
+</ol></li>
+<li><ol start="12" type="1">
+<li><strong>rho (g/m³) – Air Density (grams per cubic meter):</strong> - Air density, influenced by temperature, pressure, and humidity, measures how tightly packed the air molecules are. <strong>Purpose:</strong> Air density affects the behavior of aircraft, wind turbines, and air pollution. In meteorology, it’s crucial for understanding the dynamics of wind, pressure systems, and weather fronts.</li>
+</ol></li>
+<li><ol start="13" type="1">
+<li><strong>wv (m/s) – Wind Speed (meters per second):</strong> - The speed of the wind in meters per second. <strong>Purpose:</strong> Wind speed is critical for weather forecasting, as it indicates storm intensity, drives atmospheric circulation, and disperses air pollutants. In disaster management, wind speed helps predict the impact of storms, hurricanes, and tornadoes.</li>
+</ol></li>
+<li><ol start="14" type="1">
+<li><strong>max. wv (m/s) – Maximum Wind Speed (meters per second):</strong> - The highest recorded wind speed over a given interval. <strong>Purpose:</strong> Maximum wind speed provides insight into extreme weather events and helps in predicting the likelihood of dangerous storms or cyclones. It’s a key metric in disaster preparedness, especially for aviation, shipping, and infrastructure resilience.</li>
+</ol></li>
+<li><ol start="15" type="1">
+<li><strong>wd (deg) – Wind Direction (degrees):</strong> - Wind direction in degrees, where 0° is North, 90° is East, 180° is South, and 270° is West. <strong>Purpose:</strong> Wind direction is important for understanding the source of weather systems. For example, winds from the ocean may bring moist air and rain, while winds from the land may bring dry, warmer air. It’s critical for forecasting the movement of weather fronts and planning for aviation, agriculture, and outdoor events.</li>
+</ol></li>
+<li><h2 class="anchored">
+<p><strong>Data Collection &amp; Contextual Purpose:</strong></p>
+</h2>
+<ul>
+<li>The dataset can be used in various domains:</li>
+</ul></li>
+<li><p><strong>Weather Forecasting and Climate Monitoring:</strong> - The collection of these variables is fundamental to real-time weather forecasting and long-term climate monitoring. Temperature, humidity, pressure, and wind speed all contribute to predicting short-term weather changes like storms, heatwaves, or cold fronts. These variables are also crucial for monitoring global climate patterns, helping meteorologists identify trends such as global warming, extreme weather events, and shifts in climate zones.</p></li>
+<li><p><strong>Disaster Preparedness:</strong></p></li>
+<li><p>Data like wind speed, wind direction, pressure, and temperature can help forecast extreme weather events such as hurricanes, tornadoes, and severe storms. Monitoring these variables over time helps local governments and emergency services prepare for natural disasters, reducing the potential damage to life and infrastructure.</p></li>
+<li><p><strong>Agriculture and Water Resource Management:</strong></p></li>
+<li><p>Specific humidity, vapor pressure deficit, and dew point provide key insights into soil moisture levels and irrigation needs. In agriculture, knowing the dew point and humidity helps farmers protect crops from frost or dehydration. Vapor pressure deficit, in particular, is crucial for understanding how much water plants are losing due to evaporation, allowing for more efficient water management.</p></li>
+<li><p><strong>Aviation Safety:</strong></p></li>
+<li><p>Wind speed, direction, and air pressure data are critical for aviation. Pilots rely on real-time wind conditions to make safe landings and take-offs, and air traffic controllers use this data to manage flight paths efficiently. Air density also affects how aircraft operate, especially at high altitudes, influencing fuel efficiency and safety protocols.</p></li>
+<li><p><strong>Public Health and Comfort:</strong></p></li>
+<li><p>Relative humidity and temperature affect human health and comfort, particularly during extreme weather events like heatwaves or cold spells. High humidity combined with high temperatures can increase the risk of heat-related illnesses, while low temperatures and humidity can lead to cold-related issues like frostbite or hypothermia. Monitoring these factors helps governments issue health warnings and prepare emergency shelters.</p></li>
+<li><p><strong>Renewable Energy (Wind and Solar):</strong></p></li>
+<li><p>Wind speed and direction data are critical for optimizing the operation of wind farms. Knowing wind patterns helps in positioning turbines for maximum energy generation. Similarly, temperature and humidity data are used to optimize solar energy systems, ensuring they are positioned and operated under ideal conditions.</p></li>
+<li><p><strong>Air Quality and Pollution Control:</strong></p></li>
+<li><p>Wind direction and air density play a vital role in dispersing pollutants in the atmosphere. Tracking these variables helps environmental agencies predict where pollutants will travel, allowing for better air quality management and health advisories, especially in urban areas with high levels of industrial emissions or traffic pollution.</p></li>
+<li><h2 class="anchored">
+<p><strong>Contextual Significance</strong>:</p>
+</h2></li>
+<li><p><strong>Weather Prediction:</strong> The collected data allows meteorologists to predict short-term weather events and longer-term climate patterns, helping people prepare for both daily activities and extreme weather events.</p></li>
+<li><p><strong>Environmental Monitoring:</strong> It’s key for understanding climate change, tracking shifts in weather patterns, and managing natural resources like water and air quality.</p></li>
+<li><p><strong>Disaster Management:</strong> Collecting this data is essential for anticipating and mitigating the effects of natural disasters like floods, hurricanes, and heatwaves, protecting lives and property.</p></li>
+<li><p><strong>Agricultural Planning:</strong> Farmers rely on this data to ensure proper irrigation, crop planting, and harvesting, as well as protecting crops from adverse weather conditions like frost or drought.</p></li>
+</ul>
+</section>
+<section id="analytical-approach-and-visualization-techniques" class="level1">
+<h1>3. Analytical Approach and Visualization Techniques</h1>
+<p><strong>Data Cleaning Methods Employed</strong> - <strong>Column Selection</strong> - The Jena dataset remained intact after cleaning. It would appear the data came clean. The data-set dataset was upload into Jupyter into a Python Lab environment with the following command: data = pd.read_csv(r’C:\path_to_the_dataset_on_my_PC.csv’) Afterward, the column headers were printed using: print(data.head()) To check for missing data, the command: print(data.isnull().sum()) was executed, which identified the null values. The columns with missing data were dropped using: data_cleaned = data.dropna() data_cleaned = data_cleaned.drop_duplicates() The command returned zero duplicates. However datetime conversion proved difficult: Tried cleaning with excel to no avail. Finally used the Python command; data[‘DateTime’] = data[‘Date’] + ’ ’ + data[‘Time’] data[‘DateTime’] = data[‘DateTime’].str.strip() - <strong>Convert the ‘DateTime’ column to datetime object</strong> - To combine date and time into a single DateTime column - data[‘DateTime’] = pd.to_datetime(data[‘DateTime’], format=‘%m/%d/%Y %H:%M:%S’, errors=‘coerce’) - <strong>To convert the DateTime into a date object</strong> - <strong>Check if the conversion was successful</strong> - print(data[‘DateTime’].head()) - <strong>Check first few rows of the combined DateTime</strong> - print(data[‘DateTime’].head()) - <strong>Set DateTime’ as the index of ready for further analysis</strong> - data.set_index(‘DateTime’, inplace=True)</p>
+<p><strong>Adding visualization to quarto document, including label and captions.</strong></p>
+<p><strong>Add a description of what we should understand from your visualization, and how this connect with your project scope.</strong></p>
+<p>Describe the analytical methodologies and visualization techniques used to explore the dataset in this section.</p>
+<ul>
+<li><strong>Analytical Methods:</strong>
+<ul>
+<li>Explain the analytical approach, including statistical methods or data preprocessing steps applied to the dataset to prepare it for visualization (e.g., filtering, aggregation, etc.).</li>
+</ul></li>
+<li><strong>Visualization Techniques:</strong>
+<ul>
+<li>Detail the types of visualizations used to convey the data’s insights. For each visualization (e.g., line charts for trends, bar charts for comparisons), provide a rationale for its selection.</li>
+</ul></li>
+<li><strong>Key Observations:</strong>
+<ul>
+<li>Outline what specific trends, patterns, or anomalies are intended to be highlighted by these visualizations.</li>
+</ul></li>
+</ul>
+<p><em>Example:</em></p>
+<p>Line charts were used to track changes in crop yields from 2010 to 2020, allowing for clear identification of trends potentially linked to climate variability.</p>
+</section>
+<section id="insights-derived-from-data-analysis" class="level1">
+<h1>4. Insights Derived from Data Analysis</h1>
+<p>This chapter focuses on interpreting the results of your data analysis and visualizations.</p>
+<ul>
+<li><strong>Key Findings:</strong>
+<ul>
+<li>Summarize the primary insights revealed through your analysis, highlighting significant patterns or trends observed in the data.</li>
+</ul></li>
+<li><strong>Contextual Interpretation:</strong>
+<ul>
+<li>Provide an interpretation of these findings within the broader agricultural or policy context. Relate the trends to real-world issues, such as climate change, resource allocation, or food security challenges.</li>
+</ul></li>
+<li><strong>Comparative Analysis:</strong>
+<ul>
+<li>If applicable, compare the dataset’s findings with historical data, expected norms, or benchmarks to emphasize any notable deviations.</li>
+</ul></li>
+</ul>
+<p><em>Example:</em></p>
+<pre><code>The data reveals a 15% decline in crop yields in the Midwest region over the past decade, likely linked to increased occurrences of drought. This decline is more pronounced compared to historical averages.</code></pre>
+</section>
+<section id="discussion-of-data-quality-and-limitations" class="level1">
+<h1>5. Discussion of Data Quality and Limitations</h1>
+<p>In this section, critically examine the quality of the data and the limitations of your analysis.</p>
+<ul>
+<li><strong>Data Integrity:</strong>
+<ul>
+<li>Assess the quality of the data, noting any issues such as missing or incomplete data, inaccuracies, or inconsistencies.</li>
+</ul></li>
+<li><strong>Limitations of Analysis:</strong>
+<ul>
+<li>Discuss any limitations inherent in the dataset that may affect the validity or generalizability of your findings. These could include sample size issues, lack of granularity, or data biases.</li>
+</ul></li>
+<li><strong>Potential Improvements:</strong>
+<ul>
+<li>Suggest ways in which the data collection process or analytical approach could be improved to yield better or more actionable insights.</li>
+</ul></li>
+</ul>
+<p><em>Example:</em></p>
+<pre><code>Some regions had significant gaps in data for the years 2015-2016, which may limit the reliability of trends observed during this period. Future analyses could benefit from more granular data collection at a regional level.</code></pre>
+</section>
+<section id="conclusions-and-implications-for-future-research" class="level1">
+<h1>6. Conclusions and Implications for Future Research</h1>
+<p>Provide a clear summary of your findings and their potential implications in this section.</p>
+<ul>
+<li><strong>Summary of Findings:</strong>
+<ul>
+<li>Recap the major insights discovered through the data analysis.</li>
+</ul></li>
+<li><strong>Broader Implications:</strong>
+<ul>
+<li>Discuss how the findings could inform future decisions or strategies. This might include agricultural policies, resource management, or further research initiatives.</li>
+</ul></li>
+<li><strong>Recommendations:</strong>
+<ul>
+<li>Offer practical recommendations for stakeholders based on your findings. What actions should be considered based on the data?</li>
+</ul></li>
+</ul>
+<p><em>Example:</em></p>
+<pre><code>The decline in yields suggests a need for improved drought-resistant crop varieties and more resilient farming practices in affected regions.</code></pre>
+</section>
+<section id="references" class="level1">
+<h1>7. References</h1>
+<p>Include all references to the data source, documentation, and any literature or external research used during the analysis.</p>
+<p><em>Example Reference:</em></p>
+<pre><code>USDA National Agricultural Statistics Service. (2023). Annual Crop Yield Data. Available from: [https://www.nass.usda.gov](https://www.nass.usda.gov).</code></pre>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

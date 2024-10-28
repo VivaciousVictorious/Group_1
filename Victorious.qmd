@@ -582,9 +582,7 @@ You can find the full details of this visualization in my [Tut2_Python_vfashina_
 
 <summary><strong>Saturday</strong></summary>
 
-
 [Tut4_Python_vfashina_092724.ipynb](Tut4_Python_vfashina_092724.ipynb)
-
 
 # 1. Data Access and Collection Methods
 
@@ -661,7 +659,6 @@ This chapter provides a detailed breakdown of the variables within the data-set 
 
 Upon further analysis of the data-set, several variables were removed due to redundancy. These included station name, latitude, longitude, elevation, call sign, visibility, mean values, and key air temperature, as they remained constant throughout the data-set. Additionally, data for variables **KA1** and **KA2** ceased being recorded after January 30th, with one isolated entry on April 10th. Beyond this point, the remaining variables began to repeat. Consequently, only data from January and one day in April was considered usable for further analysis.
 
-
 **Summary of the Jena Data-set** ![](Visual_Summary_Climate_Dataset.png) If I were to choose a plot to summarize the Jena climate dataset, it would be a **time series plot** that highlights the main variables at play. This plot visualizes the time series of three key weather variables: **Temperature (°C)**, **Pressure (mbar)**, and **Wind Speed (m/s)** over a period spanning from **2009 to 2017**.
 
 The plot reveals clear **seasonal trends** in temperature and pressure, with distinct annual cycles of warming and cooling. Wind speed remains relatively stable over the years, with occasional spikes corresponding to higher wind events. Additionally, the plot shows occasional anomalies, such as a sharp dip in both pressure and temperature around **2011**.
@@ -675,8 +672,6 @@ For improved clarity and to better observe the behavior of the variables, two ad
 **Quartley Behavior**
 
 ![](Visual_Summary_Climate_Dataset_Quarterly.png)
-
-    
 
 </details>
 
@@ -698,9 +693,7 @@ WEEK FIVE
 
 <summary><strong>Friday</strong></summary>
 
-
 </details>
-
 
 <details>
 

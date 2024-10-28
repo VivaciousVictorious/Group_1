@@ -4,9 +4,9 @@
     "href": "index.html",
     "title": "Group_1 Quarto Book",
     "section": "",
-    "text": "1 Index",
+    "text": "1 PART I",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Index</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>PART I</span>"
     ]
   },
   {
@@ -14,9 +14,9 @@
     "href": "index.html#overview-of-the-project",
     "title": "Group_1 Quarto Book",
     "section": "1.2 Overview of the Project",
-    "text": "1.2 Overview of the Project\nThe project focuses on understanding the different ways data could be modeled and presented using numerous commercially available tools.",
+    "text": "1.2 Overview of the Project\nThe project focuses on understanding the different ways data could be modeled and presented using numerous commercially available tools. Part one of the book catalogues the groups work leading up to the midterm.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Index</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>PART I</span>"
     ]
   },
   {
@@ -876,7 +876,7 @@
     "section": "1.1 Welcome to Group_1 Project submissions.",
     "text": "1.1 Welcome to Group_1 Project submissions.\nGroup_1 is one of the groups created by Dr. Eric Valdarrama of the Computer & Maths Department at Oral Robert University, Tulsa, USA.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Index</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>PART I</span>"
     ]
   },
   {
@@ -1084,9 +1084,209 @@
     "href": "Tut5_Python_Vfashina_093024.html",
     "title": "13  Tutorial 5. Python",
     "section": "",
-    "text": "### scikit-learn - Python Power to create Models.\n\n\nimport pandas as pd\nfrom sklearn import datasets\n\n### Load the Iris dataset\niris = datasets.load_iris()\n\n### Convert it into a Pandas DataFrame\niris_df = pd.DataFrame(data=iris.data, columns=iris.feature_names)\n\n### Describe the statistics\niris_df.describe()\n\n\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\n# Pairplot to visualize relationships between features\nsns.pairplot(iris_df)\nplt.show()\n\n# Add the target (species) to the DataFrame for visualization\niris_df['species'] = iris.target\n\n# Visualize the distribution of each feature using a boxplot\nplt.figure(figsize=(12,6))\nsns.boxplot(data=iris_df.drop(columns='species'))\nplt.title('Feature Distribution')\nplt.show()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LinearRegression\n\n# Selecting only Sepal Length and Sepal Width for simple linear regression\nX = iris_df[['sepal width (cm)']]  # Predictor\ny = iris_df['sepal length (cm)']    # Response\n\n# Split the data into training and test sets\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)\n\n# Train the linear regression model\nlin_reg = LinearRegression()\nlin_reg.fit(X_train, y_train)\n\n# Predict on the test set\ny_pred = lin_reg.predict(X_test)\n\n# Visualize the linear regression fit\nplt.scatter(X_test, y_test, color='blue', label='Actual')\nplt.plot(X_test, y_pred, color='red', label='Predicted')\nplt.title('Simple Linear Regression: Sepal Width vs. Sepal Length')\nplt.xlabel('Sepal Width (cm)')\nplt.ylabel('Sepal Length (cm)')\nplt.legend()\nplt.show()\n\n\n\n\n\n\n\n\n\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LinearRegression\n\n# Selecting only Petal Length and Petal Width for simple linear regression\nX = iris_df[['petal width (cm)']]  # Predictor\ny = iris_df['petal length (cm)']    # Response\n\n# Split the data into training and test sets\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)\n\n# Train the linear regression model\nlin_reg = LinearRegression()\nlin_reg.fit(X_train, y_train)\n\n# Predict on the test set\ny_pred = lin_reg.predict(X_test)\n\n# Visualize the linear regression fit\nplt.scatter(X_test, y_test, color='blue', label='Actual')\nplt.plot(X_test, y_pred, color='red', label='Predicted')\nplt.title('Simple Linear Regression: Sepal Width vs. Sepal Length')\nplt.xlabel('Sepal Width (cm)')\nplt.ylabel('Sepal Length (cm)')\nplt.legend()\nplt.show()\n\n\n\n\n\n\n\n\n\n# All features (excluding target/species) as predictors\nX = iris_df.drop(columns=['species', 'sepal length (cm)'])\ny = iris_df['sepal length (cm)']\n\n# Split the data\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)\n\n# Train the multiple linear regression model\nmlr = LinearRegression()\nmlr.fit(X_train, y_train)\n\n# Predict on the test set\ny_pred = mlr.predict(X_test)\n\n# Calculate performance metrics (optional)\nfrom sklearn.metrics import mean_squared_error, r2_score\nprint(f\"Mean Squared Error: {mean_squared_error(y_test, y_pred)}\")\nprint(f\"R-squared: {r2_score(y_test, y_pred)}\")\n\n# Visualize actual vs predicted\nplt.scatter(y_test, y_pred)\nplt.title('Multiple Linear Regression: Actual vs Predicted Sepal Length')\nplt.xlabel('Actual Sepal Length (cm)')\nplt.ylabel('Predicted Sepal Length (cm)')\nplt.show()\n\n# Print the equation of the multiple linear regression model\nintercept = mlr.intercept_\ncoefficients = mlr.coef_\n\n# Feature names (excluding the response variable and species)\nfeatures = iris_df.columns.drop(['species', 'sepal length (cm)'])\n\n# Construct the regression equation as a string\nequation = f\"Sepal Length = {intercept:.2f}\"\nfor feature, coef in zip(features, coefficients):\n    equation += f\" + ({coef:.2f} * {feature})\"\n\n# Print the regression equation\nprint(\"The equation for multiple linear regression:\")\nprint(equation)\n\nMean Squared Error: 0.09811742166101381\nR-squared: 0.8525836334296238\nThe equation for multiple linear regression:\nSepal Length = 1.76 + (0.66 * sepal width (cm)) + (0.76 * petal length (cm)) + (-0.69 * petal width (cm))",
+    "text": "13.0.1 scikit-learn - Python Power to create Models.\nimport pandas as pd from sklearn import datasets\n\n\n13.0.2 Load the Iris dataset\niris = datasets.load_iris()\n\n\n13.0.3 Convert it into a Pandas DataFrame\niris_df = pd.DataFrame(data=iris.data, columns=iris.feature_names)\n\n\n13.0.4 Describe the statistics\niris_df.describe()\n\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\n# Pairplot to visualize relationships between features\nsns.pairplot(iris_df)\nplt.show()\n\n# Add the target (species) to the DataFrame for visualization\niris_df['species'] = iris.target\n\n# Visualize the distribution of each feature using a boxplot\nplt.figure(figsize=(12,6))\nsns.boxplot(data=iris_df.drop(columns='species'))\nplt.title('Feature Distribution')\nplt.show()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LinearRegression\n\n# Selecting only Sepal Length and Sepal Width for simple linear regression\nX = iris_df[['sepal width (cm)']]  # Predictor\ny = iris_df['sepal length (cm)']    # Response\n\n# Split the data into training and test sets\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)\n\n# Train the linear regression model\nlin_reg = LinearRegression()\nlin_reg.fit(X_train, y_train)\n\n# Predict on the test set\ny_pred = lin_reg.predict(X_test)\n\n# Visualize the linear regression fit\nplt.scatter(X_test, y_test, color='blue', label='Actual')\nplt.plot(X_test, y_pred, color='red', label='Predicted')\nplt.title('Simple Linear Regression: Sepal Width vs. Sepal Length')\nplt.xlabel('Sepal Width (cm)')\nplt.ylabel('Sepal Length (cm)')\nplt.legend()\nplt.show()\n\n\n\n\n\n\n\n\n\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LinearRegression\n\n# Selecting only Petal Length and Petal Width for simple linear regression\nX = iris_df[['petal width (cm)']]  # Predictor\ny = iris_df['petal length (cm)']    # Response\n\n# Split the data into training and test sets\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)\n\n# Train the linear regression model\nlin_reg = LinearRegression()\nlin_reg.fit(X_train, y_train)\n\n# Predict on the test set\ny_pred = lin_reg.predict(X_test)\n\n# Visualize the linear regression fit\nplt.scatter(X_test, y_test, color='blue', label='Actual')\nplt.plot(X_test, y_pred, color='red', label='Predicted')\nplt.title('Simple Linear Regression: Sepal Width vs. Sepal Length')\nplt.xlabel('Sepal Width (cm)')\nplt.ylabel('Sepal Length (cm)')\nplt.legend()\nplt.show()\n\n\n\n\n\n\n\n\n\n# All features (excluding target/species) as predictors\nX = iris_df.drop(columns=['species', 'sepal length (cm)'])\ny = iris_df['sepal length (cm)']\n\n# Split the data\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)\n\n# Train the multiple linear regression model\nmlr = LinearRegression()\nmlr.fit(X_train, y_train)\n\n# Predict on the test set\ny_pred = mlr.predict(X_test)\n\n# Calculate performance metrics (optional)\nfrom sklearn.metrics import mean_squared_error, r2_score\nprint(f\"Mean Squared Error: {mean_squared_error(y_test, y_pred)}\")\nprint(f\"R-squared: {r2_score(y_test, y_pred)}\")\n\n# Visualize actual vs predicted\nplt.scatter(y_test, y_pred)\nplt.title('Multiple Linear Regression: Actual vs Predicted Sepal Length')\nplt.xlabel('Actual Sepal Length (cm)')\nplt.ylabel('Predicted Sepal Length (cm)')\nplt.show()\n\n# Print the equation of the multiple linear regression model\nintercept = mlr.intercept_\ncoefficients = mlr.coef_\n\n# Feature names (excluding the response variable and species)\nfeatures = iris_df.columns.drop(['species', 'sepal length (cm)'])\n\n# Construct the regression equation as a string\nequation = f\"Sepal Length = {intercept:.2f}\"\nfor feature, coef in zip(features, coefficients):\n    equation += f\" + ({coef:.2f} * {feature})\"\n\n# Print the regression equation\nprint(\"The equation for multiple linear regression:\")\nprint(equation)\n\nMean Squared Error: 0.09811742166101381\nR-squared: 0.8525836334296238\nThe equation for multiple linear regression:\nSepal Length = 1.76 + (0.66 * sepal width (cm)) + (0.76 * petal length (cm)) + (-0.69 * petal width (cm))",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Tut5_Python_Vfashina_093024.html</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Tutorial 5. Python</span>"
+    ]
+  },
+  {
+    "objectID": "Part2_Intro.html",
+    "href": "Part2_Intro.html",
+    "title": "14  PART II",
+    "section": "",
+    "text": "Welcome to Group_1 Project submissions.\nPart two of the book forcuses on our submission for the final project.",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>PART II</span>"
+    ]
+  },
+  {
+    "objectID": "Bridget_Deliverable 1.html",
+    "href": "Bridget_Deliverable 1.html",
+    "title": "15  Project Deliverable",
+    "section": "",
+    "text": "16 Load necessary libraries\nlibrary(ggplot2)\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nlibrary(readxl)",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Project Deliverable</span>"
+    ]
+  },
+  {
+    "objectID": "Bridget_Deliverable 1.html#load-both-datasets-1",
+    "href": "Bridget_Deliverable 1.html#load-both-datasets-1",
+    "title": "15  Project Deliverable",
+    "section": "22.1 Load both datasets",
+    "text": "22.1 Load both datasets\n\ndata_2017 &lt;- read.csv(\"Hurrican_Irma_2017_Cleaned_2.csv\")\ndata_2018 &lt;- read.csv(\"Hurrican_Irma_2018_Cleaned_2.csv\")",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Project Deliverable</span>"
+    ]
+  },
+  {
+    "objectID": "Bridget_Deliverable 1.html#combine-datasets-and-parse-the-date-column-1",
+    "href": "Bridget_Deliverable 1.html#combine-datasets-and-parse-the-date-column-1",
+    "title": "15  Project Deliverable",
+    "section": "22.2 Combine datasets and parse the Date column",
+    "text": "22.2 Combine datasets and parse the Date column\n\ndata_combined &lt;- rbind(data_2017, data_2018)\ndata_combined$Date &lt;- as.Date(data_combined$Date, format=\"%m/%d/%Y\")",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Project Deliverable</span>"
+    ]
+  },
+  {
+    "objectID": "Bridget_Deliverable 1.html#extract-the-year-from-the-date-column",
+    "href": "Bridget_Deliverable 1.html#extract-the-year-from-the-date-column",
+    "title": "15  Project Deliverable",
+    "section": "22.3 Extract the year from the Date column",
+    "text": "22.3 Extract the year from the Date column\n\ndata_combined$Year &lt;- format(data_combined$Date, \"%Y\")",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Project Deliverable</span>"
+    ]
+  },
+  {
+    "objectID": "Bridget_Deliverable 1.html#filter-data-for-each-year",
+    "href": "Bridget_Deliverable 1.html#filter-data-for-each-year",
+    "title": "15  Project Deliverable",
+    "section": "22.4 Filter data for each year",
+    "text": "22.4 Filter data for each year\n\ndata_2017_only &lt;- filter(data_combined, Year == \"2017\")\ndata_2018_only &lt;- filter(data_combined, Year == \"2018\")",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Project Deliverable</span>"
+    ]
+  },
+  {
+    "objectID": "Bridget_Deliverable 1.html#summarize-daily-observation-counts-for-each-year",
+    "href": "Bridget_Deliverable 1.html#summarize-daily-observation-counts-for-each-year",
+    "title": "15  Project Deliverable",
+    "section": "22.5 Summarize Daily Observation Counts for each year",
+    "text": "22.5 Summarize Daily Observation Counts for each year\n\ndaily_counts_2017 &lt;- data_2017_only %&gt;%\n  group_by(Date) %&gt;%\n  summarize(Daily_Obs_Count = sum(Daily.Obs.Count, na.rm = TRUE))",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Project Deliverable</span>"
+    ]
+  },
+  {
+    "objectID": "Bridget_Deliverable 1.html#create-bar-charts-for-each-year",
+    "href": "Bridget_Deliverable 1.html#create-bar-charts-for-each-year",
+    "title": "15  Project Deliverable",
+    "section": "22.6 Create bar charts for each year",
+    "text": "22.6 Create bar charts for each year\n\np1 &lt;- ggplot(daily_counts_2017, aes(x = Date, y = Daily_Obs_Count)) +\n  geom_bar(stat = \"identity\", fill = \"navyblue\") +\n  labs(title = \"Daily Observation Count for 2017\",\n       x = \"Date\",\n       y = \"Observation Count\") +\n  theme_minimal() +\n  theme(axis.text.x = element_text(angle = 45, hjust = 2))\n\n\np2 &lt;- ggplot(data_2018_only, aes(x = Date, y = Daily.Obs.Count)) +\n  geom_bar(stat = \"identity\", fill = \"purple\") +\n  labs(title = \"Daily Observation Count for 2018\",\n       x = \"Date\",\n       y = \"Observation Count\") +\n  theme_minimal() +\n  theme(axis.text.x = element_text(angle = 45, hjust = 1))",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Project Deliverable</span>"
+    ]
+  },
+  {
+    "objectID": "Bridget_Deliverable 1.html#display-plots",
+    "href": "Bridget_Deliverable 1.html#display-plots",
+    "title": "15  Project Deliverable",
+    "section": "22.7 Display plots",
+    "text": "22.7 Display plots\n\nprint(p1)\n\n\n\n\n\n\n\nprint(p2)",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Project Deliverable</span>"
+    ]
+  },
+  {
+    "objectID": "Bridget_Deliverable 1.html#load-necessary-libraries-1",
+    "href": "Bridget_Deliverable 1.html#load-necessary-libraries-1",
+    "title": "15  Project Deliverable",
+    "section": "23.1 Load necessary libraries",
+    "text": "23.1 Load necessary libraries\n\nlibrary(ggplot2)\nlibrary(dplyr)\nlibrary(gridExtra) # For arranging multiple plots\n\n\nAttaching package: 'gridExtra'\n\n\nThe following object is masked from 'package:dplyr':\n\n    combine",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Project Deliverable</span>"
+    ]
+  },
+  {
+    "objectID": "Bridget_Deliverable 1.html#explanation",
+    "href": "Bridget_Deliverable 1.html#explanation",
+    "title": "15  Project Deliverable",
+    "section": "30.1 Explanation",
+    "text": "30.1 Explanation\nThe bar charts show that we have data for everyday of the month for 2017 and 2018 respectably. However, the graphs show that some days have less observations than others.",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Project Deliverable</span>"
+    ]
+  },
+  {
+    "objectID": "Bridget_Deliverable 1.html#load-necessary-libraries-2",
+    "href": "Bridget_Deliverable 1.html#load-necessary-libraries-2",
+    "title": "15  Project Deliverable",
+    "section": "31.1 Load necessary libraries",
+    "text": "31.1 Load necessary libraries\n\nlibrary(ggplot2)\nlibrary(dplyr)\nlibrary(gridExtra) # For arranging multiple plots",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Project Deliverable</span>"
+    ]
+  },
+  {
+    "objectID": "Bridget_Deliverable 1.html#load-both-datasets-3",
+    "href": "Bridget_Deliverable 1.html#load-both-datasets-3",
+    "title": "15  Project Deliverable",
+    "section": "31.2 Load both datasets",
+    "text": "31.2 Load both datasets\n\n#data_2017 &lt;- read.csv(\"Hurrican_Irma_2017_Cleaned.csv\")\n#data_2018 &lt;- read.csv(\"Hurrican_Irma_2018_Cleaned.csv\")",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Project Deliverable</span>"
+    ]
+  },
+  {
+    "objectID": "Bridget_Deliverable 1.html#combine-datasets-and-parse-the-date-column-3",
+    "href": "Bridget_Deliverable 1.html#combine-datasets-and-parse-the-date-column-3",
+    "title": "15  Project Deliverable",
+    "section": "31.3 Combine datasets and parse the Date column",
+    "text": "31.3 Combine datasets and parse the Date column\n\ndata_combined &lt;- rbind(data_2017, data_2018)\ndata_combined$Date &lt;- as.Date(data_combined$Date, format=\"%m/%d/%Y\")",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Project Deliverable</span>"
+    ]
+  },
+  {
+    "objectID": "Bridget_Deliverable 1.html#extract-the-year-from-the-date-column-2",
+    "href": "Bridget_Deliverable 1.html#extract-the-year-from-the-date-column-2",
+    "title": "15  Project Deliverable",
+    "section": "31.4 Extract the year from the Date column",
+    "text": "31.4 Extract the year from the Date column\n\ndata_combined$Year &lt;- format(data_combined$Date, \"%Y\")",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Project Deliverable</span>"
+    ]
+  },
+  {
+    "objectID": "Bridget_Deliverable 1.html#filter-data-for-each-year-1",
+    "href": "Bridget_Deliverable 1.html#filter-data-for-each-year-1",
+    "title": "15  Project Deliverable",
+    "section": "31.5 Filter data for each year",
+    "text": "31.5 Filter data for each year\n\ndata_2017_only &lt;- filter(data_combined, Year == \"2017\")\ndata_2018_only &lt;- filter(data_combined, Year == \"2018\")",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Project Deliverable</span>"
+    ]
+  },
+  {
+    "objectID": "Bridget_Deliverable 1.html#plot-daily-aqi-vs.-date-for-2017",
+    "href": "Bridget_Deliverable 1.html#plot-daily-aqi-vs.-date-for-2017",
+    "title": "15  Project Deliverable",
+    "section": "31.6 Plot Daily AQI vs. Date for 2017",
+    "text": "31.6 Plot Daily AQI vs. Date for 2017\n\np1 &lt;- ggplot(data_2017_only, aes(x = Date, y = Daily.AQI.Value)) +\n  geom_line(color = \"blue\") +\n  labs(title = \"Daily AQI for 2017\",\n       x = \"Date\",\n       y = \"Daily.AQI.Value\") +\n  theme_minimal() +\n  theme(axis.text.x = element_text(angle = 45, hjust = 1))",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Project Deliverable</span>"
+    ]
+  },
+  {
+    "objectID": "Bridget_Deliverable 1.html#explanation-1",
+    "href": "Bridget_Deliverable 1.html#explanation-1",
+    "title": "15  Project Deliverable",
+    "section": "33.1 Explanation",
+    "text": "33.1 Explanation\nThis line plot of Date Vs Daily AQI Value compares the AQI values over time across the two stations.",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Project Deliverable</span>"
+    ]
+  },
+  {
+    "objectID": "Irma-Miami-Dade-Stations.html",
+    "href": "Irma-Miami-Dade-Stations.html",
+    "title": "16  MiamiDadeStations",
+    "section": "",
+    "text": "16.1 Load and Data for Completeness. Visualize\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\n\nAttaching package: 'lubridate'\n\n\nThe following objects are masked from 'package:base':\n\n    date, intersect, setdiff, union\n\n\nWarning: Removed 36 rows containing missing values or values outside the scale range\n(`geom_line()`).",
+    "crumbs": [
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>MiamiDadeStations</span>"
+    ]
+  },
+  {
+    "objectID": "Irma-Miami-Dade-Stations.html#plot-pre-and-post-hurricane-irma-august-october",
+    "href": "Irma-Miami-Dade-Stations.html#plot-pre-and-post-hurricane-irma-august-october",
+    "title": "16  MiamiDadeStations",
+    "section": "16.2 Plot pre and post hurricane Irma (August, October)",
+    "text": "16.2 Plot pre and post hurricane Irma (August, October)",
+    "crumbs": [
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>MiamiDadeStations</span>"
     ]
   }
 ]

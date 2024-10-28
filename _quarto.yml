@@ -20,6 +20,10 @@ book:
     - Tut2_Python_vfashina_092024.ipynb
     - Tut4_Python_vfashina_092724.ipynb
     - Tut5_Python_Vfashina_093024.ipynb
+    - Part2_Intro.qmd
+    - Bridget_Deliverable 1.qmd
+    - Irma-Miami-Dade-Stations.qmd
+    - Daniela_Ozone Levels- Heat Map and Scatter Plot .qmd
     - summary.qmd
     - references.qmd
 
@@ -28,8 +32,9 @@ bibliography: references.bib
 format:
   html:
     theme: cosmo
-  pdf:
-    documentclass: scrreprt
+pdf:
+documentclass: scrreprt
+
 
 
 

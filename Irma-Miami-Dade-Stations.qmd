@@ -1,0 +1,151 @@
+---
+title: "MiamiDadeStations"
+author: "Victorious"
+format: html
+---
+
+## Load and Data for Completeness. Visualize
+
+
+
+```{r}
+#| echo: false
+
+# Load necessary libraries
+library(ggplot2)
+library(dplyr)
+# lubridate - R library for converting date objects
+library(lubridate)
+library(tidyr)
+
+# Load dataset
+mydata <- read.csv("Corrected_Ozone_Data_for_Rosenstiel_and_Perdue_Stations.csv")
+#str(mydata)
+#summary(mydata)
+
+# Convert date column from chr to date type
+mydata$Date_Rosenstiel <- as.Date(mydata$Date_Rosenstiel, format = "%m/%d/%Y")
+mydata$Date_Perdue <- as.Date(mydata$Date_Perdue, format = "%m/%d/%Y")
+
+#Pipe my dataset into Select() to reduce the size by selecting the enclosed columns
+# Reshape data to long format for ggplot2 - name it data_long and pipe into pivot_longer
+data_long <- mydata %>%
+  select(Date_Rosenstiel, Max_Ozone_Concentration_Rosenstiel, 
+         Date_Perdue, Max_Ozone_Concentration_Perdue) %>%
+  pivot_longer(
+    cols = c(Max_Ozone_Concentration_Rosenstiel, Max_Ozone_Concentration_Perdue),
+    names_to = "Station",
+    values_to = "Ozone_Concentration",
+    names_prefix = "Max_Ozone_Concentration_"
+  ) %>%
+  mutate(
+    Date = ifelse(Station == "Rosenstiel", Date_Rosenstiel, Date_Perdue),
+    Date = as.Date(Date)
+  )
+
+# Now load mydata with missing data points highlighted
+ggplot(data_long, aes(x = Date, y = Ozone_Concentration, color = Station)) +
+  geom_line() +
+  geom_point(data = filter(data_long, is.na(Ozone_Concentration) == FALSE), aes(x = Date, y = 0), 
+             color = "red", shape = 4, size = 3) +
+  scale_y_continuous(name = "Max Ozone Concentration (ppm)", limits = c(0, max(data_long$Ozone_Concentration, na.rm = TRUE))) +
+  scale_x_date(name = "Date", date_breaks = "1 month", date_labels = "%b %Y") +
+  labs(
+    title = "Ozone Concentration with Missing Data Points for Rosenstiel and Perdue Stations",
+    caption = "Initial dataset validation reveals a data gap during September, aligning with the period of Hurricane Irma."
+    
+  ) +
+  theme_minimal() +
+  theme(legend.position = "top", axis.text.x = element_text(angle = 45, hjust = 1))
+
+
+
+
+```
+
+
+
+```{r}
+#| echo: false
+
+# Load the necessary packages
+library(ggplot2)
+library(dplyr)
+
+# Load the dataset and rename it to avoid conflicts
+mydata <- read.csv("Normalized_Hurricane_Irma_September_2017.csv", stringsAsFactors = FALSE)
+
+# Convert the Date columns to Date type using the correct format
+mydata$Date <- as.Date(mydata$Date, format = "%m/%d/%Y")
+mydata$Date.1 <- as.Date(mydata$Date.1, format = "%m/%d/%Y")
+
+# Filter out rows where Date is NA
+mydata <- mydata %>%
+  filter(!is.na(Date)) %>%
+  mutate(
+    Missing_Rosenstiel = is.na(Daily.Max.8.hour.Ozone.Concentration),
+    Missing_Perdue = is.na(Daily.Max.8.hour.Ozone.Concentration.1)
+  )
+
+# Create the plot 
+ggplot(mydata, aes(x = Date)) +
+  geom_line(aes(y = Daily.Max.8.hour.Ozone.Concentration, color = "Rosenstiel")) +
+  geom_point(data = dplyr::filter(mydata, Missing_Rosenstiel == FALSE), aes(y = Daily.Max.8.hour.Ozone.Concentration), color = "red", shape = 4, size = 3) +
+  
+  geom_line(aes(y = Daily.Max.8.hour.Ozone.Concentration.1, color = "Perdue")) +
+  geom_point(data = dplyr::filter(mydata, Missing_Perdue == FALSE), aes(y = Daily.Max.8.hour.Ozone.Concentration.1), color = "blue", shape = 4, size = 3) +
+  
+  labs(
+  title = "Daily Max 8-hour Ozone Concentration showing Missing Data (September 2017)",
+  caption = "Data collected from Rosenstiel and Perdue stations with intermittent data gaps, likely due to disruptions from Hurricane Irma's impact on monitoring equipment.",
+  x = "Date",
+  y = "Ozone Concentration (ppm)"
+) +
+
+  
+  # Set x-axis to show all dates in September
+  scale_x_date(date_breaks = "1 day", date_labels = "%b %d") +
+  
+  scale_color_manual(values = c("Rosenstiel" = "green", "Perdue" = "orange")) +
+  
+  theme_minimal() +
+  theme(legend.title = element_blank()) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+
+
+ 
+
+
+```
+
+## Plot pre and post hurricane Irma (August, October)
+
+
+
+
+
+
+```{r}
+#| echo: false
+
+library(ggplot2)
+library(dplyr)
+# Load the dataset
+mydata <- read.csv("Corrected_Ozone_Data_for_Rosenstiel_and_Perdue_Stations.csv", stringsAsFactors = FALSE)
+#print(mydata)
+# Convert the Date columns to Date type
+mydata$Date_Rosenstiel <- as.Date(mydata$Date_Rosenstiel, format = "%m/%d/%Y")
+mydata$Date_Perdue <- as.Date(mydata$Date_Perdue, format = "%m/%d/%Y")
+
+
+
+
+```
+
+
+
+
+
+
+
+

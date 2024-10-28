@@ -1,0 +1,281 @@
+---
+title: "Project Deliverable"
+author: "Bridget Jaen"
+format: html
+---
+
+# Load necessary libraries
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(readxl)
+```
+
+# Load both datasets
+
+```{r}
+data_2017 <- read.csv("Hurrican_Irma_2017_Cleaned_2.csv")
+data_2018 <- read.csv("Hurrican_Irma_2018_Cleaned_2.csv")
+```
+
+# Combine datasets and parse the Date column
+
+```{r}
+data_combined <- rbind(data_2017, data_2018)
+data_combined$Date <- as.Date(data_combined$Date, format="%m/%d/%Y")
+```
+
+# Extract the year from the Date column and add as a new column
+
+```{r}
+data_combined$Year <- format(data_combined$Date, "%Y")
+```
+
+# Summarize Daily Observation Counts by Date and Year
+
+```{r}
+daily_counts <- data_combined %>%
+  group_by(Date, Year) %>%
+  summarize(Daily_Obs_Count = sum(Daily.Obs.Count, na.rm = TRUE))
+```
+
+# Create a bar chart
+
+```{r}
+ggplot(daily_counts, aes(x = Date, y = Daily_Obs_Count, fill = Year)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(title = "Daily Observation Count for 2017 and 2018",
+       x = "Date",
+       y = "Observation Count") +
+  scale_fill_manual(values = c("2017" = "skyblue", "2018" = "navyblue")) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
+
+# Separte 2017 2018
+
+##Load necessary libraries
+
+```{r}
+library(ggplot2)
+library(dplyr)
+```
+
+## Load both datasets
+
+```{r}
+data_2017 <- read.csv("Hurrican_Irma_2017_Cleaned_2.csv")
+data_2018 <- read.csv("Hurrican_Irma_2018_Cleaned_2.csv")
+```
+
+## Combine datasets and parse the Date column
+
+```{r}
+data_combined <- rbind(data_2017, data_2018)
+data_combined$Date <- as.Date(data_combined$Date, format="%m/%d/%Y")
+```
+
+## Extract the year from the Date column
+
+```{r}
+data_combined$Year <- format(data_combined$Date, "%Y")
+```
+
+## Filter data for each year
+
+```{r}
+data_2017_only <- filter(data_combined, Year == "2017")
+data_2018_only <- filter(data_combined, Year == "2018")
+```
+
+## Summarize Daily Observation Counts for each year
+
+```{r}
+daily_counts_2017 <- data_2017_only %>%
+  group_by(Date) %>%
+  summarize(Daily_Obs_Count = sum(Daily.Obs.Count, na.rm = TRUE))
+```
+
+## Create bar charts for each year
+
+```{r}
+p1 <- ggplot(daily_counts_2017, aes(x = Date, y = Daily_Obs_Count)) +
+  geom_bar(stat = "identity", fill = "navyblue") +
+  labs(title = "Daily Observation Count for 2017",
+       x = "Date",
+       y = "Observation Count") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 2))
+```
+
+```{r}
+p2 <- ggplot(data_2018_only, aes(x = Date, y = Daily.Obs.Count)) +
+  geom_bar(stat = "identity", fill = "purple") +
+  labs(title = "Daily Observation Count for 2018",
+       x = "Date",
+       y = "Observation Count") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+## Display plots
+
+```{r}
+print(p1)
+print(p2)
+```
+
+# 2017 and 2018 vertically by month
+
+## Load necessary libraries
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(gridExtra) # For arranging multiple plots
+```
+
+# Load both datasets
+
+```{r}
+#data_2017 <- read.csv("Hurrican_Irma_2017_Cleaned.csv")
+#data_2018 <- read.csv("Hurrican_Irma_2018_Cleaned.csv")
+```
+
+# Combine datasets and parse the Date column
+
+```{r}
+data_combined <- rbind(data_2017, data_2018)
+data_combined$Date <- as.Date(data_combined$Date, format="%m/%d/%Y")
+```
+
+# Extract the year from the Date column
+
+```{r}
+data_combined$Year <- format(data_combined$Date, "%Y")
+data_combined$Month <- format(data_combined$Date, "%b") # Abbreviated month names
+```
+
+# Filter data for each year and group by Month to calculate average daily observation count per month
+
+```{r}
+monthly_avg_2017 <- data_combined %>%
+  filter(Year == "2017") %>%
+  group_by(Month) %>%
+  summarize(Avg_Daily_Obs_Count = mean(Daily.Obs.Count, na.rm = TRUE))
+
+monthly_avg_2018 <- data_combined %>%
+  filter(Year == "2018") %>%
+  group_by(Month) %>%
+  summarize(Avg_Daily_Obs_Count = mean(Daily.Obs.Count, na.rm = TRUE))
+```
+
+# Order months correctly
+
+```{r}
+monthly_avg_2017$Month <- factor(monthly_avg_2017$Month, levels = month.abb)
+monthly_avg_2018$Month <- factor(monthly_avg_2018$Month, levels = month.abb)
+```
+
+# Plot average daily observation counts by month for 2017
+
+```{r}
+p1 <- ggplot(monthly_avg_2017, aes(x = Month, y = Avg_Daily_Obs_Count)) +
+  geom_bar(stat = "identity", fill = "blue") +
+  labs(title = "Average Daily Observation Count by Month for 2017",
+       x = "Month",
+       y = "Average Observation Count") +
+  theme_minimal()
+
+# Plot average daily observation counts by month for 2018
+p2 <- ggplot(monthly_avg_2018, aes(x = Month, y = Avg_Daily_Obs_Count)) +
+  geom_bar(stat = "identity", fill = "red") +
+  labs(title = "Average Daily Observation Count by Month for 2018",
+       x = "Month",
+       y = "Average Observation Count") +
+  theme_minimal()
+```
+
+# Arrange plots vertically
+
+```{r}
+grid.arrange(p1, p2, ncol = 1)
+```
+
+## Explanation
+
+The bar charts show that we have data for everyday of the month for 2017 and 2018 respectably. However, the graphs show that some days have less observations than others.
+
+# Line Plot
+
+## Load necessary libraries
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(gridExtra) # For arranging multiple plots
+```
+
+## Load both datasets
+
+```{r}
+#data_2017 <- read.csv("Hurrican_Irma_2017_Cleaned.csv")
+#data_2018 <- read.csv("Hurrican_Irma_2018_Cleaned.csv")
+```
+
+## Combine datasets and parse the Date column
+
+```{r}
+data_combined <- rbind(data_2017, data_2018)
+data_combined$Date <- as.Date(data_combined$Date, format="%m/%d/%Y")
+```
+
+## Extract the year from the Date column
+
+```{r}
+data_combined$Year <- format(data_combined$Date, "%Y")
+```
+
+## Filter data for each year
+
+```{r}
+data_2017_only <- filter(data_combined, Year == "2017")
+data_2018_only <- filter(data_combined, Year == "2018")
+```
+
+## Plot Daily AQI vs. Date for 2017
+
+```{r}
+p1 <- ggplot(data_2017_only, aes(x = Date, y = Daily.AQI.Value)) +
+  geom_line(color = "blue") +
+  labs(title = "Daily AQI for 2017",
+       x = "Date",
+       y = "Daily.AQI.Value") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
+
+# Plot Daily AQI vs. Date for 2018
+
+```{r}
+p2 <- ggplot(data_2018_only, aes(x = Date, y = Daily.AQI.Value)) +
+  geom_line(color = "red") +
+  labs(title = "Daily AQI for 2018",
+       x = "Date",
+       y = "Daily.AQI.Value") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+# Arrange the plots vertically
+
+```{r}
+grid.arrange(p1, p2, ncol = 1)
+```
+
+## Explanation
+
+This line plot of Date Vs Daily AQI Value compares the AQI values over time across the two stations.

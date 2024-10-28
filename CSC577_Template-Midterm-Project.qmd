@@ -1,0 +1,266 @@
+---
+title: "Data-Driven Insights: Analyzing of Environmental Information Trends"
+subtitle: "GCSC-577 Visualization @ ORU"
+author: "Victoria Fashina"
+date: "Midterm - Fall 2024"
+format: html
+---
+
+# 1. Data Source and Collection Methods
+
+-   **Source Overview:** ![](MP.png) Ever since the time of Noah (The Great Flood - Gen 7:11), humanity has sought to control and manage water resources, aiming to mitigate disasters. One notable early example is Nimrod, Noah’s great-grandson, who led the way in this endeavor by attempting to build the Tower of Babel (Genesis 11:1-9). This project can be seen as mankind’s effort to reach the heavens, symbolizing a desire to challenge or "debate" with God, illustrating an early attempt to assert control over nature.
+
+Following in these footsteps, many significant advances have been made throughout history. For example, the Hartfield brothers were pioneers in artificial rainmaking, and modern-day efforts include earthquake-resistant engineering, climate control, geoengineering, fire suppression, and more. These efforts, often pursued under the guise of "scientific advancement and technological progress," reflect humanity's continuous desire to influence natural events and conditions.
+
+These efforts form the raison d'être for the dataset examined in this project. Jena's dataset is an hourly collection of meteorological observations from the Max Planck Institute for Biogeochemistry (MPI-BGC). MPI-BGC, a prestigious research institute located in Jena, Germany, is part of the renowned Max Planck Society, which oversees a wide range of scientific research institutions. The primary focus of MPI-BGC is to understand the complex interactions between the biosphere (living organisms) and the geosphere (the Earth's surface) over time, contributing to the broader understanding of environmental and climatic changes.
+
+Jena dataset provides valuable insights into these ongoing interactions and helps inform our efforts in managing and responding to natural events—building on the legacy of mankind’s quest to “play God” through technological advancement.
+
+-   **File Formats and Access:** The Jena dataset is only available in CSV format:
+
+    -   Comma-Separated Values (CSV)- CSV is a plain-text format that separates data fields using commas. It is universally readable across platforms and tools, it is simple and lightweight. CSV is useful for basic analysis in Excel and programmatic access in Python, R or databases.
+
+-   **Summary of the Jena Data-set**
+
+    The Jena dataset contains detailed weather observations from 2009 to 2016 in Jena, Germany, capturing variables such as temperature, pressure, wind speed, and humidity. This granular, time-stamped data is ideal for analyzing seasonal patterns, extreme weather events, and long-term climate trends. It is particularly useful for both exploratory and predictive analysis in fields like climate research, agricultural planning, and environmental monitoring. I have used a line plot to depict the interaction between these variables due to its effectiveness in visualizing data continuity over time, highlighting trends, and managing multiple variables. This makes it ideal for time series analysis. ![](JenaDataset_2009_2010_SeasonalTrends.png)
+
+The plot reveals clear **seasonal trends** in temperature and pressure, with distinct annual cycles of warming and cooling. Wind speed remains relatively stable over the years, with occasional spikes corresponding to higher wind events.
+
+![](Jena'a_Seasons.png)
+
+-   **Source Overview:**
+
+    Max Planck Institute for Biogeochemistry, a research institute, gathered this dataset over time to study weather trends, creating predictive models, and understanding how atmospheric conditions change over time and its concomitant effects. The data-set is used in various domains such as weather forecasting, climate research, aviation and agriculture. Following below link will take one to the site it was obtained from. https://www.kaggle.com/datasets/mnassrib/jena-climate
+
+-   **Data Acquisition Procedure:** Outline the steps required to acquire the data, including any necessary permissions, logins, or API usage.
+
+    General instruction for retrieving data from Kaggle:
+
+    1.  Log on to https://www.kaggle.com/dataset
+    2.  Register or login to access data
+    3.  Navigate to data climate dataset
+    4.  Select a dataset, in my case Jenna Climate Dataset by Baligh Mnassri
+    5.  Choose a download format - csv
+    6.  Choose 'Save As' and do a local download.
+    7.  Dataset size - 54.5 MB.
+
+# 2. Data Variables and Contextual Framework
+
+This chapter provides a detailed breakdown of the variables within the data-set and contextualizes the purpose behind their collection.
+
+-   <h2>**Variables and Definition**</h2>
+
+    The Data-set consists of 15 columns and 420,552 rows of meteorological information ranging from January 2009 to December 2016. The variables and definition follows:
+
+    1.  **Date Time:** - This column records the precise date and time of each weather observation, giving it temporal context. Accurate timetamps are essential for tracking changes in weather conditions over time, allowing for time-series analysis. Weather is inherently time-sensitive, and this data helps identify patterns, trends, and anomalies.
+
+    2.  **p (mbar) – Atmospheric Pressure (in millibars):** - Atmospheric pressure is the force exerted by the weight of the air above a surface. It's measured in millibars (mbar). **Purpose:** Tracking pressure is crucial for weather forecasting. A drop in pressure often indicates storms or bad weather, while rising pressure indicates fair weather. It helps meteorologists predict changes in weather patterns, such as the approach of high-pressure systems (calm weather) or low-pressure systems (storms).
+
+    3.  **T (degC) – Temperature (in Celsius):** - The temperature of the air in degrees Celsius. - **Purpose:** Temperature is one of the fundamental variables in meteorology. It influences other factors like humidity, precipitation, and atmospheric pressure. Understanding temperature trends is crucial for predicting heatwaves, cold snaps, and general climate behavior.
+
+    4.  **Tpot (K) – Potential Temperature (in Kelvin):** - The temperature a parcel of air would have if it were moved adiabatically to a standard reference pressure level. **Purpose:** This is used to compare air masses at different altitudes. Potential temperature is valuable for studying atmospheric stability, which can help predict vertical air movements and weather phenomena like thunderstorms or cloud formation.
+
+    5.  **Tdew (degC) – Dew Point Temperature (in Celsius):** - The temperature at which air becomes saturated with moisture, meaning the air can no longer hold all the water vapor, and it condenses into dew or frost. **Purpose:** The dew point provides information on moisture levels in the air. A high dew point indicates a humid environment, which is important for predicting fog, frost, or precipitation. In agriculture, monitoring the dew point can help protect crops from frost damage.
+
+    6.  **rh (%) – Relative Humidity (in Percent):** - This measures how much moisture the air is holding relative to the maximum amount it could hold at that temperature. **Purpose:** Relative humidity impacts human comfort, plant growth, and the likelihood of precipitation. High humidity means the air is near saturation and more likely to produce rain or fog, while low humidity can lead to drought conditions. It also affects evaporation rates, which is crucial in agriculture and water resource management.
+
+    7.  **VPmax (mbar) – Maximum Vapor Pressure:** - The highest possible vapor pressure under current temperature conditions, showing the maximum amount of moisture the air can hold. **Purpose:** This helps determine the saturation point of the air. By comparing VPmax with actual vapor pressure, meteorologists can assess how close the atmosphere is to generating precipitation.
+
+    8.  **VPact (mbar) – Actual Vapor Pressure:** - The actual pressure exerted by water vapor in the air. **Purpose:** Actual vapor pressure provides direct information on the moisture content in the air. When VPact approaches VPmax, it suggests that the atmosphere is nearing saturation, which often leads to cloud formation or precipitation.
+
+    9.  **VPdef (mbar) – Vapor Pressure Deficit:** - The difference between the maximum and actual vapor pressure. **Purpose:** Vapor pressure deficit indicates the "drying power" of the air. It is particularly important in agriculture and water management because a higher VPdef means the air will more actively evaporate water from plants and soils, leading to drier conditions.
+
+    10. **sh (g/kg) – Specific Humidity (grams per kilogram):** - Specific humidity is the mass of water vapor present in a unit mass of air. **Purpose:** This is used to understand the total amount of moisture in the air, independent of temperature or pressure. Specific humidity plays a key role in calculating heat indices and predicting weather phenomena like thunderstorms or monsoons.
+
+    11. **H2OC (mmol/mol) – Concentration of Water Vapor (millimoles per mole):** - The concentration of water vapor molecules in the air. **Purpose:** This is an indicator of humidity at the molecular level, which is essential for precision in weather forecasting, especially in microclimate studies or scientific research related to greenhouse gases and climate change.
+
+    12. **rho (g/m³) – Air Density (grams per cubic meter):** - Air density, influenced by temperature, pressure, and humidity, measures how tightly packed the air molecules are. **Purpose:** Air density affects the behavior of aircraft, wind turbines, and air pollution. In meteorology, it's crucial for understanding the dynamics of wind, pressure systems, and weather fronts.
+
+    13. **wv (m/s) – Wind Speed (meters per second):** - The speed of the wind in meters per second. **Purpose:** Wind speed is critical for weather forecasting, as it indicates storm intensity, drives atmospheric circulation, and disperses air pollutants. In disaster management, wind speed helps predict the impact of storms, hurricanes, and tornadoes.
+
+    14. **max. wv (m/s) – Maximum Wind Speed (meters per second):** The highest recorded wind speed over a given interval. **Purpose:** Maximum wind speed provides insight into extreme weather events and helps in predicting the likelihood of dangerous storms or cyclones. It’s a key metric in disaster preparedness, especially for aviation, shipping, and infrastructure resilience.
+
+    15. **wd (deg) – Wind Direction (degrees):** - Wind direction in degrees, where 0° is North, 90° is East, 180° is South, and 270° is West. **Purpose:** Wind direction is important for understanding the source of weather systems. For example, winds from the ocean may bring moist air and rain, while winds from the land may bring dry, warmer air. It’s critical for forecasting the movement of weather fronts and planning for aviation, agriculture, and outdoor events.
+
+-   **Data Collection & Contextual Purpose:**
+
+-   The dataset can be used in various domains including:
+
+-   **Weather Forecasting and Climate Monitoring:** - The collection of these variables is fundamental to real-time weather forecasting and long-term climate monitoring. Temperature, humidity, pressure, and wind speed all contribute to predicting short-term weather changes like storms, heatwaves, or cold fronts. These variables are also crucial for monitoring global climate patterns, helping meteorologists identify trends such as global warming, extreme weather events, and shifts in climate zones.
+
+-   **Disaster Preparedness:**
+
+-   Data like wind speed, wind direction, pressure, and temperature can help forecast extreme weather events such as hurricanes, tornadoes, and severe storms. Monitoring these variables over time helps local governments and emergency services prepare for natural disasters, reducing the potential damage to life and infrastructure.
+
+-   **Agriculture and Water Resource Management:**
+
+-   Specific humidity, vapor pressure deficit, and dew point provide key insights into soil moisture levels and irrigation needs. In agriculture, knowing the dew point and humidity helps farmers protect crops from frost or dehydration. Vapor pressure deficit, in particular, is crucial for understanding how much water plants are losing due to evaporation, allowing for more efficient water management.
+
+-   **Aviation Safety:**
+
+-   Wind speed, direction, and air pressure data are critical for aviation. Pilots rely on real-time wind conditions to make safe landings and take-offs, and air traffic controllers use this data to manage flight paths efficiently. Air density also affects how aircraft operate, especially at high altitudes, influencing fuel efficiency and safety protocols.
+
+-   **Public Health and Comfort:**
+
+-   Relative humidity and temperature affect human health and comfort, particularly during extreme weather events like heatwaves or cold spells. High humidity combined with high temperatures can increase the risk of heat-related illnesses, while low temperatures and humidity can lead to cold-related issues like frostbite or hypothermia. Monitoring these factors helps governments issue health warnings and prepare emergency shelters.
+
+-   **Renewable Energy (Wind and Solar):**
+
+-   Wind speed and direction data are critical for optimizing the operation of wind farms. Knowing wind patterns helps in positioning turbines for maximum energy generation. Similarly, temperature and humidity data are used to optimize solar energy systems, ensuring they are positioned and operated under ideal conditions.
+
+-   **Air Quality and Pollution Control:**
+
+-   Wind direction and air density play a vital role in dispersing pollutants in the atmosphere. Tracking these variables helps environmental agencies predict where pollutants will travel, allowing for better air quality management and health advisories, especially in urban areas with high levels of industrial emissions or traffic pollution.
+
+-   **Contextual Significance**:
+
+-   **Weather Prediction:** The collected data allows meteorologists to predict short-term weather events and longer-term climate patterns, helping people prepare for both daily activities and extreme weather events.
+
+-   **Environmental Monitoring:** It’s key for understanding climate change, tracking shifts in weather patterns, and managing natural resources like water and air quality.
+
+-   **Disaster Management:** Collecting this data is essential for anticipating and mitigating the effects of natural disasters like floods, hurricanes, and heatwaves, protecting lives and property.
+
+-   **Agricultural Planning:** Farmers rely on this data to ensure proper irrigation, crop planting, and harvesting, as well as protecting crops from adverse weather conditions like frost or drought.
+
+# 3. Analytical Approach and Visualization Techniques
+
+**Data Cleaning Methods Employed** - - Following are the steps taken in cleaning the dataset:
+
+1.  **Preview and Inspect data structure** - Jena dataset was loaded and previewed using pandas in Python. With this the data structure was examined to identify potential missing values, inconsistent formats, unnecessary colunms.
+2.  **Date and Time Colunms** In handling date and time dataset, steps must be taken to ensure the date/time columns are recorrectly formated as datetime type.Jena dataset consists of both seperate columns for data and time as well as a combined datetime column. The datatime colunmn was dropped and the date and time were combined and converted into a dateime64\[ns\] data type.
+3.  **DateTime as Index** The newly converted DateTime column was set as the index of the DataFrame, making it easier to perfrom time series analysis.
+4.  **Missing Data Types** Finally data types were checked, numerical columns confirmed as float64 and DateTime column of type datetime64\[ns\].
+5.  **Memory Optimization** Removed columns reduced memory usage. Final data saved in memory is 48.1 MB
+
+**Adding visualization to quarto document, including label and captions.**
+
+**Add a description of what we should understand from your visualization, and how this connect with your project scope.**
+
+Describe the analytical methodologies and visualization techniques used to explore the dataset in this section.
+
+-   **Analytical Methods:**
+    -   Explain the analytical approach, including statistical methods or data preprocessing steps applied to the dataset to prepare it for visualization (e.g., filtering, aggregation, etc.).
+-   **Visualization Techniques:**
+    -   Detail the types of visualizations used to convey the data’s insights. For each visualization (e.g., line charts for trends, bar charts for comparisons), provide a rationale for its selection.
+-   **Key Observations:**
+    -   Outline what specific trends, patterns, or anomalies are intended to be highlighted by these visualizations.
+
+*Example:*
+
+Line charts were used to track changes in crop yields from 2010 to 2020, allowing for clear identification of trends potentially linked to climate variability.
+
+# 4. Insights Derived from Data Analysis
+
+This chapter focuses on interpreting the results of your data analysis and visualizations.
+
+-   **Key Findings:**
+    -   Summarize the primary insights revealed through your analysis, highlighting significant patterns or trends observed in the data.
+-   **Contextual Interpretation:**
+    -   Provide an interpretation of these findings within the broader agricultural or policy context. Relate the trends to real-world issues, such as climate change, resource allocation, or food security challenges.
+-   **Comparative Analysis:**
+    -   If applicable, compare the dataset’s findings with historical data, expected norms, or benchmarks to emphasize any notable deviations.
+
+*Example:*
+
+```         
+The data reveals a 15% decline in crop yields in the Midwest region over the past decade, likely linked to increased occurrences of drought. This decline is more pronounced compared to historical averages.
+```
+
+# 5. Discussion of Data Quality and Limitations
+
+In this section, critically examine the quality of the data and the limitations of your analysis.
+
+-   **Data Integrity:**
+    -   Assess the quality of the data, noting any issues such as missing or incomplete data, inaccuracies, or inconsistencies.
+-   **Limitations of Analysis:**
+    -   Discuss any limitations inherent in the dataset that may affect the validity or generalizability of your findings. These could include sample size issues, lack of granularity, or data biases.
+-   **Potential Improvements:**
+    -   Suggest ways in which the data collection process or analytical approach could be improved to yield better or more actionable insights.
+
+*Example:*
+
+```         
+Some regions had significant gaps in data for the years 2015-2016, which may limit the reliability of trends observed during this period. Future analyses could benefit from more granular data collection at a regional level.
+```
+
+# 6. Conclusions and Implications for Future Research
+
+Provide a clear summary of your findings and their potential implications in this section.
+
+-   **Summary of Findings:**
+    -   Recap the major insights discovered through the data analysis.
+-   **Broader Implications:**
+    -   Discuss how the findings could inform future decisions or strategies. This might include agricultural policies, resource management, or further research initiatives.
+-   **Recommendations:**
+    -   Offer practical recommendations for stakeholders based on your findings. What actions should be considered based on the data?
+
+*Example:*
+
+```         
+The decline in yields suggests a need for improved drought-resistant crop varieties and more resilient farming practices in affected regions.
+```
+
+## testing interactive
+
+```{r}
+library(reticulate)
+use_virtualenv("C:/Users/vfashina/venv477") 
+```
+
+```{python}
+import sys
+print(sys.prefix)
+```
+
+```{python}
+import pandas as pd
+import plotly.express as px
+
+# Load the dataset (replace with your correct file path)
+data = pd.read_csv('cleaned_jena_climate_data.csv', parse_dates=['DateTime'], index_col='DateTime')
+
+# Sort the index to ensure it is monotonic
+data = data.sort_index()
+
+# Filter for five years of data (2009-2013) and create a copy
+five_year_data = data.loc['2009':'2013'].copy()
+
+# Assigning columns using .loc
+five_year_data['month'] = five_year_data.index.month
+five_year_data['season'] = five_year_data['month'] % 12 // 3 + 1
+season_names = {1: 'Winter', 2: 'Spring', 3: 'Summer', 4: 'Fall'}
+five_year_data['season_name'] = five_year_data['season'].map(season_names)
+
+# Extract the year from the DateTime index
+five_year_data['year'] = five_year_data.index.year
+
+# Group by year and season name and calculate the mean for numeric columns
+numeric_columns = ['T (degC)', 'p (mbar)', 'wv (m/s)', 'rh (%)']
+seasonal_data = five_year_data.groupby(['year', 'season_name'])[numeric_columns].mean().reset_index()
+
+# Create an interactive plot
+fig = px.line(seasonal_data, 
+              x='season_name', 
+              y='T (degC)', 
+              color='year', 
+              hover_data={'T (degC)': True, 'p (mbar)': True, 'wv (m/s)': True, 'rh (%)': True, 'year': True},
+              title='Seasonal Temperature Trends for 2009-2013')
+
+# Show the interactive plot
+fig.show()
+
+# Optionally, save the figure if needed (for static image)
+# fig.write_image('Jena_SeasonalTrends_2009_2013.png', scale=2)
+
+
+```
+
+# 7. References
+
+Include all references to the data source, documentation, and any literature or external research used during the analysis.
+
+*Example Reference:*
+
+```         
+USDA National Agricultural Statistics Service. (2023). Annual Crop Yield Data. Available from: [https://www.nass.usda.gov](https://www.nass.usda.gov).
+```
