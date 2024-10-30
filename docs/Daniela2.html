@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Victorious">
+<meta name="author" content="Daniela Rodriguez">
+<meta name="dcterms.date" content="2024-10-26">
 
-<title>16&nbsp; MiamiDadeStations – Group_1 Quarto Book</title>
+<title>17&nbsp; Ozone Levels Heat Map and Scatter Plot – Group_1 Quarto Book</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -31,8 +66,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./Daniela2.html" rel="next">
-<link href="./Bridget_Deliverable 1.html" rel="prev">
+<link href="./summary.html" rel="next">
+<link href="./Irma-Miami-Dade-Stations.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -82,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Irma-Miami-Dade-Stations.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">MiamiDadeStations</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Daniela2.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Ozone Levels Heat Map and Scatter Plot</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -187,13 +222,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Irma-Miami-Dade-Stations.html" class="sidebar-item-text sidebar-link active">
+  <a href="./Irma-Miami-Dade-Stations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">MiamiDadeStations</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Daniela2.html" class="sidebar-item-text sidebar-link">
+  <a href="./Daniela2.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Ozone Levels Heat Map and Scatter Plot</span></span></a>
   </div>
 </li>
@@ -219,8 +254,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#load-and-data-for-completeness.-visualize" id="toc-load-and-data-for-completeness.-visualize" class="nav-link active" data-scroll-target="#load-and-data-for-completeness.-visualize"><span class="header-section-number">16.1</span> Load and Data for Completeness. Visualize</a></li>
-  <li><a href="#plot-pre-and-post-hurricane-irma-august-october" id="toc-plot-pre-and-post-hurricane-irma-august-october" class="nav-link" data-scroll-target="#plot-pre-and-post-hurricane-irma-august-october"><span class="header-section-number">16.2</span> Plot pre and post hurricane Irma (August, October)</a></li>
+  <li><a href="#geographic-distribution-of-average-ozone-levels-in-2018" id="toc-geographic-distribution-of-average-ozone-levels-in-2018" class="nav-link active" data-scroll-target="#geographic-distribution-of-average-ozone-levels-in-2018"><span class="header-section-number">17.1</span> Geographic Distribution of Average Ozone Levels in 2018</a></li>
+  <li><a href="#ozone-concentration-patterns-across-geographic-locations" id="toc-ozone-concentration-patterns-across-geographic-locations" class="nav-link" data-scroll-target="#ozone-concentration-patterns-across-geographic-locations"><span class="header-section-number">17.2</span> Ozone Concentration Patterns Across Geographic Locations</a></li>
+  <li><a href="#comparison-of-ozone-concentration-and-aqi-across-sites" id="toc-comparison-of-ozone-concentration-and-aqi-across-sites" class="nav-link" data-scroll-target="#comparison-of-ozone-concentration-and-aqi-across-sites"><span class="header-section-number">17.3</span> Comparison of Ozone Concentration and AQI Across Sites</a></li>
+  <li><a href="#scatter-plot-of-ozone-concentration-vs-aqi-with-regression-line" id="toc-scatter-plot-of-ozone-concentration-vs-aqi-with-regression-line" class="nav-link" data-scroll-target="#scatter-plot-of-ozone-concentration-vs-aqi-with-regression-line"><span class="header-section-number">17.4</span> Scatter Plot of Ozone Concentration vs AQI with Regression Line</a></li>
   </ul>
 </nav>
     </div>
@@ -229,7 +266,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">MiamiDadeStations</span></h1>
+<h1 class="title"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Ozone Levels Heat Map and Scatter Plot</span></h1>
 </div>
 
 
@@ -239,10 +276,16 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Victorious </p>
+             <p>Daniela Rodriguez </p>
           </div>
   </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 26, 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -252,9 +295,20 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="load-and-data-for-completeness.-visualize" class="level2" data-number="16.1">
-<h2 data-number="16.1" class="anchored" data-anchor-id="load-and-data-for-completeness.-visualize"><span class="header-section-number">16.1</span> Load and Data for Completeness. Visualize</h2>
+<p><strong>1. Heat Maps</strong></p>
+<ul>
+<li><p><strong>Explanation</strong>:</p></li>
+<li><p>The data set I am working is from the 2018 data set from Hurricane Irma data set. With these visualizations I am trying to explain and demonstrate the ozone levels of the two Heat Maps. The two heat maps—time-based heat map and geographic heat map—differ in purpose, structure, and the type of data they visualize.</p></li>
+<li><p><strong>What do I want to interpret?</strong></p></li>
+</ul>
+<p>I want to interpret both the differences but as well the importance of the two Heat Maps. Both, the Time-Based Heat Map and the Geographic Heat Map help preparing a broad and expanded visualization of this data set and expresses the information in a very clear way.</p>
+<p><strong>1. Time-Based Heat Map</strong>: Helps in understanding temporal trends—such as daily or weekly ozone changes—which can highlight seasonal effects or events.</p>
+<p><strong>2.Geographic Heat Map</strong>: Highlights spatial patterns, showing which regions have higher or lower levels of ozone, useful for geographic analysis or targeting specific areas for environmental or public health interventions.</p>
+<section id="geographic-distribution-of-average-ozone-levels-in-2018" class="level2" data-number="17.1">
+<h2 data-number="17.1" class="anchored" data-anchor-id="geographic-distribution-of-average-ozone-levels-in-2018"><span class="header-section-number">17.1</span> Geographic Distribution of Average Ozone Levels in 2018</h2>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>
 Attaching package: 'dplyr'</code></pre>
@@ -269,6 +323,7 @@ Attaching package: 'dplyr'</code></pre>
 
     intersect, setdiff, setequal, union</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>
 Attaching package: 'lubridate'</code></pre>
@@ -278,30 +333,141 @@ Attaching package: 'lubridate'</code></pre>
 
     date, intersect, setdiff, union</code></pre>
 </div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 36 rows containing missing values or values outside the scale range
-(`geom_line()`).</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"Hurricane_Irma_2018_Cleaned.csv"</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>Date <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(data<span class="sc">$</span>Date, <span class="at">format=</span><span class="st">"%m/%d/%y"</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>Month <span class="ot">&lt;-</span> <span class="fu">month</span>(data<span class="sc">$</span>Date)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>Week <span class="ot">&lt;-</span> <span class="fu">week</span>(data<span class="sc">$</span>Date)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>Day <span class="ot">&lt;-</span> <span class="fu">day</span>(data<span class="sc">$</span>Date)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x=</span>Week, <span class="at">y=</span>Day, <span class="at">fill=</span><span class="st">`</span><span class="at">Daily.Max.8.hour.Ozone.Concentration</span><span class="st">`</span>)) <span class="sc">+</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tile</span>(<span class="at">color=</span><span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_gradient</span>(<span class="at">low=</span><span class="st">"yellow"</span>, <span class="at">high=</span><span class="st">"red"</span>, <span class="at">name=</span><span class="st">"Ozone Level (ppm)"</span>) <span class="sc">+</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Ozone Levels Across Days/Weeks in 2018"</span>,</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>       <span class="at">x=</span><span class="st">"Week of the Year"</span>, <span class="at">y=</span><span class="st">"Day of the Month"</span>) <span class="sc">+</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> Month, <span class="at">ncol=</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="Irma-Miami-Dade-Stations_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="Irma-Miami-Dade-Stations_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="Daniela2_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="plot-pre-and-post-hurricane-irma-august-october" class="level2" data-number="16.2">
-<h2 data-number="16.2" class="anchored" data-anchor-id="plot-pre-and-post-hurricane-irma-august-october"><span class="header-section-number">16.2</span> Plot pre and post hurricane Irma (August, October)</h2>
+<section id="ozone-concentration-patterns-across-geographic-locations" class="level2" data-number="17.2">
+<h2 data-number="17.2" class="anchored" data-anchor-id="ozone-concentration-patterns-across-geographic-locations"><span class="header-section-number">17.2</span> Ozone Concentration Patterns Across Geographic Locations</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Linking to GEOS 3.12.1, GDAL 3.8.4, PROJ 9.3.1; sf_use_s2() is TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"Hurricane_Irma_2018_Cleaned.csv"</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>Date <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(data<span class="sc">$</span>Date, <span class="at">format=</span><span class="st">"%m/%d/%y"</span>)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>data_summary <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Site.Latitude, Site.Longitude) <span class="sc">%&gt;%</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">Average_Ozone =</span> <span class="fu">mean</span>(<span class="fu">as.numeric</span>(Daily.Max.<span class="fl">8.</span>hour.Ozone.Concentration), <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`summarise()` has grouped output by 'Site.Latitude'. You can override using the
+`.groups` argument.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data_summary, <span class="fu">aes</span>(<span class="at">x=</span>Site.Longitude, <span class="at">y=</span>Site.Latitude, <span class="at">fill=</span>Average_Ozone)) <span class="sc">+</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tile</span>(<span class="at">color=</span><span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_gradient</span>(<span class="at">low=</span><span class="st">"blue"</span>, <span class="at">high=</span><span class="st">"red"</span>, <span class="at">name=</span><span class="st">"Avg Ozone Level (ppm)"</span>) <span class="sc">+</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Geographic Heat Map of Average Ozone Levels"</span>,</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">x=</span><span class="st">"Longitude"</span>, <span class="at">y=</span><span class="st">"Latitude"</span>) <span class="sc">+</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Daniela2_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>2. Scatter Plots</strong></p>
+</section>
+<section id="comparison-of-ozone-concentration-and-aqi-across-sites" class="level2" data-number="17.3">
+<h2 data-number="17.3" class="anchored" data-anchor-id="comparison-of-ozone-concentration-and-aqi-across-sites"><span class="header-section-number">17.3</span> Comparison of Ozone Concentration and AQI Across Sites</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load necessary libraries</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the dataset</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"Hurricane_Irma_2018_Cleaned.csv"</span>)</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter data to include only relevant columns and format as needed</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Ozone_Concentration =</span> <span class="fu">as.numeric</span>(Daily.Max.<span class="fl">8.</span>hour.Ozone.Concentration),</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>         <span class="at">AQI =</span> <span class="fu">as.numeric</span>(Daily.AQI.Value))</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the scatter plot</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> Ozone_Concentration, <span class="at">y =</span> AQI, <span class="at">color =</span> Local.Site.Name)) <span class="sc">+</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Scatter Plot of Ozone Concentration vs AQI"</span>,</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Daily Max 8-Hour Ozone Concentration (ppm)"</span>,</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Daily AQI Value"</span>,</span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">"Site"</span>) <span class="sc">+</span></span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Daniela2_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Explanation</strong>:</p>
+<p>The “Ozone Concentration vs AQI Comparison” scatter plot is designed to show how daily ozone concentration (in parts per million, ppm) relates to the Air Quality Index (AQI) at two different monitoring sites.</p>
+<p><strong>1.Axes:</strong> X-axis represents the Daily Max 8-Hour Ozone Concentration (measured in ppm). This value shows the peak ozone concentration recorded within an 8-hour period each day. Y-axis represents the Daily AQI Value, which is a summary measure of air quality, taking into account various pollutants, with higher values indicating poorer air quality.</p>
+<p><strong>2.Color Coding:</strong> The points are color-coded by Local.Site.Name, distinguishing data from two different monitoring sites (or locations). This allows for an easy comparison between sites. Scatter Plot of Temperature vs.&nbsp;Humidity</p>
+<p><strong>Interpretation of the plot:</strong></p>
+<p><strong>1.Correlation:</strong> The scatter plot helps visualize the relationship (correlation) between ozone concentration and AQI. If there’s a strong positive correlation, points would trend upward from left to right, showing that higher ozone levels are associated with higher AQI values (indicating worse air quality).</p>
+<p><strong>2.Comparison Across Sites:</strong> By color-coding the sites, you can compare if one site tends to have higher ozone concentrations or AQI values than the other. For example, one site may show a tighter grouping with higher AQI values for certain ozone levels, possibly due to regional pollution sources or environmental factors.</p>
+<p><strong>3.Insights on Air Quality:</strong> This plot can reveal thresholds where ozone concentration begins to significantly impact AQI, or if one site generally has better or worse air quality.</p>
+</section>
+<section id="scatter-plot-of-ozone-concentration-vs-aqi-with-regression-line" class="level2" data-number="17.4">
+<h2 data-number="17.4" class="anchored" data-anchor-id="scatter-plot-of-ozone-concentration-vs-aqi-with-regression-line"><span class="header-section-number">17.4</span> Scatter Plot of Ozone Concentration vs AQI with Regression Line</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"Hurricane_Irma_2018_Cleaned.csv"</span>)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Ozone_Concentration =</span> <span class="fu">as.numeric</span>(Daily.Max.<span class="fl">8.</span>hour.Ozone.Concentration),</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>         <span class="at">AQI =</span> <span class="fu">as.numeric</span>(Daily.AQI.Value))</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> Ozone_Concentration, <span class="at">y =</span> AQI, <span class="at">color =</span> Local.Site.Name)) <span class="sc">+</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> <span class="co"># Adds regression line without confidence interval</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Scatter Plot of Ozone Concentration vs AQI with Trendline"</span>,</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Daily Max 8-Hour Ozone Concentration (ppm)"</span>,</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Daily AQI Value"</span>,</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">"Site"</span>) <span class="sc">+</span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Daniela2_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Explanation:</strong></p>
+<p>Data Points (Scatter Plot): Each point represents a day’s reading of Ozone Concentration (in parts per million, ppm) and AQI (Air Quality Index). <strong>1. X-axis:</strong> Displays the daily maximum 8-hour ozone concentration. Higher values mean more ozone in the air. <strong>2. Y-axis:</strong> Shows the AQI value, where higher numbers indicate poorer air quality. <strong>3. Points</strong> are colored by Local.Site.Name, distinguishing data from two monitoring locations.</p>
+<p><strong>Interpretation</strong>:</p>
+<p><strong>Strength of Correlation:</strong> The regression line helps visually confirm the strength of correlation. A strong, clear upward slope across both sites indicates that ozone concentration is likely a significant contributor to AQI changes.</p>
+<p><strong>Site-Specific Insights:</strong> If one site has a steeper slope, it implies a stronger sensitivity to ozone levels, possibly due to local factors like industrial activity, traffic, or geography.</p>
 
 
 </section>
@@ -729,13 +895,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./Bridget_Deliverable 1.html" class="pagination-link" aria-label="Project Deliverable">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Project Deliverable</span></span>
+      <a href="./Irma-Miami-Dade-Stations.html" class="pagination-link" aria-label="MiamiDadeStations">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">MiamiDadeStations</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Daniela2.html" class="pagination-link" aria-label="Ozone Levels Heat Map and Scatter Plot">
-        <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Ozone Levels Heat Map and Scatter Plot</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./summary.html" class="pagination-link" aria-label="Summary">
+        <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
