@@ -3,27 +3,16 @@ project:
   output-dir: docs
 
 book:
-  title: "Group_1 Quarto Book"
+  title: "Group_1 Quarto Book Part2"
   author: "Group 1"
   date: "9/1/2024"
   chapters:
-    - index.qmd
-    - intro.qmd
-    - Saul.qmd
-    - Bridget.qmd
-    - Tut2_Python_Jaen_092024.ipynb
-    - Tut3_Python_Jaen.ipynb
-    - Tut4_Python_Plotnine_Jaen.ipynb
-    - Daniela.qmd
-    - Tut2_Python_Daniela_092324.ipynb
-    - Victorious.qmd
-    - Tut2_Python_vfashina_092024.ipynb
-    - Tut4_Python_vfashina_092724.ipynb
-    - Tut5_Python_Vfashina_093024.ipynb
-    - Part2_Intro.qmd
-    - Bridget_Deliverable 1.qmd
-    - Irma-Miami-Dade-Stations.qmd
-    - Daniela2.qmd
+    - indexP2.qmd
+    - introP2.qmd
+    - Saul-FinalProj.qmd
+    - Bridget-FinalProj.qmd
+    - Daniela-FinalProj.qmd
+    - Victorious-FinalProj.qmd
     - summary.qmd
     - references.qmd
 
@@ -32,6 +21,7 @@ bibliography: references.bib
 format:
   html:
     theme: cosmo
+    css: BarlowCondensed.css
 pdf:
 documentclass: scrreprt
 

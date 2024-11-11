@@ -1,0 +1,33 @@
+# Introduction
+
+**ORU Visualization Group-1 - Quarto Book**
+
+**Introduction**
+The final project aims to visualize the temporal and potential permanent effects of Hurricane Irma on the Miami-Dade area of Florida. Our goal is to investigate the correlation between ozone concentration and hurricanes, focusing on Hurricane Irma as a case study.
+
+**Brief History of Hurricane Irma**
+Hurricane Irma was a powerful and catastrophic hurricane that impacted the Caribbean and southeastern United States in September 2017. It reached Category 5 status with peak winds of 185 mph, making it one of the most intense Atlantic hurricanes on record. The storm caused extensive damage, particularly in Florida and the Miami-Dade area, leading to long-term environmental and health impacts, including potential changes in air quality.
+
+**Project Team**
+The project consists of four team members, each contributing to specific tasks on a weekly basis:
+
+Victoria Fashina.
+Bridget Jaen.
+Daniela Rodriguez.
+Saul Ruiz.
+
+Master Task List
+Please refer to the attached task list for a detailed breakdown of weekly deliverables and deadlines for each team member.
+
+```{r#| echo: false}
+library(readxl)
+library(knitr)
+
+
+Task_list <- read_excel("C:/Visualization2/Part2/Deliverables_final-Project-Presentation_Group1.xlsx", sheet = "Grades")
+
+# Display Deliverables list
+kable(Task_list)
+
+```
+
